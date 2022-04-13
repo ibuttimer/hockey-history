@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300&family=Montserrat:wght@300&display=swap');
+
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+:root {
+    /* colour scheme: https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=1DE9B6&secondary.color=F9FBE7 */
+    --primary: #1de9b6;
+    --primary-light: #6effe8;
+    --primary-dark: #00b686;
+    --secondary: #f9fbe7;
+    --secondary-light: #ffffff;
+    --secondary-dark: #c6c8b5;
+    --primary-text: #000000;
+    --secondary-text: #000000;
+
+    --std-spacing: 30px;
+    --std-padding-horz: 15px;
+    --std-padding-vert: 5px;
+
+    --menu-item-width: 80px;
+    --menu-height: 32px;        /* 2 * std 16px */
+}
+
+/* CSS Specificity
+    https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
+    https://specifishity.com/
+*/
+
+/* -vv- Love Running Walkthrough Project -vv- */
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+/* -^^- Love Running Walkthrough Project -^^-*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: var(--primary-text);    
+}
+
+body {
+    font-family: 'Hind', sans-serif;
+    font-weight: 300;
+    color: var(--secondary-text);    
+}
+
+
+/* navigation links */
+.nav_menu {
+    padding: var(--std-padding-vert) var(--std-padding-horz) var(--std-padding-vert) var(--std-padding-horz);
+    line-height: var(--menu-height);
+}
+
+.nav_menu li {
+    float: left;
+    list-style-type: none;
+    margin-left: var(--std-spacing);
+    border: 1px solid var(--primary-light);
+    border-radius: 5px;
+    background-color: var(--primary-light);
+    padding: var(--std-padding-vert) var(--std-padding-horz) var(--std-padding-vert) var(--std-padding-horz);
+    width: var(--menu-item-width);
+    text-align: center;
+}
+
+.nav_menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav_menu li.current_page {
+    border-color: var(--primary);
+    background-color: var(--primary);
+}
+
+.nav_menu a:hover, .nav_menu li:hover {
+    border-color: var(--primary-dark);
+    background-color: var(--primary-dark);
+}
+

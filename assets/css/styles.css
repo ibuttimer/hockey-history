@@ -13,12 +13,28 @@
     --primary-text: #000000;
     --secondary-text: #000000;
 
+    --heading-font: 'Montserrat', sans-serif;
+    --heading-font_weight: 300;
+    --paragraph-font: 'Hind', sans-serif;
+    --paragraph-font_weight: 300;
+
+    --std-margin-horz: 7.5%;
+    --std-margin-vert: 5px;
+
     --std-spacing: 30px;
     --std-padding-horz: 15px;
     --std-padding-vert: 5px;
 
+    --margin-padding-horz: calc(var(--std-margin-horz) + var(--std-padding-horz));
+    --content-width: calc(100% - var(--margin-padding-horz) - var(--margin-padding-horz));
+    --content-half-width: calc(var(--content-width) / 2);
+
     --menu-item-width: 80px;
     --menu-height: 32px;        /* 2 * std 16px */
+
+    --footer-height: 50px;
+
+    --nav-menu-margin-right: 20px;
 }
 
 /* CSS Specificity
@@ -35,28 +51,58 @@
 /* -^^- Love Running Walkthrough Project -^^-*/
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    color: var(--primary-text);    
+    font-family: var(--heading-font);
+    font-weight: var(--heading-font_weight);
+    color: var(--primary-text);
+    clear: left;
 }
 
 body {
-    font-family: 'Hind', sans-serif;
-    font-weight: 300;
+    font-family: var(--paragraph-font);
+    font-weight: var(--paragraph-font_weight);
     color: var(--secondary-text);    
 }
 
+section {
+    padding: var(--std-padding-vert) var(--std-padding-horz) var(--std-padding-vert) var(--std-padding-horz);
+    margin-top: var(--std-margin-vert);
+    margin-bottom: var(--std-margin-vert);
+    margin-left: var(--std-margin-horz);
+    margin-right: var(--std-margin-horz);
+}
+
+/* classes to align with section content */
+.section-left {
+    padding-left: var(--std-padding-horz);
+    margin-left: var(--std-margin-horz);
+}
+.section-right {
+    padding-right: var(--std-padding-horz);
+    margin-right: var(--std-margin-horz);
+}
 
 /* navigation links */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/calc */
+nav {
+    width: 100%;
+}
+
 .nav_menu {
     padding: var(--std-padding-vert) var(--std-padding-horz) var(--std-padding-vert) var(--std-padding-horz);
     line-height: var(--menu-height);
+    margin-top: var(--std-margin-vert);
+    margin-bottom: var(--std-margin-vert);
+    margin-left: var(--std-margin-horz);
+    margin-right: var(--std-margin-horz);
+    height: calc(var(--std-padding-vert) + var(--menu-height) + var(--std-padding-vert));
 }
 
 .nav_menu li {
     float: left;
     list-style-type: none;
-    margin-left: var(--std-spacing);
+    margin-right: var(--nav-menu-margin-right);
+    margin-top: var(--std-margin-vert);
+    margin-bottom: var(--std-margin-vert);
     border: 1px solid var(--primary-light);
     border-radius: 5px;
     background-color: var(--primary-light);
@@ -70,6 +116,10 @@ body {
     color: inherit;
 }
 
+.nav_menu li.nav-menu-li-margin-right {
+    margin-right: 0;
+}
+
 .nav_menu li.current_page {
     border-color: var(--primary);
     background-color: var(--primary);
@@ -80,3 +130,107 @@ body {
     background-color: var(--primary-dark);
 }
 
+
+/* footer */
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: var(--content-width);
+    margin-left: var(--std-margin-horz);
+    margin-right: var(--std-margin-horz);
+    padding: var(--std-padding-vert) var(--std-padding-horz) var(--std-padding-vert) var(--std-padding-horz);
+    height: var(--footer-height);
+    color: var(--secondary-dark);
+}
+
+.copyright {
+    float: left;
+    width: 50%;
+}
+
+.socials {
+    float: right;
+    width: 50%;
+}
+
+.socials-list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.socials-list li {
+    --li-margin: calc(var(--std-spacing) - 20px);
+    display: inline;
+    margin-left: var(--li-margin);
+    margin-left: var(--li-margin);
+}
+
+.socials-list a {
+    text-decoration: none;
+    color: var(--secondary-dark);
+}
+
+/* media queries */
+
+/* larger to medium screens, 1200px wide or less */ 
+@media screen and (max-width: 1200px) {
+
+    :root {
+        --std-margin-horz: 5%;
+    }
+}
+
+/* medium screens, 950px wide or less */ 
+@media screen and (max-width: 950px) {
+
+    :root {
+        --std-margin-horz: 2.5%;
+    }
+}
+
+/* small-medium screens, 800px wide or less */ 
+@media screen and (max-width: 800px) {
+
+    :root {
+        --std-margin-horz: 1.5%;
+    }
+}
+
+/* tiny screens, 450px wide or less */ 
+@media screen and (max-width: 450px) {
+
+    :root {
+        --std-margin-horz: 0.5%;
+    }
+
+    /* navigation links */
+    .nav_menu {
+        --height: calc(var(--std-padding-vert) + var(--menu-height) + var(--std-padding-vert) + var(--std-margin-vert));
+        height: calc(var(--height) * 3);
+    }
+    .nav_menu li {
+        clear: both;
+        float: right;
+    }    
+    .nav_menu li.nav-menu-li-margin-right {
+        margin-right: var(--nav-menu-margin-right);
+    }
+        
+    /* footer */
+    .copyright {
+        float: left;
+        text-align: center;
+        width: var(--content-width);
+    }
+    .socials {
+        float: left;
+        text-align: center;
+        width: var(--content-width);
+    }
+    .socials-list {
+        justify-content: center;
+    }
+}

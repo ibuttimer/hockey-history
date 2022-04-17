@@ -13,6 +13,7 @@
   - [Font](#font)
   - [Colour Scheme](#colour-scheme)
   - [UX Elements](#ux-elements)
+  - [Accessibility](#accessibility)
 - [Resources](#resources)
 - [To Do](#to-do)
 
@@ -88,6 +89,13 @@ https://codepen.io/ibuttimer/pen/xxpzPKa
 - Information areas on timeline will box shadow on mouse hover
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator 
 - Hockey stick to act as timeline(?)
+
+## Accessibility
+The guidelines outlined in the following will be followed:
+
+- [W3C - Using ARIA](https://www.w3.org/TR/using-aria/)
+- [TPGi - Short note on aria-label, aria-labelledby, and aria-describedby](https://www.tpgi.com/short-note-on-aria-label-aria-labelledby-and-aria-describedby/)
+
 
 # Resources
 - The Evolution of Field Hockey https://www.youtube.com/watch?v=UD9r3WcZ9mA 

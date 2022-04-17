@@ -7,7 +7,7 @@ The resources page provides links to Irish and international organisations and r
 The site is aimed at both sports enthusiasts and history scholars. The aim is to provide a history of the game, as well as acting as a useful resource.
 
 ##### Fig 1: Responsive Mockup
-![Responsive Mockup](media\responsive.jpg)
+![Responsive Mockup](media/responsive.jpg)
 
 ## Features 
 
@@ -83,7 +83,7 @@ If this section grows too long, you may want to split it off into a separate fil
 
 
 ### Accessibility
-Accessibility testing was carried out using the [NVDA](https://www.nvaccess.org/) screen reader.
+Accessibility testing was carried out using the [NVDA](https://www.nvaccess.org/) and [ChromeVox](https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en) screen readers.
 
 
 ### Validator Testing 

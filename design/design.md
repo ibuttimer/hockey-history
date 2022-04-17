@@ -4,7 +4,7 @@
 - [Skeleton](#skeleton)
 - [General layout](#general-layout)
 - [Wireframes](#wireframes)
-  - [Index page](#index-page)
+  - [Home page](#home-page)
     - [Large screen](#large-screen)
     - [Medium screen](#medium-screen)
     - [Small screen](#small-screen)
@@ -27,7 +27,7 @@ Due to the low number of pages and the fact the pages will not be inter-dependen
 
 # Skeleton
 The website will consist of four pages:
-- Index
+- Home
   
   Main page with the history of field hockey, a timeline of key events and other facts.
 - Ireland
@@ -48,7 +48,7 @@ Each of the pages will have the same general layout:
 # Wireframes
 Wireframes of page layouts are available at the following location:
 
-## Index page
+## Home page
 ### Large screen
 ![](hockey_history_wireframe-index.html.jpg)
 

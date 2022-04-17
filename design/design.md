@@ -4,10 +4,11 @@
 - [Skeleton](#skeleton)
 - [General layout](#general-layout)
 - [Wireframes](#wireframes)
-  - [Main page](#main-page)
+  - [Index page](#index-page)
     - [Large screen](#large-screen)
     - [Medium screen](#medium-screen)
     - [Small screen](#small-screen)
+  - [Built With page](#built-with-page)
 - [UX Surface](#ux-surface)
   - [Font](#font)
   - [Colour Scheme](#colour-scheme)
@@ -25,10 +26,19 @@ The website will not host all available content but will provide basic informati
 Due to the low number of pages and the fact the pages will not be inter-dependent, the website will utilise a non-linear hyperlinked navigation structure. 
 
 # Skeleton
-The website will consist of three pages:
-- Main page with the history of field hockey, a timeline of key events and other facts
-- Ireland specific events and facts
-- Resources with links to Irish and international organisations, hockey blogs etc.
+The website will consist of four pages:
+- Index
+  
+  Main page with the history of field hockey, a timeline of key events and other facts.
+- Ireland
+
+  Ireland-specific page of hockey events and facts.
+- Resources
+
+  Page with links to Irish and international organisations, hockey blogs etc.
+- Built With
+
+  Page detailing the technologies and resources used to build the website.
 
 # General layout
 Each of the pages will have the same general layout:
@@ -38,7 +48,7 @@ Each of the pages will have the same general layout:
 # Wireframes
 Wireframes of page layouts are available at the following location:
 
-## Main page
+## Index page
 ### Large screen
 ![](hockey_history_wireframe-index.html.jpg)
 
@@ -48,6 +58,8 @@ Wireframes of page layouts are available at the following location:
 ### Small screen
 ![](hockey_history_wireframe-index-small.jpg)
 
+## Built With page
+![](hockey_history_wireframe-builtwith.html.jpg)
 
 # UX Surface
 ## Font

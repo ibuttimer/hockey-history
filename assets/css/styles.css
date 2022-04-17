@@ -80,6 +80,9 @@ section {
     padding-right: var(--std-padding-horz);
     margin-right: var(--std-margin-horz);
 }
+.section-centre {
+    text-align: center;
+}
 
 /* navigation links */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/calc */
@@ -147,12 +150,17 @@ footer {
 
 .copyright {
     float: left;
-    width: 50%;
+    width: 47.5%;
+}
+
+.built-with {
+    float: left;
+    width: 5%;
 }
 
 .socials {
     float: right;
-    width: 50%;
+    width: 47.5%;
 }
 
 .socials-list {
@@ -169,6 +177,11 @@ footer {
 }
 
 .socials-list a {
+    text-decoration: none;
+    color: var(--secondary-dark);
+}
+
+.built-with a {
     text-decoration: none;
     color: var(--secondary-dark);
 }
@@ -222,8 +235,13 @@ footer {
     /* footer */
     .copyright {
         float: left;
-        text-align: center;
-        width: var(--content-width);
+        text-align: left;
+        width: calc(var(--content-width) * 0.8);
+    }
+    .built-with {
+        float: right;
+        text-align: right;
+        width: calc(var(--content-width) * 0.2);
     }
     .socials {
         float: left;

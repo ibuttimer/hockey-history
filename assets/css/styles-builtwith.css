@@ -3,4 +3,7 @@ section h1, section h3 {
     margin-top: var(--std-margin-vert);
 }
 
+iframe {
+    border: 0px;
+}
 

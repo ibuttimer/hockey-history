@@ -1,14 +1,14 @@
 /* history */
 
 .article-section {
-    margin-top: var(--std-margin-vert);
-    padding-top: var(--std-padding-vert);
-    padding-bottom: var(--std-padding-vert);
+    padding: var(--std-padding-vert) var(--std-padding-horz);
+    margin: var(--std-margin-vert) var(--std-margin-horz);
 }
 
-article h1 {
+article h2 {
     margin-top: var(--std-margin-vert);
-
+    margin-left: var(--std-margin-horz);
+    padding: var(--std-padding-vert) var(--std-padding-horz);
 }
 
 /* introduction */

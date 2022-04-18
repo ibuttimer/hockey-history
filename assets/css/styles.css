@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300&family=Montserrat:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300&family=Montserrat+Alternates:wght@500&display=swap');
 
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
 :root {
@@ -8,13 +7,16 @@
     --primary-light: #6effe8;
     --primary-dark: #00b686;
     --secondary: #f9fbe7;
+    --secondary-r: 249;
+    --secondary-g: 251;
+    --secondary-b: 231;
     --secondary-light: #ffffff;
     --secondary-dark: #c6c8b5;
     --primary-text: #000000;
     --secondary-text: #000000;
 
     --heading-font: 'Montserrat', sans-serif;
-    --heading-font_weight: 300;
+    --heading-font_weight: 500;
     --paragraph-font: 'Hind', sans-serif;
     --paragraph-font_weight: 300;
 
@@ -35,6 +37,13 @@
     --footer-height: 50px;
 
     --nav-menu-margin-right: 20px;
+
+    --std-block-size: 200px;
+
+    /* one line hero text */
+    --hero-text-width: 500px;
+    --hero-text-height: 50px;
+    --hero-height: var(--std-block-size);
 }
 
 /* CSS Specificity
@@ -133,6 +142,78 @@ nav {
     background-color: var(--primary-dark);
 }
 
+/* hero image */
+#hero-outer {
+    height: var(--hero-height);
+    width: var(--content-width);
+    overflow: hidden;
+
+    position: relative;
+}
+
+#hero-text, #hero-text h2 {
+    color: var(--secondary-text);
+    line-height: var(--hero-text-height);
+}
+
+#hero-image {
+    height: var(--hero-height);
+    width: 100%;
+
+    border-radius: 10px;
+
+    background: url('../img/mas-arg-boys-2018-youth-olympics-lge.jpg') no-repeat center center;
+
+    /* animation rotation effect when page loaded */
+    animation-name: hero-animate;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+/* rotation for the hero image
+    https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function */
+@keyframes hero-animate {
+    from {
+        transform: rotateY(270deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+/* fade in for the hero image */
+@keyframes hero-fade-in {
+    0% { 
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1; 
+    }
+}
+    
+#hero-text {
+    font-size: 150%;
+    text-align: center;
+
+    width: var(--hero-text-width);
+    height: var(--hero-text-height);
+    border-radius: 10px;
+
+    background-color: rgba(var(--secondary-r), var(--secondary-g), var(--secondary-b), .7);
+
+    position: relative;
+    
+    --no-text-height: calc(var(--hero-height) - var(--hero-text-height));
+    --no-text-width: calc(100% - var(--hero-text-width));
+    top: calc(var(--no-text-height) / 2); 
+    left: calc(var(--no-text-width) / 2);
+}
+
+#one-line-hero {
+    display: block;
+}
+#two-line-hero {
+    display: none;
+}
 
 /* footer */
 
@@ -217,6 +298,10 @@ footer {
 
     :root {
         --std-margin-horz: 0.5%;
+
+        /* two line hero text */
+        --hero-text-width: 250px;
+        --hero-text-height: 100px;
     }
 
     /* navigation links */
@@ -251,4 +336,24 @@ footer {
     .socials-list {
         justify-content: center;
     }
+
+    /* hero */
+    #hero-text, #hero-text h2 {
+        line-height: calc(var(--hero-text-height) / 2);
+    }
+    #one-line-hero {
+        display: none;
+    }
+    #two-line-hero {
+        display: block;
+    }
 }
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion */
+/* Tone down the animation to avoid vestibular motion triggers like scaling or panning large objects. */
+@media (prefers-reduced-motion) {
+    #hero-image {
+      animation-name: hero-fade-in;
+    }
+  }
+

@@ -44,7 +44,7 @@ The website will consist of four pages:
 # General layout
 Each of the pages will have the same general layout:
 - Navigation buttons at top of page, with current page highlighted in a different colour. The buttons will contain the appropriate text, and FontAwsome icons will be used to visually represent the function of each page.
-- A banner image, overlayed with title and subtitle if necessary
+- A hero image, overlayed with title and subtitle if necessary
 
 # Wireframes
 Wireframes of page layouts are available at the following location:
@@ -69,7 +69,7 @@ The font used for paragraph text will be [Hind](https://fonts.google.com/specime
 
 ```css
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300&family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300&family=Montserrat+Alternates:wght@500&display=swap');
 </style>
 
 font-family: 'Hind', sans-serif;

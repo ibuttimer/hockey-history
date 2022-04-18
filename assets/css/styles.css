@@ -73,11 +73,8 @@ body {
 }
 
 section {
-    padding: var(--std-padding-vert) var(--std-padding-horz) var(--std-padding-vert) var(--std-padding-horz);
-    margin-top: var(--std-margin-vert);
-    margin-bottom: var(--std-margin-vert);
-    margin-left: var(--std-margin-horz);
-    margin-right: var(--std-margin-horz);
+    padding: var(--std-padding-vert) var(--std-padding-horz);
+    margin: var(--std-margin-vert) var(--std-margin-horz);
 }
 
 /* classes to align with section content */

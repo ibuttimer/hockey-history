@@ -69,7 +69,8 @@ h1, h2, h3, h4, h5, h6 {
 body {
     font-family: var(--paragraph-font);
     font-weight: var(--paragraph-font_weight);
-    color: var(--secondary-text);    
+    color: var(--secondary-text);
+    background-color: var(--secondary);
 }
 
 section {
@@ -215,9 +216,6 @@ nav {
 /* footer */
 
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
     width: var(--content-width);
     margin-left: var(--std-margin-horz);
     margin-right: var(--std-margin-horz);

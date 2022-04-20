@@ -1,3 +1,23 @@
+:root {
+	--timeline-year-colour: #00af41;
+
+	--triangle-border: 30px;
+
+	--timeline-thickness: 1px;
+	--timeline-colour: #a6a7b5;
+	--callout-line-thickness: 1px;
+	--callout-line-colour: #41a82c;
+
+	--content-shift: -0.25rem;
+
+	--time-donut-height: 0.5rem;
+	--time-donut-width: 0.5rem;
+	--time-donut-border: 0.25rem;
+	--time-donut-horz-shift: calc(var(--time-donut-width) * -1);
+	--time-donut-vert-shift: calc(var(--time-donut-height) * -1);
+	--time-donut-centre-colour: white;
+}
+
 /* history */
 
 .article-section {
@@ -25,7 +45,178 @@ article h2 {
     float: right;
 }
 
+/* timeline based on https://codepen.io/joemaffei/pen/WNQKyPo from https://stackoverflow.com/a/61781360
+	"Using a CSS grid with 2 rows, each segment of the timeline can be defined to be 2 columns wide. 
+	 Making the 2nd segment 3 columns wide instantly gives you a staggered layout."
+*/
+ #timeline {
+	 letter-spacing: 0.03em;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+}
+dl {
+	/* https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column */
+	display: grid;
+	grid-auto-columns: max-content;
+	grid-auto-flow: column;
+	grid-template-rows: auto auto;
+}
+dl .cell {
+	/* https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column
+		set each element to 2 columns wide */
+	grid-column: span 2;
+	display: flex;
+	padding: 0 1rem;
+}
+ dl .cell:nth-child(2) {
+	/* Set the second element in a list to 3 columns 3 */
+	grid-column: span 3;
+	justify-content: flex-end;
+}
+dl .cell .cell-content {
+	/* callout line from timeline marking content */
+	display: inline-flex;
+	flex-direction: column;
+	border-left: var(--callout-line-thickness) dashed var(--callout-line-colour);
+	position: relative;
+}
+dl .cell .cell-content::after {
+	/* donut on line */
+	content: '';
+	display: block;
+	height: var(--time-donut-height);
+	width: var(--time-donut-width);
+	position: absolute;
+	left: var(--time-donut-horz-shift);
+	border: var(--time-donut-border) solid var(--callout-line-colour);
+	background-color: var(--time-donut-centre-colour);
+	border-radius: 50%;
+}
+dl .cell .cell-content dt {
+	/* shift left, body background colour to cover callout line */
+	background-color: var(--secondary);
+	position: relative;
+	left: var(--content-shift);
 
+	color: var(--timeline-year-colour);
+	padding: 0 0 0.25em 0.25em;
+	text-transform: uppercase;
+	font-size: 0.8rem;
+	font-weight: 600;
+}
+
+dl .cell .cell-content dd {
+	/* shift left, body background colour to cover callout line */
+	background-color: var(--secondary);
+	position: relative;
+	left: var(--content-shift);
+
+	padding: 0 0 0.25em 0.25em;
+	color: var(--secondary-text);
+	font-size: 0.8rem;
+}
+dl .cell:nth-child(odd) .cell-content {
+	/* top cells part of timeline */
+	padding-bottom: 1rem;
+	border-bottom: var(--timeline-thickness) solid var(--timeline-colour);
+}
+ dl .cell:nth-child(odd) .cell-content::after {
+	 bottom: var(--time-donut-vert-shift);
+}
+ dl .cell:nth-child(odd) .cell-content dd:last-child {
+	 padding-bottom: 0.5rem;
+}
+ dl .cell:nth-child(even) .cell-content {
+	 /* bottom cells part of timeline */
+	 padding-top: 1rem;
+	 position: relative;
+	 top: -0.5px;			/* to avoid thicker line where top & bottom cells overlap */
+	 border-top: var(--timeline-thickness) solid var(--timeline-colour);
+}
+ dl .cell:nth-child(even) .cell-content::after {
+	 top: var(--time-donut-vert-shift);
+}
+ dl .cell:nth-child(even) .cell-content dt {
+	 padding-top: 0.5rem;
+}
+ dl .cell:nth-child(even) .cell-content dd {
+	 flex-grow: 1;
+}
+ dl .cell:last-child .cell-content {
+	 border-top-color: transparent;
+	 border-bottom-color: transparent;
+}
+   
+
+/* triangle-xxx class adapted from https://alvaromontoro.com/blog/67970/drawing-a-triangle-with-css */
+
+.triangle-top {
+	/* "If you set your width depending on the parent container you can set the height to 0 and 
+		set padding-bottom to the percentage which will be calculated depending on the current width", 
+		https://stackoverflow.com/a/13625843 */
+	height: 0;
+    padding-bottom: 50%;
+
+	background-image:
+		/* A gradient going from the bottom right to the top left corner,
+			starting color at 50% and finishing transparent */
+	  linear-gradient(to top left, var(--primary-dark) 50%, transparent 0);
+	background-size: 50% 100%;
+	background-repeat: no-repeat;
+	background-position: left, right;
+}
+.triangle-bottom {
+	height: 0;
+    padding-bottom: 50%;
+
+	background-image:
+		/* A gradient going from the top right to the bottom left corner,
+			starting color at 50% and finishing transparent */
+	  linear-gradient(to bottom left, var(--primary-dark) 50%, transparent 0);
+	background-size: 50% 100%;
+	background-repeat: no-repeat;
+	background-position: left, right;
+}
+  
+
+/* arrow-xxxx css classes adapted from https://css-tricks.com/snippets/css/css-triangle/ */
+
+.arrow-up {
+	width: 0; 
+	height: 0; 
+	border-left: var(--triangle-border) solid transparent;
+	border-right: var(--triangle-border) solid transparent;
+	
+	border-bottom: var(--triangle-border) solid var(--timeline-year-colour);
+  }
+  
+  .arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: var(--triangle-border) solid transparent;
+	border-right: var(--triangle-border) solid transparent;
+	
+	border-top: var(--triangle-border) solid var(--timeline-year-colour);
+  }
+  
+  .arrow-right {
+	width: 0; 
+	height: 0; 
+	border-top: var(--triangle-border) solid transparent;
+	border-bottom: var(--triangle-border) solid transparent;
+	
+	border-left: var(--triangle-border) solid var(--timeline-year-colour);
+  }
+  
+  .arrow-left {
+	width: 0; 
+	height: 0; 
+	border-top: var(--triangle-border) solid transparent;
+	border-bottom: var(--triangle-border) solid transparent; 
+	
+	border-right:var(--triangle-border) solid var(--timeline-year-colour); 
+  }
 
 /* media queries */
 

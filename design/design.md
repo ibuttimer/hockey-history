@@ -16,6 +16,9 @@
   - [Accessibility](#accessibility)
 - [Resources](#resources)
 - [To Do](#to-do)
+- [Changes](#changes)
+  - [20-04-2022](#20-04-2022)
+    - [Timeline](#timeline)
 
 # Strategy
 The strategy is to create a website outlining the history of field hockey. It will provide a brief overview of the development of the game and act as a resource for hockey related information.
@@ -51,16 +54,16 @@ Wireframes of page layouts are available at the following location:
 
 ## Home page
 ### Large screen
-![](hockey_history_wireframe-index.html.jpg)
+![](img/hockey_history_wireframe-index.html.jpg)
 
 ### Medium screen
-![](hockey_history_wireframe-index-medium.jpg)
+![](img/hockey_history_wireframe-index-medium.jpg)
 
 ### Small screen
-![](hockey_history_wireframe-index-small.jpg)
+![](img/hockey_history_wireframe-index-small.jpg)
 
 ## Built With page
-![](hockey_history_wireframe-builtwith.html.jpg)
+![](img/hockey_history_wireframe-builtwith.html.jpg)
 
 # UX Surface
 ## Font
@@ -76,19 +79,19 @@ font-family: 'Hind', sans-serif;
 font-family: 'Montserrat', sans-serif;
 ```
 
-![](font-example.jpg)
+![](img/font-example.jpg)
 
 
 ## Colour Scheme
 https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=1DE9B6&secondary.color=F9FBE7 
 https://codepen.io/ibuttimer/pen/xxpzPKa 
 
-![](colour-scheme-example.jpg)
+![](img/colour-scheme-example.jpg)
 
 ## UX Elements
 - Information areas on timeline will box shadow on mouse hover
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator 
-- Hockey stick to act as timeline(?)
+- Timeline will be implemented in CSS.
 
 ## Accessibility
 The guidelines outlined in the following will be followed:
@@ -114,3 +117,10 @@ The guidelines outlined in the following will be followed:
 
 # To Do
 - Look for Olympics images
+
+# Changes
+## 20-04-2022
+### Timeline
+Timeline was simplified. The original idea, shown below, proved too difficult to implement in the timeframe required. 
+![](img/timeline-v1.jpg)
+

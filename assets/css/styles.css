@@ -110,6 +110,14 @@ nav {
 .nav_menu li {
     float: left;
     list-style-type: none;
+    background-color: var(--secondary);
+    text-align: center;
+}
+
+.nav_menu a {
+    text-decoration: none;
+    color: inherit;
+
     margin-right: var(--nav-menu-margin-right);
     margin-top: var(--std-margin-vert);
     margin-bottom: var(--std-margin-vert);
@@ -118,24 +126,18 @@ nav {
     background-color: var(--primary-light);
     padding: var(--std-padding-vert) var(--std-padding-horz) var(--std-padding-vert) var(--std-padding-horz);
     width: var(--menu-item-width);
-    text-align: center;
-}
-
-.nav_menu a {
-    text-decoration: none;
-    color: inherit;
 }
 
 .nav_menu li.nav-menu-li-margin-right {
     margin-right: 0;
 }
 
-.nav_menu li.current_page {
+.nav_menu a.current_page {
     border-color: var(--primary);
     background-color: var(--primary);
 }
 
-.nav_menu a:hover, .nav_menu li:hover {
+.nav_menu a:hover {
     border-color: var(--primary-dark);
     background-color: var(--primary-dark);
 }

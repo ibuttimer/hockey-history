@@ -1,21 +1,56 @@
 :root {
 	--timeline-year-colour: #00af41;
 
-	--triangle-border: 30px;
-
 	--timeline-thickness: 1px;
+	--timeline-even-shift: -1px;	/* to avoid thicker line where top & bottom cells overlap */
 	--timeline-colour: #a6a7b5;
 	--callout-line-thickness: 1px;
 	--callout-line-colour: #41a82c;
 
+	/* horz timeline
+	   ------------- */
+	--grid-auto-flow: column;
+
+	--callout-line-border-left: dashed;
+
+	--timeline-line-border-top: solid;
+	--timeline-line-border-bottom: solid;
+
+	--cell-grid-column: span 2;
+	--cell-child-grid-column: span 3;
+
+	--cell-padding_size: 1rem;
+	--cell-padding: 0 var(--cell-padding_size);
+
+	--cell-flex-dir: row;
+
+	/* time above detail */
+	--cell-content-flex-direction: column;
+
+	/* vert timeline
+	   ------------- */
+	--callout-line-border-bottom: none;
+
+	--timeline-line-border-left: none;
+	--timeline-line-border-right: none;
+
+	--cell-grid-row: auto;
+	--cell-child-grid-row: auto;
+
 	--content-shift: -0.25rem;
 
-	--time-donut-height: 0.5rem;
-	--time-donut-width: 0.5rem;
-	--time-donut-border: 0.25rem;
-	--time-donut-horz-shift: calc(var(--time-donut-width) * -1);
-	--time-donut-vert-shift: calc(var(--time-donut-height) * -1);
-	--time-donut-centre-colour: white;
+	--timetick-height: 0.5rem;
+	--timetick-width: 0.5rem;
+	--timetick-border: 0.25rem;
+	--timetick-horz-shift: calc(var(--timetick-width) * -1);
+	--timetick-vert-shift: calc(var(--timetick-height) * -1);
+	--timetick-centre-colour: white;
+
+	--timetick-even-vert-shift-positive: calc(var(--timetick-height) + var(--timeline-even-shift) + var(--timeline-thickness));
+	--timetick-even-vert-shift: calc(var(--timetick-even-vert-shift-positive) * -1);
+
+	--timetick-odd-vert-shift-positive: calc(var(--timetick-height) + var(--cell-padding_size));
+	--timetick-odd-vert-shift: calc(var(--timetick-odd-vert-shift-positive) * -1);
 }
 
 /* history */
@@ -52,47 +87,64 @@ article h2 {
  #timeline {
 	 letter-spacing: 0.03em;
 	 display: flex;
-	 align-items: center;
+	 align-items: end;
 	 justify-content: center;
 }
 dl {
 	/* https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column */
 	display: grid;
+
+	/* https://developers.google.com/codelabs/devtools-debug-css-grid#0 */
+
 	grid-auto-columns: max-content;
-	grid-auto-flow: column;
+	grid-auto-rows: max-content;
+	grid-auto-flow: var(--grid-auto-flow);
 	grid-template-rows: auto auto;
+	grid-template-columns: auto auto;
 }
 dl .cell {
 	/* https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column
 		set each element to 2 columns wide */
-	grid-column: span 2;
+	grid-row: var(--cell-grid-row);
+	grid-column: var(--cell-grid-column);
 	display: flex;
-	padding: 0 1rem;
+	flex-direction: var(--cell-flex-dir);
+	padding: var(--cell-padding);
 }
  dl .cell:nth-child(2) {
-	/* Set the second element in a list to 3 columns 3 */
-	grid-column: span 3;
+	/* Set the second element in a list to 3 columns */
+	grid-row: var(--cell-child-grid-row);
+	grid-column: var(--cell-child-grid-column);
 	justify-content: flex-end;
 }
 dl .cell .cell-content {
 	/* callout line from timeline marking content */
 	display: inline-flex;
-	flex-direction: column;
-	border-left: var(--callout-line-thickness) dashed var(--callout-line-colour);
-	position: relative;
+	flex-direction: var(--cell-content-flex-direction);
+
+	/* active for horz timeline */
+	border-left-width: var(--callout-line-thickness);
+	border-left-style: var(--callout-line-border-left);
+	border-left-color: var(--callout-line-colour);
+	/* active for vert timeline */
+	border-bottom-width: var(--callout-line-thickness);
+	border-bottom-style: var(--callout-line-border-bottom);
+	border-bottom-color: var(--callout-line-colour);
+
 }
+
 dl .cell .cell-content::after {
-	/* donut on line */
+	/* time tick on line: donut */
 	content: '';
 	display: block;
-	height: var(--time-donut-height);
-	width: var(--time-donut-width);
-	position: absolute;
-	left: var(--time-donut-horz-shift);
-	border: var(--time-donut-border) solid var(--callout-line-colour);
-	background-color: var(--time-donut-centre-colour);
+	height: var(--timetick-height);
+	width: var(--timetick-width);
+
+	border: var(--timetick-border) solid var(--callout-line-colour);
+	background-color: var(--timetick-centre-colour);
 	border-radius: 50%;
 }
+
 dl .cell .cell-content dt {
 	/* shift left, body background colour to cover callout line */
 	background-color: var(--secondary);
@@ -111,117 +163,110 @@ dl .cell .cell-content dd {
 	background-color: var(--secondary);
 	position: relative;
 	left: var(--content-shift);
-
+    flex-grow: 1;
+	
 	padding: 0 0 0.25em 0.25em;
 	color: var(--secondary-text);
 	font-size: 0.8rem;
 }
+
 dl .cell:nth-child(odd) .cell-content {
-	/* top cells part of timeline */
+	/* top/right cells part of timeline */
 	padding-bottom: 1rem;
-	border-bottom: var(--timeline-thickness) solid var(--timeline-colour);
+
+	justify-content: end;
+
+	/* active for horz timeline */
+	border-bottom-width: var(--timeline-thickness);
+	border-bottom-style: var(--timeline-line-border-bottom);
+	border-bottom-color: var(--timeline-colour);
 }
- dl .cell:nth-child(odd) .cell-content::after {
-	 bottom: var(--time-donut-vert-shift);
+dl .cell:nth-child(odd) .cell-content::after {
+	bottom: var(--timetick-vert-shift);
 }
- dl .cell:nth-child(odd) .cell-content dd:last-child {
-	 padding-bottom: 0.5rem;
+dl .cell:nth-child(odd) .cell-content dd:last-child {
+	padding-bottom: 0.5rem;
 }
- dl .cell:nth-child(even) .cell-content {
-	 /* bottom cells part of timeline */
-	 padding-top: 1rem;
-	 position: relative;
-	 top: -0.5px;			/* to avoid thicker line where top & bottom cells overlap */
-	 border-top: var(--timeline-thickness) solid var(--timeline-colour);
+dl .cell:nth-child(even) .cell-content {
+	/* bottom/left cells part of timeline */
+	padding-top: 1rem;
+	position: relative;
+	/* to avoid thicker line where top & bottom cells overlap */
+	top: var(--timeline-even-shift);
+	 
+	/* active for horz timeline */
+	border-top-width: var(--timeline-thickness);
+	border-top-style: var(--timeline-line-border-top);
+	border-top-color: var(--timeline-colour);
 }
- dl .cell:nth-child(even) .cell-content::after {
-	 top: var(--time-donut-vert-shift);
+dl .cell:nth-child(even) .cell-content::after {
+	 top: var(--timetick-vert-shift);
 }
- dl .cell:nth-child(even) .cell-content dt {
+dl .cell:nth-child(even) .cell-content dt {
 	 padding-top: 0.5rem;
 }
- dl .cell:nth-child(even) .cell-content dd {
+dl .cell:nth-child(even) .cell-content dd {
 	 flex-grow: 1;
 }
- dl .cell:last-child .cell-content {
+dl .cell:last-child .cell-content {
 	 border-top-color: transparent;
 	 border-bottom-color: transparent;
 }
    
 
-/* triangle-xxx class adapted from https://alvaromontoro.com/blog/67970/drawing-a-triangle-with-css */
-
-.triangle-top {
-	/* "If you set your width depending on the parent container you can set the height to 0 and 
-		set padding-bottom to the percentage which will be calculated depending on the current width", 
-		https://stackoverflow.com/a/13625843 */
-	height: 0;
-    padding-bottom: 50%;
-
-	background-image:
-		/* A gradient going from the bottom right to the top left corner,
-			starting color at 50% and finishing transparent */
-	  linear-gradient(to top left, var(--primary-dark) 50%, transparent 0);
-	background-size: 50% 100%;
-	background-repeat: no-repeat;
-	background-position: left, right;
-}
-.triangle-bottom {
-	height: 0;
-    padding-bottom: 50%;
-
-	background-image:
-		/* A gradient going from the top right to the bottom left corner,
-			starting color at 50% and finishing transparent */
-	  linear-gradient(to bottom left, var(--primary-dark) 50%, transparent 0);
-	background-size: 50% 100%;
-	background-repeat: no-repeat;
-	background-position: left, right;
-}
-  
-
-/* arrow-xxxx css classes adapted from https://css-tricks.com/snippets/css/css-triangle/ */
-
-.arrow-up {
-	width: 0; 
-	height: 0; 
-	border-left: var(--triangle-border) solid transparent;
-	border-right: var(--triangle-border) solid transparent;
-	
-	border-bottom: var(--triangle-border) solid var(--timeline-year-colour);
-  }
-  
-  .arrow-down {
-	width: 0; 
-	height: 0; 
-	border-left: var(--triangle-border) solid transparent;
-	border-right: var(--triangle-border) solid transparent;
-	
-	border-top: var(--triangle-border) solid var(--timeline-year-colour);
-  }
-  
-  .arrow-right {
-	width: 0; 
-	height: 0; 
-	border-top: var(--triangle-border) solid transparent;
-	border-bottom: var(--triangle-border) solid transparent;
-	
-	border-left: var(--triangle-border) solid var(--timeline-year-colour);
-  }
-  
-  .arrow-left {
-	width: 0; 
-	height: 0; 
-	border-top: var(--triangle-border) solid transparent;
-	border-bottom: var(--triangle-border) solid transparent; 
-	
-	border-right:var(--triangle-border) solid var(--timeline-year-colour); 
-  }
-
 /* media queries */
+
+/* other than small-medium screens, 800px wide or less */ 
+@media not screen and (max-width: 800px) {
+
+	dl .cell:nth-child(even) .cell-content::after {
+		/* time tick on line: donut */
+		position: absolute;
+		left: var(--timetick-horz-shift);
+		top: var(--timetick-even-vert-shift);
+	}
+	
+	dl .cell:nth-child(odd) .cell-content::after {
+		/* time tick on line: donut */
+		position: relative;
+		left: var(--timetick-horz-shift);
+		bottom: var(--timetick-odd-vert-shift);
+	}
+}
+
 
 /* small-medium screens, 800px wide or less */ 
 @media screen and (max-width: 800px) {
+
+	:root {
+
+		--grid-auto-flow: row;
+
+		/* horz timeline
+		   ------------- */
+		--cell-grid-column: auto;
+		--cell-child-grid-column: auto;
+
+		--callout-line-border-left: none;
+
+		--timeline-line-border-top: none;
+		--timeline-line-border-bottom: none;
+   
+		/* vert timeline
+		------------- */
+		--cell-padding: var(--cell-padding_size) 0;
+
+		--cell-flex-dir: column;
+
+		--cell-grid-row: span 2;
+		--cell-child-grid-row: span 3;
+
+		--callout-line-border-bottom: dashed;
+
+		--timeline-line-border-left: solid;
+		--timeline-line-border-right: solid;
+	}
+
 
     #left-intro {
         width: 100%;
@@ -236,6 +281,66 @@ dl .cell:nth-child(odd) .cell-content {
         align-items: center;
         justify-content: center;
         padding: 0;
-    }    
+    }
+
+	/* don't display every third <br> */
+	dl .cell .cell-content dd br:nth-child(3n) {
+		display: none;
+	}
+
+	dl .cell .cell-content::after {
+		/* time tick on line: donut */
+		position: relative;
+	}
+	dl .cell:nth-child(odd) .cell-content {
+		/* right cell's part of timeline */
+		/* active for vert timeline */
+		border-right-width: var(--timeline-thickness);
+		border-right-style: var(--timeline-line-border-right);
+		border-right-color: var(--timeline-colour);
+
+		/* restore callout cleared in previous nth-child(odd) selector */
+		border-bottom-width: var(--callout-line-thickness);
+		border-bottom-style: var(--callout-line-border-bottom);
+		border-bottom-color: var(--callout-line-colour);
+
+		padding-right: var(--cell-padding_size);
+	}
+	dl .cell:nth-child(even) .cell-content {
+		/* left cell's part of timeline */
+		position: relative;
+		/* to avoid thicker line where top & bottom cells overlap */
+		left: var(--timeline-even-shift);
+
+		/* active for vert timeline */
+		border-left-width: var(--timeline-thickness);
+		border-left-style: var(--timeline-line-border-left);
+		border-left-color: var(--timeline-colour);
+
+		padding-left: var(--cell-padding_size);
+	}
+	dl .cell:nth-child(odd) .cell-content::after {
+		/* time tick on line: donut */
+		right: calc(-100% - var(--timetick-horz-shift) - var(--cell-padding_size));
+		bottom: calc(var(--timetick-vert-shift) - var(--cell-padding_size));
+	}
+	dl .cell:nth-child(even) .cell-content::after {
+		/* time tick on line: donut */
+		left: calc(var(--timetick-horz-shift) - var(--cell-padding_size));
+		top: calc(var(--timetick-vert-shift) + var(--cell-padding_size));
+	}
+
+	dl .cell:last-child .cell-content {
+		border-bottom-color: var(--callout-line-colour);
+   }
+}
+
+/* tiny screens, 450px wide or less */ 
+@media screen and (max-width: 450px) {
+
+	/* don't display every second <br> */
+	dl .cell .cell-content dd br:nth-child(odd) {
+		display: none;
+	}
 }
 

@@ -31,7 +31,7 @@
     --content-width: calc(100% - var(--margin-padding-horz) - var(--margin-padding-horz));
     --content-half-width: calc(var(--content-width) / 2);
 
-    --menu-item-width: 80px;
+    --menu-item-width: 120px;
     --menu-height: 32px;        /* 2 * std 16px */
 
     --footer-height: 50px;
@@ -112,11 +112,13 @@ nav {
     list-style-type: none;
     background-color: var(--secondary);
     text-align: center;
+    width: var(--menu-item-width);
 }
 
 .nav_menu a {
     text-decoration: none;
     color: inherit;
+    display: flex;
 
     margin-right: var(--nav-menu-margin-right);
     margin-top: var(--std-margin-vert);
@@ -125,7 +127,9 @@ nav {
     border-radius: 5px;
     background-color: var(--primary-light);
     padding: var(--std-padding-vert) var(--std-padding-horz) var(--std-padding-vert) var(--std-padding-horz);
-    width: var(--menu-item-width);
+    flex-direction: row;
+    max-width: var(--menu-item-width);
+    align-items: baseline;
 }
 
 .nav_menu li.nav-menu-li-margin-right {
@@ -251,7 +255,6 @@ footer {
     --li-margin: calc(var(--std-spacing) - 20px);
     display: inline;
     margin-left: var(--li-margin);
-    margin-left: var(--li-margin);
 }
 
 .socials-list a {
@@ -303,16 +306,13 @@ footer {
 
     /* navigation links */
     .nav_menu {
-        --height: calc(var(--std-padding-vert) + var(--menu-height) + var(--std-padding-vert) + var(--std-margin-vert));
+        --height: calc((var(--std-padding-vert) * 2) + var(--menu-height));
         height: calc(var(--height) * 3);
     }
     .nav_menu li {
         clear: both;
         float: right;
     }    
-    .nav_menu li.nav-menu-li-margin-right {
-        margin-right: var(--nav-menu-margin-right);
-    }
         
     /* footer */
     .copyright {

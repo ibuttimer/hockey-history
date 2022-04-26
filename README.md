@@ -71,6 +71,9 @@ In addition, you may also use this section to discuss plans for additional featu
 
 - Another feature idea
 
+## Design 
+The design specification is available in [design.md](design/design.md).
+
 ## Testing 
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your project’s features and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
@@ -125,8 +128,6 @@ The following resources were used to build the website.
 
 ### Media
 
-- The photos used on the home and sign up page are from This Open Source site
-- The images used for the gallery page were taken from this other open source site
 - Hero image by [BugWarp - Own work](https://commons.wikimedia.org/w/index.php?curid=75142522), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), cropped
 - Hero image layout based on CodeInstitute: LR101, Love Running - Essentials Project  
 - The [Responsive Mockup](#fig-1-responsive-mockup) image was generated courtesy of [Am I Responsive](http://ami.responsivedesign.is/)

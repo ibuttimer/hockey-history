@@ -8,6 +8,7 @@
     - [Large screen](#large-screen)
     - [Medium screen](#medium-screen)
     - [Small screen](#small-screen)
+  - [Ireland page](#ireland-page)
   - [Built With page](#built-with-page)
 - [UX Surface](#ux-surface)
   - [Font](#font)
@@ -19,6 +20,8 @@
 - [Changes](#changes)
   - [20-04-2022](#20-04-2022)
     - [Timeline](#timeline)
+  - [26-04-2022](#26-04-2022)
+    - [Ireland page](#ireland-page-1)
 
 # Strategy
 The strategy is to create a website outlining the history of field hockey. It will provide a brief overview of the development of the game and act as a resource for hockey related information.
@@ -50,9 +53,15 @@ Each of the pages will have the same general layout:
 - A hero image, overlayed with title and subtitle if necessary
 
 # Wireframes
-Wireframes of page layouts are available at the following location:
+Wireframes of page layouts are as followings:
 
 ## Home page
+
+The Home page will have the following features:
+- Hockey overview and history sections
+- Embedded YouTube video(s)
+- Responsive timeline outlining key events and dates
+
 ### Large screen
 ![](img/hockey_history_wireframe-index.html.jpg)
 
@@ -62,7 +71,16 @@ Wireframes of page layouts are available at the following location:
 ### Small screen
 ![](img/hockey_history_wireframe-index-small.jpg)
 
+## Ireland page
+The Ireland page will have the following features:
+- Information card laid out in a responsive grid
+
+![](img/hockey_history_wireframe-ireland.html.jpg)
+
 ## Built With page
+The Built With page will have the following features:
+- Lists of resources/sources for individual sections
+
 ![](img/hockey_history_wireframe-builtwith.html.jpg)
 
 # UX Surface
@@ -123,4 +141,7 @@ The guidelines outlined in the following will be followed:
 ### Timeline
 Timeline was simplified. The original idea, shown below, proved too difficult to implement in the timeframe required. 
 ![](img/timeline-v1.jpg)
+## 26-04-2022
+### Ireland page
+Added Ireland page design. 
 

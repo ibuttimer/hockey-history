@@ -1,0 +1,100 @@
+:root {
+
+	--std-card-margin: 30px;
+
+	--card-border: 1px;
+	--card-border-colour: var(--primary-light);
+	--card-shadow-colour: var(--secondary-dark);
+
+	--card-border-hover: 2px;
+	--card-border-colour-hover: var(--primary-dark);
+	--card-background-colour-hover: var(--secondary-light);
+
+}
+
+/* history */
+
+.article-section {
+    padding: var(--std-padding-vert) var(--std-padding-horz);
+    margin: var(--std-margin-vert) var(--std-margin-horz);
+}
+
+article h2 {
+    margin-top: var(--std-margin-vert);
+    margin-left: var(--std-margin-horz);
+    padding: var(--std-padding-vert) var(--std-padding-horz);
+}
+
+/* introduction */
+
+#left-intro {
+    padding-top: var(--std-padding-vert);
+    width: 66%;
+    float: left;
+}
+
+#right-intro {
+    padding-top: var(--std-padding-vert);
+    width: 33%;
+    float: right;
+}
+
+
+#card-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+.card {
+	margin: var(--std-card-margin);
+    padding: var(--std-padding-vert) var(--std-padding-horz);
+	box-shadow: 6px 3px 3px var(--card-shadow-colour);
+	border: var(--card-border) solid var(--card-border-colour);
+	border-radius: 5%;
+}
+
+.card:hover {
+	border: var(--card-border-hover) dotted var(--card-border-colour-hover);
+	background-color: var(--card-background-colour-hover);
+}
+
+
+
+
+
+/* media queries */
+
+/* small-medium screens, 800px wide or less */ 
+@media screen and (max-width: 800px) {
+
+	:root {
+	}
+
+
+    #left-intro {
+        width: 100%;
+        float: left;
+        padding: 0;
+    }
+
+    #right-intro {
+        clear: both;
+        width: 100%;
+        float: left;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+	#card-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+/* tiny screens, 450px wide or less */ 
+@media screen and (max-width: 450px) {
+
+	#card-grid {
+		grid-template-columns: 1fr;
+	}
+}
+

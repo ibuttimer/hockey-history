@@ -78,6 +78,17 @@ section {
     margin: var(--std-margin-vert) var(--std-margin-horz);
 }
 
+.article-section {
+    padding: var(--std-padding-vert) var(--std-padding-horz);
+    margin: var(--std-margin-vert) var(--std-margin-horz);
+}
+
+article h2 {
+    margin-top: var(--std-margin-vert);
+    margin-left: var(--std-margin-horz);
+    padding: var(--std-padding-vert) var(--std-padding-horz);
+}
+
 /* classes to align with section content */
 .section-left {
     padding-left: var(--std-padding-horz);

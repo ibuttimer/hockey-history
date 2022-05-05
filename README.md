@@ -131,6 +131,8 @@ The following resources were used to build the website.
 - Hero image by [BugWarp - Own work](https://commons.wikimedia.org/w/index.php?curid=75142522), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), cropped
 - Hero image layout based on CodeInstitute: LR101, Love Running - Essentials Project  
 - The [Responsive Mockup](#fig-1-responsive-mockup) image was generated courtesy of [Am I Responsive](http://ami.responsivedesign.is/)
+- [Hockey field image](https://commons.wikimedia.org/wiki/File:Hockey_field_metric.svg), Hockey_field.svg: User Robert Merkel on en.wikipedia, derivative work: Lcmortensen, Public domain, via Wikimedia Commons, derivative work: landscape, updated labels, length and width dimensions
+- Maps by [FreeVectorMaps.com](https://freevectormaps.com/), [Attribution License (Free)](https://freevectormaps.com/license), cropped, transparent background
 
 
 ## Other General Project Advice

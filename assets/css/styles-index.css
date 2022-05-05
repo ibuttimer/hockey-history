@@ -62,19 +62,6 @@
 	--timetick-odd-vert-shift: calc(var(--timetick-odd-vert-shift-positive) * -1);
 }
 
-/* history */
-
-.article-section {
-    padding: var(--std-padding-vert) var(--std-padding-horz);
-    margin: var(--std-margin-vert) var(--std-margin-horz);
-}
-
-article h2 {
-    margin-top: var(--std-margin-vert);
-    margin-left: var(--std-margin-horz);
-    padding: var(--std-padding-vert) var(--std-padding-horz);
-}
-
 /* introduction */
 
 #left-intro {

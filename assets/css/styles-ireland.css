@@ -12,19 +12,6 @@
 
 }
 
-/* history */
-
-.article-section {
-    padding: var(--std-padding-vert) var(--std-padding-horz);
-    margin: var(--std-margin-vert) var(--std-margin-horz);
-}
-
-article h2 {
-    margin-top: var(--std-margin-vert);
-    margin-left: var(--std-margin-horz);
-    padding: var(--std-padding-vert) var(--std-padding-horz);
-}
-
 /* introduction */
 
 #left-intro {
@@ -65,10 +52,6 @@ article h2 {
 
 /* small-medium screens, 800px wide or less */ 
 @media screen and (max-width: 800px) {
-
-	:root {
-	}
-
 
     #left-intro {
         width: 100%;

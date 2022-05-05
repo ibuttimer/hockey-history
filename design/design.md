@@ -9,6 +9,7 @@
     - [Medium screen](#medium-screen)
     - [Small screen](#small-screen)
   - [Ireland page](#ireland-page)
+  - [Resources page](#resources-page)
   - [Built With page](#built-with-page)
 - [UX Surface](#ux-surface)
   - [Font](#font)
@@ -22,6 +23,8 @@
     - [Timeline](#timeline)
   - [26-04-2022](#26-04-2022)
     - [Ireland page](#ireland-page-1)
+  - [05-05-2022](#05-05-2022)
+    - [Resources page](#resources-page-1)
 
 # Strategy
 The strategy is to create a website outlining the history of field hockey. It will provide a brief overview of the development of the game and act as a resource for hockey related information.
@@ -73,9 +76,16 @@ The Home page will have the following features:
 
 ## Ireland page
 The Ireland page will have the following features:
-- Information card laid out in a responsive grid
+- Information cards laid out in a responsive grid
 
 ![](img/hockey_history_wireframe-ireland.html.jpg)
+
+## Resources page
+The Resources page will have the following features:
+- Table with basic rules of hockey
+- Country cards laid out in a responsive grid, which display resources when hovered over.
+
+![](img/hockey_history_wireframe-resources.html.jpg)
 
 ## Built With page
 The Built With page will have the following features:
@@ -144,4 +154,7 @@ Timeline was simplified. The original idea, shown below, proved too difficult to
 ## 26-04-2022
 ### Ireland page
 Added Ireland page design. 
+## 05-05-2022
+### Resources page
+Added Resources page design. 
 

@@ -196,7 +196,18 @@ nav {
 
     border-radius: 10px;
 
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/image/image-set */
     background: url('../img/mas-arg-boys-2018-youth-olympics-lge.jpg') no-repeat center center;
+    background-image: -webkit-image-set(
+        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-lge_ne1kur.webp" type("image/webp"),
+        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-lge_hrrour.jpg" type("image/jpeg")
+    );
+    background-image: image-set(
+        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-lge_ne1kur.webp" type("image/webp"),
+        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-lge_hrrour.jpg" type("image/jpeg")
+    );
+
+    background-color: var(--primary);
 
     /* animation rotation effect when page loaded */
     animation-name: hero-animate;
@@ -320,6 +331,20 @@ footer {
 
     :root {
         --std-margin-horz: 1.5%;
+
+        --hero-height: 190px;   /* to match height of small image */
+    }
+
+    #hero-image {
+        background-image: url('../img/mas-arg-boys-2018-youth-olympics-med.jpg');
+        background-image: -webkit-image-set(
+            "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-med_shomyl.webp" type("image/webp"),
+            "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-med_qo5apd.jpg" type("image/jpeg")
+        );
+        background-image: image-set(
+            "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-med_shomyl.webp" type("image/webp"),
+            "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-med_qo5apd.jpg" type("image/jpeg")
+        );
     }
 }
 
@@ -332,6 +357,18 @@ footer {
         /* two line hero text */
         --hero-text-width: 250px;
         --hero-text-height: 100px;
+    }
+
+    #hero-image {
+        background-image: url('../img/mas-arg-boys-2018-youth-olympics-sml.jpg');
+        background-image: -webkit-image-set(
+            "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-sml_yl80np.webp" type("image/webp"),
+            "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-sml_r9zywy.jpg" type("image/jpeg")
+        );
+        background-image: image-set(
+            "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-sml_yl80np.webp" type("image/webp"),
+            "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-sml_r9zywy.jpg" type("image/jpeg")
+        );
     }
 
     /* navigation links */

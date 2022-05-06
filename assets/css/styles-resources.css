@@ -160,12 +160,6 @@ article h2 {
     text-decoration: none;
 }
 
-/* .resource-info:hover {
-    height: 100%;
-
-} */
-
-
 
 /* media queries */
 
@@ -176,10 +170,16 @@ article h2 {
         grid-template-columns: 1fr;
     }
 
+    #card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* tiny screens, 450px wide or less */ 
-/* @media screen and (max-width: 450px) {
+@media screen and (max-width: 450px) {
 
-} */
+    #card-grid {
+        grid-template-columns: 1fr;
+    }
+}
 

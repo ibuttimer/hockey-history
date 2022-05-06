@@ -44,6 +44,15 @@
     --hero-text-width: 500px;
     --hero-text-height: 50px;
     --hero-height: var(--std-block-size);
+
+
+    /* default heading heights; https://www.w3schools.com/tags/tag_hn.asp */
+    --default-h1-height: 2em;
+    --default-h2-height: 1.5em;
+    --default-h3-height: 1.17em;
+    --default-h4-height: 1em;
+    --default-h5-height: 0.83em;
+    --default-h6-height: .67em;
 }
 
 /* CSS Specificity
@@ -80,6 +89,8 @@ section {
 
 .article-section {
     padding: var(--std-padding-vert) var(--std-padding-horz);
+    /* padding for vertical headings */
+    padding-left: calc(var(--std-padding-horz) + var(--default-h2-height) + var(--std-margin-vert));
     margin: var(--std-margin-vert) var(--std-margin-horz);
 }
 
@@ -88,6 +99,14 @@ article h2 {
     margin-left: var(--std-margin-horz);
     padding: var(--std-padding-vert) var(--std-padding-horz);
 }
+
+h2.heading {
+    transform-origin: bottom left;
+    transform: rotate(90deg);
+    display: inline-block;
+    clear: both;
+}
+
 
 /* classes to align with section content */
 .section-left {

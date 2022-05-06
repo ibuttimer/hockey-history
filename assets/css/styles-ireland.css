@@ -39,6 +39,11 @@
 	border-radius: 5%;
 }
 
+article.card div.article-section {
+    padding-left: var(--std-padding-horz);
+}
+
+
 .card:hover {
 	border: var(--card-border-hover) dotted var(--card-border-colour-hover);
 	background-color: var(--card-background-colour-hover);

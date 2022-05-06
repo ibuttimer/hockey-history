@@ -26,7 +26,11 @@
 }
 
 
-.heading {
+/*
+    https://developer.mozilla.org/en-US/docs/Web/HTML/Element/colgroup
+    https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th#attr-scope
+*/
+.table-heading {
     background-color: #d7d9f2;
 }
 
@@ -100,7 +104,7 @@ td li {
 
 
 article h2 {
-    margin-left: 0px;
+    /* margin-left: 0px; */
     padding-left: 0px;
 }
 
@@ -108,7 +112,7 @@ article h2 {
 
 .resource-grid {
     /* default h2 height + article h2 margin-top + 2 * (article h2 padding) */
-    --heading-row-initial: calc(1.5em + var(--std-margin-vert) + (2 * var(--std-padding-vert)));
+    --heading-row-initial: calc(var(--default-h2-height) + var(--std-margin-vert) + (2 * var(--std-padding-vert)));
     --map-row-initial: calc(var(--resource-card-height) - var(--heading-row-initial));
 
 	display: grid;

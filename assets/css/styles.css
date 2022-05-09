@@ -27,12 +27,22 @@
     --std-padding-horz: 15px;
     --std-padding-vert: 5px;
 
+    --std-border-radius: 5px;
+
     --margin-padding-horz: calc(var(--std-margin-horz) + var(--std-padding-horz));
     --content-width: calc(100% - var(--margin-padding-horz) - var(--margin-padding-horz));
     --content-half-width: calc(var(--content-width) / 2);
 
-    --menu-item-width: 120px;
+    --menu-item-width: 130px;
     --menu-height: 32px;        /* 2 * std 16px */
+
+    --padded-menu-height: calc((2 * var(--std-padding-vert)) + var(--menu-height));
+
+    --nav-transition-time: 300ms;
+    --nav-transition-func: ease-in-out;
+
+    --hamburger-bar-height: 4px;
+    --hamburger-bar-width: 30px;
 
     --footer-height: 50px;
 
@@ -121,61 +131,123 @@ h2.heading {
     text-align: center;
 }
 
-/* navigation links */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/calc */
-nav {
-    width: 100%;
-}
 
-.nav_menu {
-    padding: var(--std-padding-vert) var(--std-padding-horz) var(--std-padding-vert) var(--std-padding-horz);
-    line-height: var(--menu-height);
-    margin-top: var(--std-margin-vert);
-    margin-bottom: var(--std-margin-vert);
+/* navigation links
+
+    hamburger menu based on 'Responsive CSS Hamburger Menu - CSS only' (https://codepen.io/alvarotrigo/pen/MWEJEWG)
+    from https://alvarotrigo.com/blog/hamburger-menu-css/
+ */
+.top-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--secondary);
+    height: var(--padded-menu-height);
     margin-left: var(--std-margin-horz);
-    margin-right: var(--std-margin-horz);
-    height: calc(var(--std-padding-vert) + var(--menu-height) + var(--std-padding-vert));
-}
-
-.nav_menu li {
-    float: left;
+    padding: var(--std-padding-vert) var(--std-padding-horz);
+  }
+  
+.nav-menu {
+    display: flex;
+    flex-direction: row;
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+  
+.nav-menu > li {
+    overflow: hidden;
     background-color: var(--secondary);
     text-align: center;
     width: var(--menu-item-width);
 }
-
-.nav_menu a {
+  
+.nav-menu > li a {
     text-decoration: none;
     color: inherit;
     display: flex;
-
+    
     margin-right: var(--nav-menu-margin-right);
     margin-top: var(--std-margin-vert);
     margin-bottom: var(--std-margin-vert);
     border: 1px solid var(--primary-light);
-    border-radius: 5px;
+    border-radius: var(--std-border-radius);
     background-color: var(--primary-light);
-    padding: var(--std-padding-vert) var(--std-padding-horz) var(--std-padding-vert) var(--std-padding-horz);
+    padding: var(--std-padding-vert) var(--std-padding-horz);
     flex-direction: row;
     max-width: var(--menu-item-width);
     align-items: baseline;
 }
 
-.nav_menu li.nav-menu-li-margin-right {
-    margin-right: 0;
-}
-
-.nav_menu a.current_page {
+.nav-menu > li a.current_page {
     border-color: var(--primary);
     background-color: var(--primary);
 }
 
-.nav_menu a:hover {
+.nav-menu > li a:hover {
     border-color: var(--primary-dark);
     background-color: var(--primary-dark);
 }
 
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: var(--hamburger-bar-width);
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+#menu-toggle {
+    display: none;
+}
+  
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    /* 3 bars */
+    display: block;
+    background-color: var(--primary-dark);
+    position: absolute;
+
+    height: var(--hamburger-bar-height);
+    width: var(--hamburger-bar-width);
+    transition: transform var(--nav-transition-time) var(--nav-transition-func);
+    border-radius: calc(var(--hamburger-bar-height) / 2);
+}
+  
+.menu-button::before {
+    /* before bar: top */
+    content: "";
+    margin-top: calc((2 * var(--hamburger-bar-height)) * -1);
+}
+  
+.menu-button::after {
+    /* after bar: bottom */
+    content: "";
+    margin-top: calc(2 * var(--hamburger-bar-height));
+}
+  
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+    /* before bar: 45 degrees */
+    margin-top: 0px;
+    transform: rotate(45deg);
+}
+  
+#menu-toggle:checked + .menu-button-container .menu-button {
+    /* middle bar: transparent */
+    background: rgba(255, 255, 255, 0);
+}
+  
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+    /* after bar: -45 degrees */
+    margin-top: 0px;
+    transform: rotate(-45deg);
+}
+  
 /* hero image */
 #hero-outer {
     height: var(--hero-height);
@@ -345,6 +417,56 @@ footer {
             "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-med_shomyl.webp" type("image/webp"),
             "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-med_qo5apd.jpg" type("image/jpeg")
         );
+    }
+}
+
+/* tiny-small screens, 600px wide or less */ 
+@media screen and (max-width: 600px) {
+
+    .menu-button-container {
+        display: flex;
+    }
+  
+    .nav-menu {
+        position: absolute;
+        top: 0;
+        margin-top: var(--padded-menu-height);
+        left: var(--std-margin-horz);
+        flex-direction: column;
+        width: 100%;
+        justify-content: left;
+    }
+  
+    .nav-menu > li a {
+        display: block;
+        width: var(--menu-item-width);
+    }
+    
+    /* don't display menu items when hamburger unopened */
+    #menu-toggle ~ .nav-menu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: none var(--nav-transition-time) var(--nav-transition-func);
+    }
+  
+    /* display menu items when hamburger opened */
+    #menu-toggle:checked ~ .nav-menu li {
+        border: 1px solid var(--secondary);
+        border-radius: var(--std-border-radius);
+        z-index: 1;
+        height: var(--padded-menu-height);
+        padding: var(--std-padding-vert) var(--std-padding-horz);
+        margin-left: var(--std-margin-horz);
+        transition: height var(--nav-transition-time) var(--nav-transition-func);
+    }
+    
+    .nav-menu > li {
+        display: flex;
+        justify-content: left;
+        width: calc(var(--menu-item-width) + (2 * var(--std-padding-horz)));
+        background-color: var(--secondary);
     }
 }
 

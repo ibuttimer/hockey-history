@@ -22,8 +22,12 @@
 
 <body>
     <header>
-        <nav>
-            <ul class="nav_menu">
+        <nav class="top-nav">
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+            </label>
+            <ul class="nav-menu">
                 <li>
                     <a href="index.html"><i class="fas fa-home"></i>&nbsp;Home</a>
                 </li>
@@ -80,12 +84,17 @@
                 </li>
                 <li>
                     <span class="fa-li"><i class="fas fa-tools"></i></span>
-                    <a href="https://freevectormaps.com/"  target="_blank" rel="noopener"
+                    <a href="https://freevectormaps.com/" target="_blank" rel="noopener"
                         aria-label="visit FreeVectorMaps.com in another tab">
                         Maps by FreeVectorMaps.com</a>
                         , derivative work: cropped, transparent background
                 </li>
-
+                <li>
+                    <span class="fa-li"><i class="fas fa-tools"></i></span>
+                    Hamburger menu based on <a href="https://alvarotrigo.com/blog/hamburger-menu-css/"  target="_blank" rel="noopener"
+                        aria-label="visit 10+ Hamburger Menu Examples CSS Only by Luke Embrey in another tab">
+                        10+ Hamburger Menu Examples [CSS Only] by Luke Embrey</a>
+                </li>
             </ul>
         </section>
         <section>

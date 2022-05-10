@@ -25,6 +25,8 @@
     - [Ireland page](#ireland-page-1)
   - [05-05-2022](#05-05-2022)
     - [Resources page](#resources-page-1)
+  - [09-05-2022](#09-05-2022)
+    - [Navigation menu](#navigation-menu)
 
 # Strategy
 The strategy is to create a website outlining the history of field hockey. It will provide a brief overview of the development of the game and act as a resource for hockey related information.
@@ -157,4 +159,7 @@ Added Ireland page design.
 ## 05-05-2022
 ### Resources page
 Added Resources page design. 
+## 09-05-2022
+### Navigation menu
+Updated navigation menu to utilise hamburger menu on small screens. 
 

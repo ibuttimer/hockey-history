@@ -134,6 +134,12 @@ The following resources were used to build the website.
 - [Hockey field image](https://commons.wikimedia.org/wiki/File:Hockey_field_metric.svg), Hockey_field.svg: User Robert Merkel on en.wikipedia, derivative work: Lcmortensen, Public domain, via Wikimedia Commons, derivative work: landscape, updated labels, length and width dimensions
 - Maps by [FreeVectorMaps.com](https://freevectormaps.com/), [Attribution License (Free)](https://freevectormaps.com/license), cropped, transparent background
 - Hamburger menu based on [Responsive CSS Hamburger Menu - CSS only](https://codepen.io/alvarotrigo/pen/MWEJEWG) from [10+ Hamburger Menu Examples &#xff3b;CSS Only&#xff3d; by Luke Embrey](https://alvarotrigo.com/blog/hamburger-menu-css/)
+- [Flag of Ireland hockey team image](https://commons.wikimedia.org/wiki/File:Flag_of_Ireland_hockey_team.svg), Caomhan27/Mysid, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0), via Wikimedia Commons
+- Pitch lines image by [TaniaRose](https://pixabay.com/users/taniarose-3072581/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2330582) from [Pixabay](https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2330582)
+- Cups image by [Arek Socha](https://pixabay.com/users/qimono-1962238/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1615074) from [Pixabay](https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1615074)
+- [Ireland provinces image](https://commons.wikimedia.org/wiki/File:Ireland_location_provinces.svg), Ireland_location_provinces.jpg: User:Asarlaíderivative work: Ninrouter, Draceane, Public domain, via Wikimedia Commons
+- [Ireland team 1908 image](https://commons.wikimedia.org/wiki/File:Ireland_hockey_team_1908.jpg) Unknown author, Public domain, via Wikimedia Commons
+- [Olympic rings image](https://commons.wikimedia.org/wiki/File:OLYMPICS_ICON_BY_V.V_ICONS.jpg), Vusi vilanculos, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons
 
 
 ## Other General Project Advice

@@ -37,26 +37,144 @@
 	box-shadow: 6px 3px 3px var(--card-shadow-colour);
 	border: var(--card-border) solid var(--card-border-colour);
 	border-radius: 5%;
+
+    overflow: hidden;
+    position: relative;
 }
 
 article.card div.article-section {
     padding-left: var(--std-padding-horz);
 }
 
+/*
+    How to change background-image opacity in CSS without affecting text | HTML/CSS
+    https://coder-coder.com/background-image-opacity/
+    Put the background image into a pseudo-element of the parent.
+    - To make that pseudo-element the same size as the parent, absolutely position it and set its 
+      top, right, bottom, and left values to zero so it doesn’t collapse. Also, as a pseudo-element, 
+      it needs to have the content property set, otherwise it won’t show up on the page.
+    - For the text, you need to set it to position: relative so that it will be on top of the 
+      pseudo-element and background image. 
+    - Set the parent to position: relative to keep the child within bounds. 
+*/
 
-.card:hover {
-	border: var(--card-border-hover) dotted var(--card-border-colour-hover);
-	background-color: var(--card-background-colour-hover);
+#overview-card::before {    
+    content: "";
+    background: url('../img/Ireland_hockey_team_1908.jpg') no-repeat center center;
+    background-image: -webkit-image-set(
+        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652187024/hockey-history/Ireland_hockey_team_1908_ixop6t.jpg" type("image/jpeg")
+    );
+    background-image: image-set(
+        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652187024/hockey-history/Ireland_hockey_team_1908_ixop6t.jpg" type("image/jpeg")
+    );
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.2;
 }
 
+#organisation-card::before {    
+    content: "";
+    background: url('../img/Ireland_location_provinces.svg') no-repeat center center;
+    background-image: -webkit-image-set(
+        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652187024/hockey-history/Ireland_location_provinces_erz3vy.svg" type("image/svg")
+    );
+    background-image: image-set(
+        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652187024/hockey-history/Ireland_location_provinces_erz3vy.svg" type("image/svg")
+    );
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.2;
+}
 
+#leagues-card::before {    
+    content: "";
+    background: url('../img/hockey-2330582_640.jpg') no-repeat center center;
+    background-image: -webkit-image-set(
+        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652187024/hockey-history/hockey-2330582_640_jdwb3z.jpg" type("image/jpeg")
+    );
+    background-image: image-set(
+        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652187024/hockey-history/hockey-2330582_640_jdwb3z.jpg" type("image/jpeg")
+    );
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.2;
+}
 
+#cups-card::before {    
+    content: "";
+    background: url('../img/cup-1615074_640.png') no-repeat center center;
+    background-image: -webkit-image-set(
+        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652187024/hockey-history/cup-1615074_640_uj7ouj.png" type("image/png")
+    );
+    background-image: image-set(
+        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652187024/hockey-history/cup-1615074_640_uj7ouj.png" type("image/png")
+    );
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.2;
+}
+
+#womens-world-cup-card::before {    
+    content: "";
+    background: url('../img/Flag_of_Ireland_hockey_team.svg') no-repeat center center;
+    background-image: -webkit-image-set(
+        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652174857/hockey-history/Flag_of_Ireland_hockey_team_mmsqy6.svg" type("image/svg")
+    );
+    background-image: image-set(
+        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652174857/hockey-history/Flag_of_Ireland_hockey_team_mmsqy6.svg" type("image/svg")
+    );
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.1;
+}
+
+#olympics-card::before {    
+    content: "";
+    background: url('../img/480px-OLYMPICS_ICON_BY_V.V_ICONS.jpg') no-repeat center center;
+    background-image: -webkit-image-set(
+        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652187274/hockey-history/480px-OLYMPICS_ICON_BY_V.V_ICONS_xvtm6b.jpg" type("image/jpeg")
+    );
+    background-image: image-set(
+        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652187274/hockey-history/480px-OLYMPICS_ICON_BY_V.V_ICONS_xvtm6b.jpg" type("image/jpeg")
+    );
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.2;
+}
+
+.article-text, .article-text h2 {
+    position: relative;
+}
 
 
 /* media queries */
 
-/* small-medium screens, 800px wide or less */ 
-@media screen and (max-width: 800px) {
+/* medium-large screens, 1000px wide or less */ 
+@media screen and (max-width: 1000px) {
 
     #left-intro {
         width: 100%;
@@ -78,8 +196,8 @@ article.card div.article-section {
 	}
 }
 
-/* tiny screens, 450px wide or less */ 
-@media screen and (max-width: 450px) {
+/* small screens, 650px wide or less */ 
+@media screen and (max-width: 650px) {
 
 	#card-grid {
 		grid-template-columns: 1fr;

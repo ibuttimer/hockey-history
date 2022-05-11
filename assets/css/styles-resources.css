@@ -2,7 +2,7 @@
 	--std-card-margin: 30px;
 
 	--card-border: 1px;
-	--card-border-colour: var(--primary-light);
+	--card-border-colour: var(--primary-dark);
 	--card-shadow-colour: var(--secondary-dark);
 
 	--card-border-hover: 2px;
@@ -82,11 +82,6 @@ td li {
     background-color: var(--resource-card-background-colour-hover);
 
 }
-
-/* .card:hover {
-	border: var(--card-border-hover) dotted var(--card-border-colour-hover);
-	background-color: var(--card-background-colour-hover);
-} */
 
 
 article h2 {

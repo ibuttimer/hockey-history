@@ -27,6 +27,8 @@
     - [Resources page](#resources-page-1)
   - [09-05-2022](#09-05-2022)
     - [Navigation menu](#navigation-menu)
+  - [11-05-2022](#11-05-2022)
+    - [Colour scheme](#colour-scheme-1)
 
 # Strategy
 The strategy is to create a website outlining the history of field hockey. It will provide a brief overview of the development of the game and act as a resource for hockey related information.
@@ -113,8 +115,9 @@ font-family: 'Montserrat', sans-serif;
 
 
 ## Colour Scheme
-https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=1DE9B6&secondary.color=F9FBE7 
-https://codepen.io/ibuttimer/pen/xxpzPKa 
+[material.io Color Tool](https://material.io/resources/color/#!/?view.left=1&view.right=0&primary.color=1DE9B6&secondary.color=FFF59D)
+
+[codepen.io example](https://codepen.io/ibuttimer/pen/LYQZJYY) 
 
 ![](img/colour-scheme-example.jpg)
 
@@ -162,4 +165,7 @@ Added Resources page design.
 ## 09-05-2022
 ### Navigation menu
 Updated navigation menu to utilise hamburger menu on small screens. 
+## 11-05-2022
+### Colour scheme
+Updated colour scheme. 
 

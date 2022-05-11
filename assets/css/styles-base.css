@@ -3,18 +3,20 @@
 
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
 :root {
-    /* colour scheme: https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=1DE9B6&secondary.color=F9FBE7 */
+    /* colour scheme: https://material.io/resources/color/#!/?view.left=1&view.right=0&primary.color=1DE9B6&secondary.color=FFF59D */
     --primary: #1de9b6;
     --primary-light: #6effe8;
     --primary-dark: #00b686;
-    --secondary: #f9fbe7;
-    --secondary-r: 249;
-    --secondary-g: 251;
-    --secondary-b: 231;
-    --secondary-light: #ffffff;
-    --secondary-dark: #c6c8b5;
+    --secondary: #fff59d;
+    --secondary-r: 255;
+    --secondary-g: 245;
+    --secondary-b: 157;
+    --secondary-light: #ffffcf;
+    --secondary-dark: #cbc26d;
     --primary-text: #000000;
     --secondary-text: #000000;
+
+    --background-colour: var(--secondary-light);
 
     --heading-font: 'Montserrat', sans-serif;
     --heading-font_weight: 500;
@@ -67,7 +69,7 @@ body {
     font-family: var(--paragraph-font);
     font-weight: var(--paragraph-font_weight);
     color: var(--secondary-text);
-    background-color: var(--secondary);
+    background-color: var(--background-colour);
 }
 
 section {

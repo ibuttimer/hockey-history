@@ -1,5 +1,5 @@
 :root {
-	--timeline-year-colour: #00af41;
+	--timeline-year-colour: #0C7E3B;
 
 	--timeline-thickness: 1px;
 	--timeline-even-shift: -1px;	/* to avoid thicker line where top & bottom cells overlap */
@@ -161,7 +161,7 @@ dl .cell::after {
 
 dl .cell dt {
 	/* shift left, body background colour to cover callout line */
-	background-color: var(--secondary);
+	background-color: var(--background-colour);
 	position: relative;
 	left: var(--content-shift);
 
@@ -174,7 +174,7 @@ dl .cell dt {
 
 dl .cell dd {
 	/* shift left, body background colour to cover callout line */
-	background-color: var(--secondary);
+	background-color: var(--background-colour);
 	position: relative;
 	left: var(--content-shift);
     flex-grow: 1;

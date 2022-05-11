@@ -15,6 +15,10 @@
     --hamburger-bar-width: 30px;
 
     --nav-menu-margin-right: 20px;
+
+    --menu-button-current-colour: var(--primary);
+    --menu-button-colour: var(--secondary-dark);
+    --menu-button-hover-colour: var(--primary-dark);
 }
 
 /* navigation links
@@ -27,7 +31,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--secondary);
+    background-color: var(--background-colour);
     height: var(--padded-menu-height);
     margin-left: var(--std-margin-horz);
     padding: var(--std-padding-vert) var(--std-padding-horz);
@@ -43,7 +47,7 @@
   
 .nav-menu > li {
     overflow: hidden;
-    background-color: var(--secondary);
+    background-color: var(--background-colour);
     text-align: center;
     width: var(--menu-item-width);
 }
@@ -56,9 +60,9 @@
     margin-right: var(--nav-menu-margin-right);
     margin-top: var(--std-margin-vert);
     margin-bottom: var(--std-margin-vert);
-    border: 1px solid var(--primary-light);
+    border: 1px solid var(--menu-button-colour);
+    background-color: var(--menu-button-colour);
     border-radius: var(--std-border-radius);
-    background-color: var(--primary-light);
     padding: var(--std-padding-vert) var(--std-padding-horz);
     flex-direction: row;
     max-width: var(--menu-item-width);
@@ -66,13 +70,13 @@
 }
 
 .nav-menu > li a.current_page {
-    border-color: var(--primary);
-    background-color: var(--primary);
+    border-color: var(--menu-button-current-colour);
+    background-color: var(--menu-button-current-colour);
 }
 
 .nav-menu > li a:hover {
-    border-color: var(--primary-dark);
-    background-color: var(--primary-dark);
+    border-color: var(--menu-button-hover-colour);
+    background-color: var(--menu-button-hover-colour);
 }
 
 .menu-button-container {

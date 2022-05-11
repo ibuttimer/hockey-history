@@ -3,7 +3,7 @@
 	--std-card-margin: 30px;
 
 	--card-border: 1px;
-	--card-border-colour: var(--primary-light);
+	--card-border-colour: var(--primary-dark);
 	--card-shadow-colour: var(--secondary-dark);
 
 	--card-border-hover: 2px;

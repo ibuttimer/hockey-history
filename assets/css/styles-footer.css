@@ -3,6 +3,10 @@
 /* custom properties */
 :root {
     --footer-height: 50px;
+
+    /* https://color.adobe.com/create/color-contrast-analyzer 
+        good contrast to background colour */
+    --footer-content-colour: #6D6D6D;
 }
 
 footer {
@@ -11,7 +15,7 @@ footer {
     margin-right: var(--std-margin-horz);
     padding: var(--std-padding-vert) var(--std-padding-horz) var(--std-padding-vert) var(--std-padding-horz);
     height: var(--footer-height);
-    color: var(--secondary-dark);
+    color: var(--footer-content-colour);
 }
 
 .copyright {
@@ -29,6 +33,12 @@ footer {
     width: 47.5%;
 }
 
+.copyright p {
+    font-size: small;
+    font-family: var(--heading-font);
+    font-weight: bold;
+}
+
 .socials-list {
     list-style: none;
     display: flex;
@@ -43,12 +53,12 @@ footer {
 
 .socials-list a {
     text-decoration: none;
-    color: var(--secondary-dark);
+    color: var(--footer-content-colour);
 }
 
 .built-with a {
     text-decoration: none;
-    color: var(--secondary-dark);
+    color: var(--footer-content-colour);
 }
 
 

@@ -1,0 +1,200 @@
+@import 'styles-base.css';
+
+
+/* custom properties */
+:root {
+    --menu-item-width: 130px;
+    --menu-height: 32px;        /* 2 * std 16px */
+
+    --padded-menu-height: calc((2 * var(--std-padding-vert)) + var(--menu-height));
+
+    --nav-transition-time: 300ms;
+    --nav-transition-func: ease-in-out;
+
+    --hamburger-bar-height: 4px;
+    --hamburger-bar-width: 30px;
+
+    --nav-menu-margin-right: 20px;
+}
+
+/* navigation links
+
+    hamburger menu based on 'Responsive CSS Hamburger Menu - CSS only' (https://codepen.io/alvarotrigo/pen/MWEJEWG)
+    from https://alvarotrigo.com/blog/hamburger-menu-css/
+ */
+.top-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--secondary);
+    height: var(--padded-menu-height);
+    margin-left: var(--std-margin-horz);
+    padding: var(--std-padding-vert) var(--std-padding-horz);
+  }
+  
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+  
+.nav-menu > li {
+    overflow: hidden;
+    background-color: var(--secondary);
+    text-align: center;
+    width: var(--menu-item-width);
+}
+  
+.nav-menu > li a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    
+    margin-right: var(--nav-menu-margin-right);
+    margin-top: var(--std-margin-vert);
+    margin-bottom: var(--std-margin-vert);
+    border: 1px solid var(--primary-light);
+    border-radius: var(--std-border-radius);
+    background-color: var(--primary-light);
+    padding: var(--std-padding-vert) var(--std-padding-horz);
+    flex-direction: row;
+    max-width: var(--menu-item-width);
+    align-items: baseline;
+}
+
+.nav-menu > li a.current_page {
+    border-color: var(--primary);
+    background-color: var(--primary);
+}
+
+.nav-menu > li a:hover {
+    border-color: var(--primary-dark);
+    background-color: var(--primary-dark);
+}
+
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: var(--hamburger-bar-width);
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+#menu-toggle {
+    display: none;
+}
+  
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    /* 3 bars */
+    display: block;
+    background-color: var(--primary-dark);
+    position: absolute;
+
+    height: var(--hamburger-bar-height);
+    width: var(--hamburger-bar-width);
+    transition: transform var(--nav-transition-time) var(--nav-transition-func);
+    border-radius: calc(var(--hamburger-bar-height) / 2);
+}
+  
+.menu-button::before {
+    /* before bar: top */
+    content: "";
+    margin-top: calc((2 * var(--hamburger-bar-height)) * -1);
+}
+  
+.menu-button::after {
+    /* after bar: bottom */
+    content: "";
+    margin-top: calc(2 * var(--hamburger-bar-height));
+}
+  
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+    /* before bar: 45 degrees */
+    margin-top: 0px;
+    transform: rotate(45deg);
+}
+  
+#menu-toggle:checked + .menu-button-container .menu-button {
+    /* middle bar: transparent */
+    background: rgba(255, 255, 255, 0);
+}
+  
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+    /* after bar: -45 degrees */
+    margin-top: 0px;
+    transform: rotate(-45deg);
+}
+  
+/* media queries */
+
+/* tiny-small screens, 600px wide or less */ 
+@media screen and (max-width: 600px) {
+
+    .menu-button-container {
+        display: flex;
+    }
+  
+    .nav-menu {
+        position: absolute;
+        top: 0;
+        margin-top: var(--padded-menu-height);
+        left: var(--std-margin-horz);
+        flex-direction: column;
+        width: 100%;
+        justify-content: left;
+    }
+  
+    .nav-menu > li a {
+        display: block;
+        width: var(--menu-item-width);
+    }
+    
+    /* don't display menu items when hamburger unopened */
+    #menu-toggle ~ .nav-menu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: none var(--nav-transition-time) var(--nav-transition-func);
+    }
+  
+    /* display menu items when hamburger opened */
+    #menu-toggle:checked ~ .nav-menu li {
+        border: 1px solid var(--secondary);
+        border-radius: var(--std-border-radius);
+        z-index: 1;
+        height: var(--padded-menu-height);
+        padding: var(--std-padding-vert) var(--std-padding-horz);
+        margin-left: var(--std-margin-horz);
+        transition: height var(--nav-transition-time) var(--nav-transition-func);
+    }
+    
+    .nav-menu > li {
+        display: flex;
+        justify-content: left;
+        width: calc(var(--menu-item-width) + (2 * var(--std-padding-horz)));
+        background-color: var(--secondary);
+    }
+}
+
+/* tiny screens, 450px wide or less */ 
+@media screen and (max-width: 450px) {
+
+    /* navigation links */
+    .nav_menu {
+        --height: calc((var(--std-padding-vert) * 2) + var(--menu-height));
+        height: calc(var(--height) * 3);
+    }
+    .nav_menu li {
+        clear: both;
+        float: right;
+    }    
+}
+

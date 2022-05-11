@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300&family=Montserrat+Alternates:wght@500&display=swap');
+
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+:root {
+    /* colour scheme: https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=1DE9B6&secondary.color=F9FBE7 */
+    --primary: #1de9b6;
+    --primary-light: #6effe8;
+    --primary-dark: #00b686;
+    --secondary: #f9fbe7;
+    --secondary-r: 249;
+    --secondary-g: 251;
+    --secondary-b: 231;
+    --secondary-light: #ffffff;
+    --secondary-dark: #c6c8b5;
+    --primary-text: #000000;
+    --secondary-text: #000000;
+
+    --heading-font: 'Montserrat', sans-serif;
+    --heading-font_weight: 500;
+    --paragraph-font: 'Hind', sans-serif;
+    --paragraph-font_weight: 300;
+
+    --std-margin-horz: 7.5%;
+    --std-margin-vert: 5px;
+
+    --std-spacing: 30px;
+    --std-padding-horz: 15px;
+    --std-padding-vert: 5px;
+
+    --std-border-radius: 5px;
+
+    --margin-padding-horz: calc(var(--std-margin-horz) + var(--std-padding-horz));
+    --content-width: calc(100% - var(--margin-padding-horz) - var(--margin-padding-horz));
+    --content-half-width: calc(var(--content-width) / 2);
+
+    /* default heading heights; https://www.w3schools.com/tags/tag_hn.asp */
+    --default-h1-height: 2em;
+    --default-h2-height: 1.5em;
+    --default-h3-height: 1.17em;
+    --default-h4-height: 1em;
+    --default-h5-height: 0.83em;
+    --default-h6-height: .67em;
+}
+
+/* CSS Specificity
+    https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
+    https://specifishity.com/
+*/
+
+/* -vv- Love Running Walkthrough Project -vv- */
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+/* -^^- Love Running Walkthrough Project -^^-*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    font-weight: var(--heading-font_weight);
+    color: var(--primary-text);
+    clear: left;
+}
+
+body {
+    font-family: var(--paragraph-font);
+    font-weight: var(--paragraph-font_weight);
+    color: var(--secondary-text);
+    background-color: var(--secondary);
+}
+
+section {
+    padding: var(--std-padding-vert) var(--std-padding-horz);
+    margin: var(--std-margin-vert) var(--std-margin-horz);
+}
+
+.article-section {
+    padding: var(--std-padding-vert) var(--std-padding-horz);
+    /* padding for vertical headings */
+    padding-left: calc(var(--std-padding-horz) + var(--default-h2-height) + var(--std-margin-vert));
+    margin: var(--std-margin-vert) var(--std-margin-horz);
+}
+
+article h2 {
+    margin-top: var(--std-margin-vert);
+    margin-left: var(--std-margin-horz);
+    padding: var(--std-padding-vert) var(--std-padding-horz);
+}
+
+h2.heading {
+    transform-origin: bottom left;
+    transform: rotate(90deg);
+    display: inline-block;
+    clear: both;
+}
+
+
+/* classes to align with section content */
+.section-left {
+    padding-left: var(--std-padding-horz);
+    margin-left: var(--std-margin-horz);
+}
+.section-right {
+    padding-right: var(--std-padding-horz);
+    margin-right: var(--std-margin-horz);
+}
+.section-centre {
+    text-align: center;
+}
+
+
+/* media queries */
+
+/* larger to medium screens, 1200px wide or less */ 
+@media screen and (max-width: 1200px) {
+
+    :root {
+        --std-margin-horz: 5%;
+    }
+}
+
+/* medium screens, 950px wide or less */ 
+@media screen and (max-width: 950px) {
+
+    :root {
+        --std-margin-horz: 2.5%;
+    }
+}
+
+/* small-medium screens, 800px wide or less */ 
+@media screen and (max-width: 800px) {
+
+    :root {
+        --std-margin-horz: 1.5%;
+    }
+}
+
+/* tiny screens, 450px wide or less */ 
+@media screen and (max-width: 450px) {
+
+    :root {
+        --std-margin-horz: 0.5%;
+    }
+}
+
+

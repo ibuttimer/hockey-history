@@ -1,0 +1,186 @@
+@import 'styles-base.css';
+
+/* custom properties */
+:root {
+    --footer-height: 50px;
+}
+
+footer {
+    width: var(--content-width);
+    margin-left: var(--std-margin-horz);
+    margin-right: var(--std-margin-horz);
+    padding: var(--std-padding-vert) var(--std-padding-horz) var(--std-padding-vert) var(--std-padding-horz);
+    height: var(--footer-height);
+    color: var(--secondary-dark);
+}
+
+.copyright {
+    float: left;
+    width: 47.5%;
+}
+
+.built-with {
+    float: left;
+    width: 5%;
+}
+
+.socials {
+    float: right;
+    width: 47.5%;
+}
+
+.socials-list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.socials-list li {
+    --li-margin: calc(var(--std-spacing) - 20px);
+    display: inline;
+    margin-left: var(--li-margin);
+}
+
+.socials-list a {
+    text-decoration: none;
+    color: var(--secondary-dark);
+}
+
+.built-with a {
+    text-decoration: none;
+    color: var(--secondary-dark);
+}
+
+
+/* Tooltip courtesy of CSS Tooltip Generator 
+    https://www.cssportal.com/css-tooltip-generator/
+*/
+[data-tooltip] {
+    position: relative;
+    cursor: pointer;
+  }
+  [data-tooltip]:before,
+  [data-tooltip]:after {
+    line-height: 1;
+    font-size: .9em;
+    pointer-events: none;
+    position: absolute;
+    box-sizing: border-box;
+    display: none;
+    opacity: 0;
+  }
+  [data-tooltip]:before {
+    content: "";
+    border: 5px solid transparent;
+    z-index: 100;
+  }
+  [data-tooltip]:after {
+    content: attr(data-tooltip);
+    text-align: center;
+    min-width: 3em;
+    max-width: 21em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 5px 7px;
+    border-radius: 3px;
+    background: #1DE9B6;
+    color: #FFFFFF;
+    z-index: 99;
+  }
+  [data-tooltip]:hover:before,
+  [data-tooltip]:hover:after {
+    display: block;
+    opacity: 1;
+  }
+  [data-tooltip]:not([data-flow])::before,
+  [data-tooltip][data-flow="top"]::before {
+    bottom: 100%;
+    border-bottom-width: 0;
+    border-top-color: #1DE9B6;
+  }
+  [data-tooltip]:not([data-flow])::after,
+  [data-tooltip][data-flow="top"]::after {
+    bottom: calc(100% + 5px);
+  }
+  [data-tooltip]:not([data-flow])::before, [tooltip]:not([data-flow])::after,
+  [data-tooltip][data-flow="top"]::before,
+  [data-tooltip][data-flow="top"]::after {
+    left: 50%;
+    -webkit-transform: translate(-50%, -4px);
+            transform: translate(-50%, -4px);
+  }
+  [data-tooltip][data-flow="bottom"]::before {
+    top: 100%;
+    border-top-width: 0;
+    border-bottom-color: #1DE9B6;
+  }
+  [data-tooltip][data-flow="bottom"]::after {
+    top: calc(100% + 5px);
+  }
+  [data-tooltip][data-flow="bottom"]::before, [data-tooltip][data-flow="bottom"]::after {
+    left: 50%;
+    -webkit-transform: translate(-50%, 8px);
+            transform: translate(-50%, 8px);
+  }
+  [data-tooltip][data-flow="left"]::before {
+    top: 50%;
+    border-right-width: 0;
+    border-left-color: #1DE9B6;
+    left: calc(0em - 5px);
+    -webkit-transform: translate(-8px, -50%);
+            transform: translate(-8px, -50%);
+  }
+  [data-tooltip][data-flow="left"]::after {
+    top: 50%;
+    right: calc(100% + 5px);
+    -webkit-transform: translate(-8px, -50%);
+            transform: translate(-8px, -50%);
+  }
+  [data-tooltip][data-flow="right"]::before {
+    top: 50%;
+    border-left-width: 0;
+    border-right-color: #1DE9B6;
+    right: calc(0em - 5px);
+    -webkit-transform: translate(8px, -50%);
+            transform: translate(8px, -50%);
+  }
+  [data-tooltip][data-flow="right"]::after {
+    top: 50%;
+    left: calc(100% + 5px);
+    -webkit-transform: translate(8px, -50%);
+            transform: translate(8px, -50%);
+  }
+  [data-tooltip=""]::after, [data-tooltip=""]::before {
+    display: none !important;
+  }
+  
+
+
+/* media queries */
+
+/* tiny screens, 450px wide or less */ 
+@media screen and (max-width: 450px) {
+
+    /* footer */
+    .copyright {
+        float: left;
+        text-align: left;
+        width: calc(var(--content-width) * 0.8);
+    }
+    .built-with {
+        float: right;
+        text-align: right;
+        width: calc(var(--content-width) * 0.2);
+    }
+    .socials {
+        float: left;
+        text-align: center;
+        width: var(--content-width);
+    }
+    .socials-list {
+        justify-content: center;
+    }
+}
+
+

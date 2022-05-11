@@ -6,101 +6,130 @@ The resources page provides links to Irish and international organisations and r
 
 The site is aimed at both sports enthusiasts and history scholars. The aim is to provide a history of the game, as well as acting as a useful resource.
 
-##### Fig 1: Responsive Mockup
+###### Fig 1: Responsive Mockup
 ![Responsive Mockup](media/responsive.jpg)
 
 ## Features 
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so. You will need to explain what value each of the features provides for the user, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
-
 ### Existing Features
+#### Common Features
 
 - __Navigation Bar__
 
-  - Featured on all three pages, the full responsive navigation bar includes links to the Logo, Home page, Gallery and Sign Up page and is identical in each page to allow for easy navigation.
-  - This section will allow the user to easily navigate from page to page across all devices without having to revert back to the previous page via the ‘back’ button. 
+  - The fully responsive navigation bar provides navigation to all the main pages; Home, Ireland and Resources. The current page is highlighted for easy indentification and users can easily navigate to the other pages.
+  - The HTML code is contained on each page, and the CSS is in [styles-nav.css](assets/css/styles-nav.css).
 
-![Nav Bar](https://github.com/lucyrush/readme-template/blob/master/media/love_running_nav.png)
+###### Fig 2: Navigation Bar
+![Nav Bar](media/nav-bar-images.png)
 
 - __The landing page image__
 
-  - The landing includes a photograph with text overlay to allow the user to see exactly which location this site would be applicable to. 
-  - This section introduces the user to Love Running with an eye catching animation to grab their attention
+  - The main image on the landing page consists of a photograph with text overlay to allow the user to see the purpose of this site. 
+  - When loaded an animation is used to attract the users attention. However, when the user has specified they prefers reduced motion, a simple fade in animation is used.
 
-![Landing Page](https://github.com/lucyrush/readme-template/blob/master/media/love_running_landing.png)
-
-- __Club Ethos Section__
-
-  - The club ethos section will allow the user to see the benefits of joining the Love Running meetups, as well as the benefits of running overall. 
-  - This user will see the value of signing up for the Love Running meetups. This should encourage the user to consider running as their form of exercise. 
-
-![Club Ethos](https://github.com/lucyrush/readme-template/blob/master/media/love_running_ethos.png)
-
-- __Meetup Times section__
-
-  - This section will allow the user to see exactly when the meetups will happen, where they will be located and how long the run will be in kilometers. 
-  - This section will be updated as these times change to keep the user up to date. 
-
-![Meetup Times](https://github.com/lucyrush/readme-template/blob/master/media/love_running_times.png)
+###### Fig 3: Hero Image
+![Landing Page](media/hero-main.jpg)
 
 - __The Footer__ 
 
-  - The footer section includes links to the relevant social media sites for Love Running. The links will open to a new tab to allow easy navigation for the user. 
-  - The footer is valuable to the user as it encourages them to keep connected via social media
+  - The footer section includes links to social media sites via icons, which open to a new tab to allow easy navigation for the user. 
+  - The social media links serve as a call to action to the user to stay engaged with the site.
+  - A link to the Built With page is provided for users interested in the information sources and resources used on this site.
+  - The link icons have tooltips, should users be unfamiliar with a particular icon.
+  - The HTML code is contained on each page, and the CSS is in [styles-footer.css](assets/css/styles-footer.css).
 
-![Footer](https://github.com/lucyrush/readme-template/blob/master/media/love_running_footer.png)
+###### Fig 4: Footer
+![Footer](media/footer.jpg)
 
-- __Gallery__
+#### Main Page
+- __Overview Section__
 
-  - The gallery will provide the user with supporting images to see what the meet ups look like. 
-  - This section is valuable to the user as they will be able to easily identify the types of events the organisation puts together. 
+  - This section provides a brief overview of the game, including its popularity and reasons to enjoy the sport. 
 
-![Gallery](https://github.com/lucyrush/readme-template/blob/master/media/love_running_gallery.png)
+###### Fig 5: Overview Section
+![Overview Section](media/main-overview.jpg)
 
-- __The Sign Up Page__
+- __Introduction Section__
 
-  - This page will allow the user to get signed up to Love Running to start their running journey with the community. The user will be able specify if they would like to take part in road, trail or both types of running. The user will be asked to submit their full name and email address. 
+  - This section details a brief bird's eye view of the origins of hockey.
+  - An embedded YouTube video provides a visual record of the evolution of modern hockey.
 
-![Sign Up](https://github.com/lucyrush/readme-template/blob/master/media/love_running_signup.png)
+###### Fig 6: Introduction Section
+![Introduction Section](media/main-intro.jpg)
 
-For some/all of your features, you may choose to reference the specific project files that implement them.
+- __Timeline Section__
 
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+  - The timeline provided in this section gives key dates in the history of the game.
+  - The timeline is responsive, switching from horizontal to vertical on smaller screens.
+
+###### Fig 7: Timeline Section
+![Timeline Section](media/timeline-images.png)
+
+- __Main Page Code__
+
+  The main page code is in [index.html](index.html).
+
+#### Ireland Page
+
+- __Ireland Facts Section__
+
+  - The Ireland page provides a series of information cards with interesting hockey facts specifically related to Ireland. 
+  - Each card provides a small description intended to inform. 
+
+###### Fig 8: Ireland Facts Section
+![Ireland](media/ireland-cards.jpg)
+
+- __Ireland Code__
+
+  The Ireland page code is in [ireland.html](ireland.html).
+
+#### Resources Page
+
+- __Rules Section__
+
+  - This section provides a brief overview of the rules of hockey and a link to the full rules book. 
+  - The pitch image acts as a link to [Pitch Page](#pitch-page)
+
+###### Fig 9: Rules Section
+![Rules Section](media/resources-rules.jpg)
+
+- __Organisations Section__
+
+  - This section provides a links to national and international hockey orhanisations. 
+  - Hovering over a specific card, reveals the links, which open in new tabs.
+
+###### Fig 10: Organisations Section
+![Organisations Section](media/resources-orgs.jpg)
+
+#### Pitch Page
+
+- __Pitch Section__
+
+  - This section consists of a large scale image, with the dimensions, line markings and key field area definitions.
+
+###### Fig 11: Pitch Section
+![Pitch](assets/img/Hockey_field_metric.webp)
+
+#### Built With Page
+
+- __Built With Section__
+
+  - This section lists the resources used to develop the site.
+
+- __Information Sources Section__
+
+  - This section lists the information sources for each section of the site.
 
 ### Features Left to Implement
 
-- Another feature idea
+- Add additional content
 
 ## Design 
 The design specification is available in [design.md](design/design.md).
 
 ## Testing 
+Details of the testing undertaken are outlined in [test.md](test/test.md), along with the results.
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your project’s features and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
-
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
-
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
-
-
-### Accessibility
-Accessibility testing was carried out using the [NVDA](https://www.nvaccess.org/) and [ChromeVox](https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en) screen readers.
-
-
-### Validator Testing 
-
-| Page | Home | Ireland | Resources | Built With |
-|------|------|---------|-----------|------------|
-| HTML | [W3C validator](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fibuttimer.github.io%2Fhockey-history%2Findex.html) | [W3C validator](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fibuttimer.github.io%2Fhockey-history%2Fireland.html) | [W3C validator](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fibuttimer.github.io%2Fhockey-history%2Fresources.html) | [W3C validator](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fibuttimer.github.io%2Fhockey-history%2Fbuiltwith.html) |
-| Result | &check;/&cross; | &check;/&cross; | &check;/&cross; | &check;/&cross; |
-| CSS | [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fibuttimer.github.io%2Fhockey-history%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fibuttimer.github.io%2Fhockey-history%2Fireland.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fibuttimer.github.io%2Fhockey-history%2Fresources.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fibuttimer.github.io%2Fhockey-history%2Fbuiltwith.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) |
-| Result | &check;/&cross; | &check;/&cross; | &check;/&cross; | &check;/&cross; |
-
-### Unfixed Bugs
-
-You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed. 
 
 ## Deployment
 
@@ -121,7 +150,7 @@ The following resources were used to build the website.
 
 ### Content 
 
-- The text for the Home page was taken from Wikipedia Article A
+- The information sources for the site are listed in the [Information Sources](https://ibuttimer.github.io/hockey-history/builtwith.html#information-sources) Section of the Built With Page.
 - The icons on the site were taken from [Font Awesome](https://fontawesome.com/)
 - The favicon for the site was generated by [favicon.io](https://favicon.io/)
 - The timeline is based on [this example](https://codepen.io/joemaffei/pen/WNQKyPo) by [Joe Maffei](https://stackoverflow.com/users/4642023/joe-maffei) from [stackoverflow](https://stackoverflow.com/a/61781360), customised, adapted to meet [W3C Nu Html Checker](https://validator.w3.org/nu/) standards and made responsive.

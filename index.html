@@ -12,6 +12,10 @@
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
     <link rel="stylesheet" type="text/css" href="assets/css/styles-index.css">
 
+    <!-- Include the CSS & JS for Lite YouTube Embed -->
+    <link rel="stylesheet" href="assets/css/lite-yt-embed.css" />
+    <script src="assets/js/lite-yt-embed.js"></script>
+
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon_io/favicon-16x16.png">
@@ -130,10 +134,14 @@
                     </div>
                     <div id="intro-box4">
                         <div class='embed-container'>
-                            <iframe src='https://www.youtube.com/embed/UD9r3WcZ9mA' title="YouTube video player"
+                            <lite-youtube videoid="UD9r3WcZ9mA" 
+                                params="controls=0&start=10&end=30&modestbranding=2&rel=0&enablejsapi=1"
+                                playlabel="Play: Evolution of field hockey"></lite-youtube>
+
+                            <!-- <iframe src='https://www.youtube.com/embed/UD9r3WcZ9mA' title="YouTube video player"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen>
-                            </iframe>
+                            </iframe> -->
                         </div>
                     </div>
                 </div>

@@ -13,6 +13,8 @@
     --resource-img-width: calc(2 * var(--resource-block_size));
     --resource-card-height: calc(2.5 * var(--resource-block_size));
 	--resource-card-background-colour-hover: var(--secondary-light);
+	--resource-card-font-size: 0.8rem;
+	--resource-card-font-weight: 600;
 
     --table-border-colour: rgb(100, 100, 100);
 }
@@ -82,7 +84,6 @@ td li {
 	border-radius: 5%;
 
     background-color: var(--resource-card-background-colour-hover);
-
 }
 
 
@@ -94,8 +95,9 @@ article h2 {
 /* resource grid */
 
 .resource-grid {
-    /* default h2 height + article h2 margin-top + 2 * (article h2 padding) */
+    /* heading row default = h2 height + article h2 margin-top + 2 * (article h2 padding) */
     --heading-row-initial: calc(var(--default-h2-height) + var(--std-margin-vert) + (2 * var(--std-padding-vert)));
+    /* map row default */
     --map-row-initial: calc(var(--resource-card-height) - var(--heading-row-initial));
 
 	display: grid;
@@ -131,6 +133,7 @@ article h2 {
 }
 
 .resource-grid:hover {
+    /* hide map row */
     grid-template-rows: 0px var(--resource-card-height);
     align-items: start;
     background-color: var(--resource-card-background-colour-hover);
@@ -143,18 +146,22 @@ article h2 {
 .resource-grid dt {
     letter-spacing: 0.03em;
     font-family: var(--heading-font);
-	font-size: 0.8rem;
-	font-weight: 600;
+	font-size: var(--resource-card-font-size);
+	font-weight: var(--resource-card-font-weight);
 }
 
 .resource-grid dd {
-	font-size: 0.8rem;
-	font-weight: 600;
+	font-size: var(--resource-card-font-size);
+	font-weight: var(--resource-card-font-weight);
 }
 .resource-grid dd a {
-	font-size: 0.8rem;
-	font-weight: 600;
+	font-size: var(--resource-card-font-size);
+	font-weight: var(--resource-card-font-weight);
     text-decoration: none;
+}
+
+.resource-grid dt ~ dd a {
+    line-height: 200%;
 }
 
 
@@ -172,8 +179,8 @@ article h2 {
     }
 }
 
-/* tiny screens, 450px wide or less */ 
-@media screen and (max-width: 450px) {
+/* small screens, 600px wide or less */ 
+@media screen and (max-width: 600px) {
 
     #card-grid {
         grid-template-columns: 1fr;

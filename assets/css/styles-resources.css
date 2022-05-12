@@ -13,6 +13,8 @@
     --resource-img-width: calc(2 * var(--resource-block_size));
     --resource-card-height: calc(2.5 * var(--resource-block_size));
 	--resource-card-background-colour-hover: var(--secondary-light);
+
+    --table-border-colour: rgb(100, 100, 100);
 }
 
 
@@ -31,14 +33,14 @@ caption {
 
 table {
     border-collapse: collapse;
-    border: 2px solid rgb(100, 100, 100);
+    border: 2px solid var(--table-border-colour);
     letter-spacing: 1px;
-    font-size: .7rem;
+    font-size: 0.8rem;
 }
 
 td,
 th {
-    border: 1px solid rgb(100, 100, 100);
+    border: 1px solid var(--table-border-colour);
     padding: 10px 10px;
 }
 

@@ -1,25 +1,55 @@
-## Testing 
+# Testing 
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your project’s features and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+The site was tested using the following methods:
 
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+## Manual 
+The site was manually tested in the following browsers:
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+|   | Browser | OS | 
+|---|---------|----|
+| 1 | Google Chrome, Version 101.0.4951.64 | Windows 11 Pro Version 21H2 |
+| 2 | Mozilla Firefox, Version 100.0 (64-bit) | Windows 11 Pro Version 21H2 |
+| 3 | Opera, Version:86.0.4363.59 | Windows 11 Pro Version 21H2 |
+| 4 | Google Chrome, Version 101.0.4951.41 | Android 10 |
+
+Testing consisted of:
+- Site navigation
+- Page responsiveness check where appropriate
+- Review of each page
+
+## Lighthouse
+
+Lighthouse testing was carried out in an Incognito window using Lighthouse from Chrome Developer Tools.
+
+| Page | Test | Result |  |  |  | Report |
+|-|-|-|-|-|-|-|
+| Main | Mobile | ![Performance 92](https://img.shields.io/badge/Performance-92-brightgreen) | ![Accessibility 100](https://img.shields.io/badge/Accessibility-100-brightgreen) | ![Best Practises 100](https://img.shields.io/badge/Best%20Practises-100-brightgreen) |![SEO 100](https://img.shields.io/badge/SEO-100-brightgreen) |[home-mobile](lighthouse/ibuttimer.github.io_2022-05-12_15-34-07-home-mobile.html) |
+|     | Desktop | ![Performance 94](https://img.shields.io/badge/Performance-94-brightgreen) | ![Accessibility 100](https://img.shields.io/badge/Accessibility-100-brightgreen) | ![Best Practises 100](https://img.shields.io/badge/Best%20Practises-100-brightgreen) |![SEO 100](https://img.shields.io/badge/SEO-100-brightgreen) |[home-desktop](lighthouse/ibuttimer.github.io_2022-05-12_15-35-36-home-desktop.html) |
+| Ireland | Mobile | ![Performance 84](https://img.shields.io/badge/Performance-84-orange) | ![Accessibility 100](https://img.shields.io/badge/Accessibility-100-brightgreen) | ![Best Practises 100](https://img.shields.io/badge/Best%20Practises-100-brightgreen) |![SEO 100](https://img.shields.io/badge/SEO-100-brightgreen) |[home-mobile](lighthouse/ibuttimer.github.io_2022-05-12_15-37-20-ireland-mobile.html) |
+|     | Desktop | ![Performance 99](https://img.shields.io/badge/Performance-99-brightgreen) | ![Accessibility 100](https://img.shields.io/badge/Accessibility-100-brightgreen) | ![Best Practises 100](https://img.shields.io/badge/Best%20Practises-100-brightgreen) |![SEO 100](https://img.shields.io/badge/SEO-100-brightgreen) |[home-desktop](lighthouse/ibuttimer.github.io_2022-05-12_15-37-20-ireland-desktop.html) |
+| Resources | Mobile | ![Performance 91](https://img.shields.io/badge/Performance-91-brightgreen) | ![Accessibility 100](https://img.shields.io/badge/Accessibility-100-brightgreen) | ![Best Practises 100](https://img.shields.io/badge/Best%20Practises-100-brightgreen) |![SEO 100](https://img.shields.io/badge/SEO-100-brightgreen) |[home-mobile](lighthouse/ibuttimer.github.io_2022-05-12_15-38-32-resources-mobile.html) |
+|     | Desktop | ![Performance 98](https://img.shields.io/badge/Performance-98-brightgreen) | ![Accessibility 100](https://img.shields.io/badge/Accessibility-100-brightgreen) | ![Best Practises 100](https://img.shields.io/badge/Best%20Practises-100-brightgreen) |![SEO 100](https://img.shields.io/badge/SEO-100-brightgreen) |[home-desktop](lighthouse/ibuttimer.github.io_2022-05-12_15-39-06-resources-desktop.html) |
+| Pitch | Mobile | ![Performance 93](https://img.shields.io/badge/Performance-93-brightgreen) | ![Accessibility 100](https://img.shields.io/badge/Accessibility-100-brightgreen) | ![Best Practises 100](https://img.shields.io/badge/Best%20Practises-100-brightgreen) |![SEO 100](https://img.shields.io/badge/SEO-100-brightgreen) |[home-mobile](lighthouse/ibuttimer.github.io_2022-05-12_15-40-16-pitch-mobile.html) |
+|     | Desktop | ![Performance 100](https://img.shields.io/badge/Performance-100-brightgreen) | ![Accessibility 100](https://img.shields.io/badge/Accessibility-100-brightgreen) | ![Best Practises 100](https://img.shields.io/badge/Best%20Practises-100-brightgreen) |![SEO 100](https://img.shields.io/badge/SEO-100-brightgreen) |[home-desktop](lighthouse/ibuttimer.github.io_2022-05-12_15-40-54-pitch-desktop.html) |
+| Built With | Mobile | ![Performance 81](https://img.shields.io/badge/Performance-81-orange) | ![Accessibility 100](https://img.shields.io/badge/Accessibility-100-brightgreen) | ![Best Practises 100](https://img.shields.io/badge/Best%20Practises-100-brightgreen) |![SEO 100](https://img.shields.io/badge/SEO-100-brightgreen) |[home-mobile](lighthouse/ibuttimer.github.io_2022-05-12_15-42-13-builtwith-mobile.html) |
+|     | Desktop | ![Performance 100](https://img.shields.io/badge/Performance-100-brightgreen) | ![Accessibility 100](https://img.shields.io/badge/Accessibility-100-brightgreen) | ![Best Practises 100](https://img.shields.io/badge/Best%20Practises-100-brightgreen) |![SEO 100](https://img.shields.io/badge/SEO-100-brightgreen) |[home-desktop](lighthouse/ibuttimer.github.io_2022-05-12_15-42-57-builtwith-desktop.html) |
 
 
 
-### Accessibility
+## Accessibility
 Accessibility testing was carried out using the [NVDA](https://www.nvaccess.org/) and [ChromeVox](https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en) screen readers.
 
 
-### Validator Testing 
+## Validator Testing 
+
+The [W3C Nu Html Checker](https://validator.w3.org/nu/) was utilised to check the HTML validity, while the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) was utilised to check the CSS validity with respect to [CSS level 3 + SVG](https://www.w3.org/Style/CSS/current-work.html.)
 
 | Page | Home | Ireland | Resources | Built With | Pitch |
 |------|------|---------|-----------|------------|-------|
 | HTML | [W3C validator](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fibuttimer.github.io%2Fhockey-history%2Findex.html) | [W3C validator](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fibuttimer.github.io%2Fhockey-history%2Fireland.html) | [W3C validator](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fibuttimer.github.io%2Fhockey-history%2Fresources.html) | [W3C validator](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fibuttimer.github.io%2Fhockey-history%2Fbuiltwith.html) | [W3C validator](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fibuttimer.github.io%2Fhockey-history%2Fpitch.html) |
-| Result | &check;/&cross; | &check;/&cross; | &check;/&cross; | &check;/&cross; | &check;/&cross; |
+| Result | &check; | &check; | &check; | &check; | &check; |
 | CSS | [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fibuttimer.github.io%2Fhockey-history%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fibuttimer.github.io%2Fhockey-history%2Fireland.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fibuttimer.github.io%2Fhockey-history%2Fresources.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fibuttimer.github.io%2Fhockey-history%2Fbuiltwith.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fibuttimer.github.io%2Fhockey-history%2Fpitch.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) |
-| Result | &check;/&cross; | &check;/&cross; | &check;/&cross; | &check;/&cross; | &check;/&cross; |
+| Result | &check; | &check; | &check; | &check; | &check; |
 
 ### Unfixed Bugs
 

@@ -3,6 +3,10 @@ section h2, section h3 {
     margin-top: var(--std-margin-vert);
 }
 
+main ul {
+    line-height: 200%;
+}
+
 iframe {
     border: 0px;
 }

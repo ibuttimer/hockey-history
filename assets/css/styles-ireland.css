@@ -64,9 +64,9 @@ article.card div.article-section {
     background-image: -webkit-image-set(
         "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652187024/hockey-history/Ireland_hockey_team_1908_ixop6t.jpg" type("image/jpeg")
     );
-    background-image: image-set(
-        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652187024/hockey-history/Ireland_hockey_team_1908_ixop6t.jpg" type("image/jpeg")
-    );
+    /* TODO the standard way; image-set(). This is a CSS Images Module Level 4 feature, 
+        and as the W3C CSS Validator currently only supports CSS3, unable to 
+        follow recommendations from https://developer.mozilla.org/en-US/docs/Web/CSS/image/image-set */
     background-size: cover;
     position: absolute;
     top: 0px;
@@ -82,9 +82,9 @@ article.card div.article-section {
     background-image: -webkit-image-set(
         "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652187024/hockey-history/Ireland_location_provinces_erz3vy.svg" type("image/svg")
     );
-    background-image: image-set(
-        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652187024/hockey-history/Ireland_location_provinces_erz3vy.svg" type("image/svg")
-    );
+    /* TODO the standard way; image-set(). This is a CSS Images Module Level 4 feature, 
+        and as the W3C CSS Validator currently only supports CSS3, unable to 
+        follow recommendations from https://developer.mozilla.org/en-US/docs/Web/CSS/image/image-set */
     background-size: cover;
     position: absolute;
     top: 0px;
@@ -100,9 +100,9 @@ article.card div.article-section {
     background-image: -webkit-image-set(
         "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652187024/hockey-history/hockey-2330582_640_jdwb3z.jpg" type("image/jpeg")
     );
-    background-image: image-set(
-        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652187024/hockey-history/hockey-2330582_640_jdwb3z.jpg" type("image/jpeg")
-    );
+    /* TODO the standard way; image-set(). This is a CSS Images Module Level 4 feature, 
+        and as the W3C CSS Validator currently only supports CSS3, unable to 
+        follow recommendations from https://developer.mozilla.org/en-US/docs/Web/CSS/image/image-set */
     background-size: cover;
     position: absolute;
     top: 0px;
@@ -118,9 +118,9 @@ article.card div.article-section {
     background-image: -webkit-image-set(
         "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652187024/hockey-history/cup-1615074_640_uj7ouj.png" type("image/png")
     );
-    background-image: image-set(
-        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652187024/hockey-history/cup-1615074_640_uj7ouj.png" type("image/png")
-    );
+    /* TODO the standard way; image-set(). This is a CSS Images Module Level 4 feature, 
+        and as the W3C CSS Validator currently only supports CSS3, unable to 
+        follow recommendations from https://developer.mozilla.org/en-US/docs/Web/CSS/image/image-set */
     background-size: cover;
     position: absolute;
     top: 0px;
@@ -136,9 +136,9 @@ article.card div.article-section {
     background-image: -webkit-image-set(
         "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652174857/hockey-history/Flag_of_Ireland_hockey_team_mmsqy6.svg" type("image/svg")
     );
-    background-image: image-set(
-        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652174857/hockey-history/Flag_of_Ireland_hockey_team_mmsqy6.svg" type("image/svg")
-    );
+    /* TODO the standard way; image-set(). This is a CSS Images Module Level 4 feature, 
+        and as the W3C CSS Validator currently only supports CSS3, unable to 
+        follow recommendations from https://developer.mozilla.org/en-US/docs/Web/CSS/image/image-set */
     background-size: cover;
     position: absolute;
     top: 0px;
@@ -154,9 +154,9 @@ article.card div.article-section {
     background-image: -webkit-image-set(
         "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652187274/hockey-history/480px-OLYMPICS_ICON_BY_V.V_ICONS_xvtm6b.jpg" type("image/jpeg")
     );
-    background-image: image-set(
-        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652187274/hockey-history/480px-OLYMPICS_ICON_BY_V.V_ICONS_xvtm6b.jpg" type("image/jpeg")
-    );
+    /* TODO the standard way; image-set(). This is a CSS Images Module Level 4 feature, 
+        and as the W3C CSS Validator currently only supports CSS3, unable to 
+        follow recommendations from https://developer.mozilla.org/en-US/docs/Web/CSS/image/image-set */
     background-size: cover;
     position: absolute;
     top: 0px;

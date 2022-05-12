@@ -32,15 +32,16 @@
 
     border-radius: 10px;
 
-    /* https://developer.mozilla.org/en-US/docs/Web/CSS/image/image-set */
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/image/image-set
+        https://css-tricks.com/using-performant-next-gen-images-in-css-with-image-set/ */
     background: url('../img/mas-arg-boys-2018-youth-olympics-lge.jpg') no-repeat center center;
+    /* Chrome/Edge/Opera; doesn't currently support 'type' only resolution */
     background-image: -webkit-image-set(
-        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-lge_ne1kur.webp" type("image/webp"),
-        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-lge_hrrour.jpg" type("image/jpeg")
+        url("https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-lge_ne1kur.webp") 1x
     );
+    /* standard way */
     background-image: image-set(
-        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-lge_ne1kur.webp" type("image/webp"),
-        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-lge_hrrour.jpg" type("image/jpeg")
+        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-lge_ne1kur.webp" 1x
     );
 
     background-color: var(--primary);
@@ -108,13 +109,13 @@
 
     #hero-image {
         background-image: url('../img/mas-arg-boys-2018-youth-olympics-med.jpg');
+        /* Chrome/Edge/Opera; doesn't currently support 'type' only resolution */
         background-image: -webkit-image-set(
-            "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-med_shomyl.webp" type("image/webp"),
-            "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-med_qo5apd.jpg" type("image/jpeg")
+            url("https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-med_shomyl.webp") 1x
         );
+        /* standard way */
         background-image: image-set(
-            "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-med_shomyl.webp" type("image/webp"),
-            "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-med_qo5apd.jpg" type("image/jpeg")
+            "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-med_shomyl.webp" 1x
         );
     }
 }
@@ -131,13 +132,13 @@
     /* hero */
     #hero-image {
         background-image: url('../img/mas-arg-boys-2018-youth-olympics-sml.jpg');
+        /* Chrome/Edge/Opera; doesn't currently support 'type' only resolution */
         background-image: -webkit-image-set(
-            "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-sml_yl80np.webp" type("image/webp"),
-            "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-sml_r9zywy.jpg" type("image/jpeg")
+            url("https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-sml_yl80np.webp") 1x
         );
+        /* standard way */
         background-image: image-set(
-            "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-sml_yl80np.webp" type("image/webp"),
-            "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-sml_r9zywy.jpg" type("image/jpeg")
+            "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-sml_yl80np.webp" 1x
         );
     }
 

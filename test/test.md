@@ -17,6 +17,10 @@ Testing consisted of:
 - Page responsiveness check where appropriate
 - Review of each page
 
+## Responsiveness Testing
+
+Responsiveness testing was done using [Screenfly](https://screenfly.org/#u=https%3A//ibuttimer.github.io/hockey-history/&w=1024&h=600&s=1) and Google Chrome Developer Tools Device Mode.
+
 ## Lighthouse
 
 Lighthouse testing was carried out in an Incognito window using Lighthouse from Chrome Developer Tools.
@@ -35,7 +39,6 @@ Lighthouse testing was carried out in an Incognito window using Lighthouse from 
 |     | Desktop | ![Performance 100](https://img.shields.io/badge/Performance-100-brightgreen) | ![Accessibility 100](https://img.shields.io/badge/Accessibility-100-brightgreen) | ![Best Practises 100](https://img.shields.io/badge/Best%20Practises-100-brightgreen) |![SEO 100](https://img.shields.io/badge/SEO-100-brightgreen) |[home-desktop](https://ibuttimer.github.io/hockey-history/test/lighthouse/ibuttimer.github.io_2022-05-12_15-42-57-builtwith-desktop.html) |
 
 
-
 ## Accessibility
 Accessibility testing was carried out using the [NVDA](https://www.nvaccess.org/) and [ChromeVox](https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en) screen readers.
 
@@ -51,7 +54,17 @@ The [W3C Nu Html Checker](https://validator.w3.org/nu/) was utilised to check th
 | CSS | [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fibuttimer.github.io%2Fhockey-history%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fibuttimer.github.io%2Fhockey-history%2Fireland.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fibuttimer.github.io%2Fhockey-history%2Fresources.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fibuttimer.github.io%2Fhockey-history%2Fbuiltwith.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fibuttimer.github.io%2Fhockey-history%2Fpitch.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) |
 | Result | &check; | &check; | &check; | &check; | &check; |
 
+
+## Issues
+
+Issues were logged in [GitHub Issues](https://github.com/ibuttimer/hockey-history/issues)
+
+- [x] #1
+- [ ] #2
+- [ ] #3
+
 ### Unfixed Bugs
+
 
 You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed. 
 

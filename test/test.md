@@ -57,13 +57,12 @@ The [W3C Nu Html Checker](https://validator.w3.org/nu/) was utilised to check th
 
 ## Issues
 
-Issues were logged in [GitHub Issues](https://github.com/ibuttimer/hockey-history/issues)
+Issues were logged in [GitHub Issues](https://github.com/ibuttimer/hockey-history/issues).
 
-- [x] #1
-- [ ] #2
-- [ ] #3
+### Unfixed Issues
 
-### Unfixed Bugs
+The following issues are still outstanding, please see [bug list](https://github.com/ibuttimer/hockey-history/issues?q=is%3Aissue+is%3Aopen+label%3Abug) for details.
+
 
 
 You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed. 

@@ -64,6 +64,7 @@ section > h2.heading {
     bottom: 0px;
     left: 0px;
     opacity: 0.2;
+    pointer-events: none;
 }
 
 #organisation-card::before {    
@@ -82,6 +83,7 @@ section > h2.heading {
     bottom: 0px;
     left: 0px;
     opacity: 0.2;
+    pointer-events: none;
 }
 
 #leagues-card::before {    
@@ -100,6 +102,7 @@ section > h2.heading {
     bottom: 0px;
     left: 0px;
     opacity: 0.2;
+    pointer-events: none;
 }
 
 #cups-card::before {    
@@ -118,6 +121,7 @@ section > h2.heading {
     bottom: 0px;
     left: 0px;
     opacity: 0.2;
+    pointer-events: none;
 }
 
 #womens-world-cup-card::before {    
@@ -136,6 +140,7 @@ section > h2.heading {
     bottom: 0px;
     left: 0px;
     opacity: 0.1;
+    pointer-events: none;
 }
 
 #olympics-card::before {    
@@ -154,6 +159,7 @@ section > h2.heading {
     bottom: 0px;
     left: 0px;
     opacity: 0.2;
+    pointer-events: none;
 }
 
 .article-text, .article-text h2 {

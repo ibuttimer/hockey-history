@@ -34,7 +34,7 @@
     background-color: var(--background-colour);
     height: var(--padded-menu-height);
     margin-left: var(--std-margin-horz);
-    padding: var(--std-padding-vert) var(--std-padding-horz);
+    padding: calc(var(--std-padding-vert) * 2) var(--std-padding-horz) var(--std-padding-vert) var(--std-padding-horz);
   }
   
 .nav-menu {

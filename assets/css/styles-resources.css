@@ -1,5 +1,7 @@
+@import 'styles-base.css';
+
 :root {
-	--std-card-margin: 30px;
+	--std-card-margin: var(--std-padding-horz);
 
 	--card-border: 1px;
 	--card-border-colour: var(--primary-dark);
@@ -88,15 +90,19 @@ td li {
 
 
 article h2 {
-    /* margin-left: 0px; */
     padding-left: 0px;
 }
+
+section > h2.heading {
+    top: calc(var(--h2-heading-top) + var(--std-card-margin));
+}
+
 
 /* resource grid */
 
 .resource-grid {
-    /* heading row default = h2 height + article h2 margin-top + 2 * (article h2 padding) */
-    --heading-row-initial: calc(var(--default-h2-height) + var(--std-margin-vert) + (2 * var(--std-padding-vert)));
+    /* heading row default = h2 height + article h2 margin-top */
+    --heading-row-initial: calc(var(--h2-line-height) + var(--std-margin-vert));
     /* map row default */
     --map-row-initial: calc(var(--resource-card-height) - var(--heading-row-initial));
 

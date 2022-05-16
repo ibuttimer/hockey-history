@@ -30,6 +30,8 @@
     --std-padding-horz: 15px;
     --std-padding-vert: 5px;
 
+    --std-padded-margin-vert: calc(var(--std-margin-vert) + var(--std-padding-vert));
+
     --std-border-radius: 5px;
 
     --margin-padding-horz: calc(var(--std-margin-horz) + var(--std-padding-horz));
@@ -43,6 +45,22 @@
     --default-h4-height: 1em;
     --default-h5-height: 0.83em;
     --default-h6-height: .67em;
+
+    /* Desktop browsers use a default value of roughly 1.2, depending on the element's font-family.
+        https://developer.mozilla.org/en-US/docs/Web/CSS/line-height */
+    --default-line-height: 1.2;
+
+    /* amount to shift vertical heading to align with top of parent after rotation */
+    --h2-line-height: calc(var(--default-h2-height) * var(--default-line-height));
+    --h2-heading-vert-shift: calc(var(--h2-line-height) - var(--std-padded-margin-vert) - var(--std-padding-vert));
+    --h2-heading-top: calc(var(--h2-heading-vert-shift) * -1);
+
+    /* amount to shift content horizontally by to clear rotated h2 heading */
+    --h2-heading-horz-width: calc(var(--h2-line-height) + var(--std-padding-horz));
+
+    /* amount to shift article-section by to align with top of parent */
+    --article-vert-shift: calc(var(--h2-heading-vert-shift) + calc(var(--std-padded-margin-vert) * 2));
+    --article-top: calc(var(--article-vert-shift) * -1);
 }
 
 /* CSS Specificity
@@ -77,20 +95,30 @@ section {
     margin: var(--std-margin-vert) var(--std-margin-horz);
 }
 
-.article-section {
+article {
     padding: var(--std-padding-vert) var(--std-padding-horz);
-    /* padding for vertical headings */
-    padding-left: calc(var(--std-padding-horz) + var(--default-h2-height) + var(--std-margin-vert));
     margin: var(--std-margin-vert) var(--std-margin-horz);
+    /* TODO article keeps original height, which leaves large gap at the bottom 
+        after heading rotated and shifted. */
+}
+
+.article-section {
+    /* move back to top of parent, to fill space created by h2 rotation */
+    position: relative;
+    top: var(--article-top);
+    left: var(--h2-heading-horz-width);
+    width: calc(100% - var(--h2-heading-horz-width));
 }
 
 article h2 {
     margin-top: var(--std-margin-vert);
-    margin-left: var(--std-margin-horz);
-    padding: var(--std-padding-vert) var(--std-padding-horz);
 }
 
 h2.heading {
+    /* move back to top of parent after rotation */
+    position: relative;
+    top: var(--h2-heading-top);
+
     transform-origin: bottom left;
     transform: rotate(90deg);
     display: inline-block;

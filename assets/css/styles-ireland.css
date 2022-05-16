@@ -1,6 +1,7 @@
-:root {
+@import 'styles-base.css';
 
-	--std-card-margin: 30px;
+:root {
+	--std-card-margin: var(--std-padding-horz);
 
 	--card-border: 1px;
 	--card-border-colour: var(--primary-dark);
@@ -9,23 +10,7 @@
 	--card-border-hover: 2px;
 	--card-border-colour-hover: var(--primary-dark);
 	--card-background-colour-hover: var(--secondary-light);
-
 }
-
-/* introduction */
-
-#left-intro {
-    padding-top: var(--std-padding-vert);
-    width: 66%;
-    float: left;
-}
-
-#right-intro {
-    padding-top: var(--std-padding-vert);
-    width: 33%;
-    float: right;
-}
-
 
 #card-grid {
 	display: grid;
@@ -44,6 +29,11 @@
 
 article.card div.article-section {
     padding-left: var(--std-padding-horz);
+    position: static;
+}
+
+section > h2.heading {
+    top: calc(var(--h2-heading-top) + var(--std-card-margin));
 }
 
 /*
@@ -167,7 +157,11 @@ article.card div.article-section {
 }
 
 .article-text, .article-text h2 {
-    position: relative;
+    position: static;
+}
+
+.article-text h2 {
+    padding-left: var(--std-padding-horz);
 }
 
 
@@ -175,21 +169,6 @@ article.card div.article-section {
 
 /* medium-large screens, 1000px wide or less */ 
 @media screen and (max-width: 1000px) {
-
-    #left-intro {
-        width: 100%;
-        float: left;
-        padding: 0;
-    }
-
-    #right-intro {
-        clear: both;
-        width: 100%;
-        float: left;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-    }
 
 	#card-grid {
 		grid-template-columns: repeat(2, 1fr);

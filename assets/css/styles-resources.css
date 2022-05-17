@@ -71,6 +71,9 @@ td li {
     height: auto;  
 }
 
+#pitch-img:hover {
+	box-shadow: 10px 10px 24px 0px var(--card-shadow-colour);
+}
 
 /* card grid for resources */
 

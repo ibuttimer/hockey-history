@@ -49,13 +49,13 @@ The site is aimed at both sports enthusiasts and history scholars. The aim is to
 ###### Fig 5: Overview Section
 ![Overview Section](media/main-overview.jpg)
 
-- __Introduction Section__
+- __Origins Section__
 
   - This section details a brief bird's eye view of the origins of hockey.
   - An embedded YouTube video provides a visual record of the evolution of modern hockey.
 
-###### Fig 6: Introduction Section
-![Introduction Section](media/main-intro.jpg)
+###### Fig 6: Origins Section
+![Origins Section](media/main-origins.jpg)
 
 - __Timeline Section__
 

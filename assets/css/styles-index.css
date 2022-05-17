@@ -67,14 +67,14 @@
 	--video-height: calc(var(--video-width) * var(--video-aspect-ratio));
 }
 
-/* introduction */
+/* origins */
 
-#intro-video-right {	
+#origins-video-right {	
 	float: right; 
 	width: var(--video-width);
 	height: var(--video-height); 
 }
-#intro-video-bottom {
+#origins-video-bottom {
 	display: none;
 	width: var(--video-width);
 	height: var(--video-height); 
@@ -346,10 +346,10 @@ dl .cell:last-child {
 		--video-width: var(--content-width);
 	}
 
-	#intro-video-right {	
+	#origins-video-right {	
 		display: none;
 	}
-	#intro-video-bottom {
+	#origins-video-bottom {
 		display: block;
 	}
 }

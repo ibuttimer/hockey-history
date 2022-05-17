@@ -36,6 +36,14 @@ section > h2.heading {
     top: calc(var(--h2-heading-top) + var(--std-card-margin));
 }
 
+.article-text {
+    font-weight: var(--paragraph-heavy-font-weight);
+}
+
+.article-text:hover {
+    font-weight: var(--paragraph-font-weight);
+}
+
 /*
     How to change background-image opacity in CSS without affecting text | HTML/CSS
     https://coder-coder.com/background-image-opacity/
@@ -67,7 +75,7 @@ section > h2.heading {
     pointer-events: none;
 }
 
-#organisation-card::before {    
+#organisation-card::before {
     content: "";
     background: url('../img/Ireland_location_provinces.svg') no-repeat center center;
     background-image: -webkit-image-set(
@@ -162,6 +170,15 @@ section > h2.heading {
     pointer-events: none;
 }
 
+.article-text:hover > #overview-card::before,
+.article-text:hover > #organisation-card::before,
+.article-text:hover > #leagues-card::before,
+.article-text:hover > #cups-card::before,
+.article-text:hover > #womens-world-cup-card::before,
+.article-text:hover > #olympics-card::before {
+    background-image: none;    
+}
+
 .article-text, .article-text h2 {
     position: static;
 }
@@ -169,7 +186,6 @@ section > h2.heading {
 .article-text h2 {
     padding-left: var(--std-padding-horz);
 }
-
 
 /* media queries */
 

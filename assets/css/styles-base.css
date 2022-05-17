@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300&family=Montserrat+Alternates:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;500&family=Montserrat+Alternates:wght@500&display=swap');
 
 
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
@@ -15,13 +15,15 @@
     --secondary-dark: #cbc26d;
     --primary-text: #000000;
     --secondary-text: #000000;
+    --secondary-alt-text: #006F51;
 
     --background-colour: var(--secondary-light);
 
     --heading-font: 'Montserrat', sans-serif;
-    --heading-font_weight: 500;
+    --heading-font-weight: 500;
     --paragraph-font: 'Hind', sans-serif;
-    --paragraph-font_weight: 300;
+    --paragraph-font-weight: 300;
+    --paragraph-heavy-font-weight: 500;
 
     --std-margin-horz: 7.5%;
     --std-margin-vert: 5px;
@@ -78,14 +80,14 @@
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
-    font-weight: var(--heading-font_weight);
+    font-weight: var(--heading-font-weight);
     color: var(--primary-text);
     clear: left;
 }
 
 body {
     font-family: var(--paragraph-font);
-    font-weight: var(--paragraph-font_weight);
+    font-weight: var(--paragraph-font-weight);
     color: var(--secondary-text);
     background-color: var(--background-colour);
 }

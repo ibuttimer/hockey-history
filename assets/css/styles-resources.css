@@ -119,10 +119,11 @@ section > h2.heading {
     width: 100%;
     height: 75%;
     text-align: center;
+    align-self: center;
 }
 
 .resource-map img {
-    max-width: 100%;
+    max-width: 30%;
     height: auto;
     background-color: var(--resource-card-background-colour-hover);
     margin-top: var(--std-margin-vert);
@@ -144,11 +145,10 @@ section > h2.heading {
 .resource-grid:hover {
     /* hide map row */
     grid-template-rows: 0px var(--resource-card-height);
-    align-items: start;
     background-color: var(--resource-card-background-colour-hover);
 }
 
-.resource-grid:hover ~ .resource-map img {
+.resource-grid:hover > .resource-map img {
     visibility: hidden;
 }
 
@@ -176,6 +176,54 @@ section > h2.heading {
 
 /* media queries */
 
+/* medium-large screens, 1600px wide or less */ 
+@media screen and (max-width: 1600px) {
+
+    .resource-map img {
+        max-width: 35%;
+    }
+}
+
+/* medium-large screens, 1500px wide or less */ 
+@media screen and (max-width: 1500px) {
+
+    .resource-map img {
+        max-width: 37.5%;
+    }
+}
+
+/* medium-large screens, 1400px wide or less */ 
+@media screen and (max-width: 1400px) {
+
+    .resource-map img {
+        max-width: 40%;
+    }
+}
+
+/* medium-large screens, 1200px wide or less */ 
+@media screen and (max-width: 1200px) {
+
+    .resource-map img {
+        max-width: 50%;
+    }
+}
+
+/* small-medium screens, 1000px wide or less */ 
+@media screen and (max-width: 1000px) {
+
+    .resource-map img {
+        max-width: 60%;
+    }
+}
+
+/* small-medium screens, 900px wide or less */ 
+@media screen and (max-width: 900px) {
+
+    .resource-map img {
+        max-width: 70%;
+    }
+}
+
 /* small-medium screens, 800px wide or less */ 
 @media screen and (max-width: 800px) {
 
@@ -186,6 +234,11 @@ section > h2.heading {
     #card-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .resource-map img {
+        max-width: 50%;
+    }
+  
 }
 
 /* small screens, 600px wide or less */ 
@@ -194,5 +247,24 @@ section > h2.heading {
     #card-grid {
         grid-template-columns: 1fr;
     }
+
+    .resource-map img {
+        max-width: 40%;
+    }
 }
 
+/* small screens, 480px wide or less */ 
+@media screen and (max-width: 480px) {
+
+    .resource-map img {
+        max-width: 50%;
+    }
+}
+
+/* tiny-small screens, 400px wide or less */ 
+@media screen and (max-width: 400px) {
+
+    .resource-map img {
+        max-width: 60%;
+    }
+}

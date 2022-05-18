@@ -23,6 +23,10 @@
 
 	--cell-padding_size: 1rem;
 	--cell-padding: 0 var(--cell-padding_size);
+	--odd-cell-padding-top: 0;
+	--odd-cell-padding-bottom: var(--cell-padding_size);
+	--even-cell-padding-top: calc(2 * var(--cell-padding_size));
+	--even-cell-padding-bottom: 0;
 
 	--content-shift-positive: calc(var(--std-padding) + var(--cell-padding_size));
 	--content-shift: calc(var(--content-shift-positive) * -1);
@@ -58,7 +62,7 @@
 	--timetick-even-vert-shift-positive: calc(var(--timetick-height) + var(--timeline-even-shift) + var(--timeline-thickness));
 	--timetick-even-vert-shift: calc(var(--timetick-even-vert-shift-positive) * -1);
 
-	--timetick-odd-vert-shift-positive: calc(var(--timetick-height) + var(--cell-padding_size));
+	--timetick-odd-vert-shift-positive: calc(var(--timetick-height) + var(--odd-cell-padding-bottom));
 	--timetick-odd-vert-shift: calc(var(--timetick-odd-vert-shift-positive) * -1);
 
 	/* youtube embed width="560" height="315" */
@@ -143,6 +147,7 @@ dl .cell::after {
 	border: var(--timetick-border) solid var(--callout-line-colour);
 	background-color: var(--timetick-centre-colour);
 	border-radius: 50%;
+	z-index: 1;
 }
 
 dl .cell dt {
@@ -171,10 +176,12 @@ dl .cell dd {
 }
 
 dl .cell:nth-child(odd) {
-	/* top/right cells part of timeline */
-	padding-bottom: 1rem;
+	/* top/left cells part of timeline */
+	padding-top: var(--odd-cell-padding-top);
+	padding-bottom: var(--odd-cell-padding-bottom);
 
 	justify-content: end;
+	align-self: self-end;
 
 	/* active for horz timeline */
 	border-bottom-width: var(--timeline-thickness);
@@ -188,8 +195,9 @@ dl .cell:nth-child(odd) dd:last-child {
 	padding-bottom: 0.5rem;
 }
 dl .cell:nth-child(even) {
-	/* bottom/left cells part of timeline */
-	padding-top: 1rem;
+	/* bottom/right cells part of timeline */
+	padding-top: var(--even-cell-padding-top);
+	padding-bottom: var(--even-cell-padding-bottom);
 	position: relative;
 	/* to avoid thicker line where top & bottom cells overlap */
 	top: var(--timeline-even-shift);
@@ -270,6 +278,10 @@ dl .cell:last-child {
 		/* vert timeline
 		------------- */
 		--cell-padding: var(--cell-padding_size) 0;
+		--odd-cell-padding-top: 0;
+		--odd-cell-padding-bottom: 0;
+		--even-cell-padding-top: var(--cell-padding_size);
+		--even-cell-padding-bottom: 0;
 
 		--cell-flex-dir: column;
 
@@ -291,10 +303,6 @@ dl .cell:last-child {
 		display: none;
 	}
 
-	dl .cell::after {
-		/* time tick on line: donut */
-		position: relative;
-	}
 	dl .cell:nth-child(odd) {
 		/* right cell's part of timeline */
 		/* active for vert timeline */
@@ -315,6 +323,8 @@ dl .cell:last-child {
 		/* to avoid thicker line where top & bottom cells overlap */
 		left: var(--timeline-even-shift);
 
+		align-self: self-end;
+
 		/* active for vert timeline */
 		border-left-width: var(--timeline-thickness);
 		border-left-style: var(--timeline-line-border-left);
@@ -322,15 +332,23 @@ dl .cell:last-child {
 
 		padding-left: var(--cell-padding_size);
 	}
+	dl .cell:nth-child(even) dt, 
+	dl .cell:nth-child(even) dd {
+		text-align: end;
+	}
+
+	dl .cell::after {
+		/* time tick on line: donut */
+		position: relative;
+	}
 	dl .cell:nth-child(odd)::after {
 		/* time tick on line: donut */
-		right: calc(-100% - var(--timetick-horz-shift) - var(--cell-padding_size) - var(--cell-padding_size));
-		bottom: calc(var(--timetick-vert-shift) - var(--cell-padding_size));
+		right: calc(-100% - var(--timetick-horz-shift) - (2 * var(--cell-padding_size)));
 	}
 	dl .cell:nth-child(even)::after {
 		/* time tick on line: donut */
 		left: var(--timetick-horz-shift);
-		top: calc(var(--timetick-vert-shift) + var(--cell-padding_size) + var(--cell-padding_size));
+		top: calc(var(--timetick-vert-shift) + var(--even-cell-padding-top));
 	}
 
 	dl .cell:last-child {

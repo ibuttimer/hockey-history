@@ -1,5 +1,6 @@
 - [Strategy](#strategy)
 - [Scope](#scope)
+  - [User Stories](#user-stories)
 - [Structure](#structure)
 - [Skeleton](#skeleton)
 - [General layout](#general-layout)
@@ -19,22 +20,34 @@
 - [Resources](#resources)
 - [To Do](#to-do)
 - [Changes](#changes)
-  - [20-04-2022](#20-04-2022)
-    - [Timeline](#timeline)
-  - [26-04-2022](#26-04-2022)
-    - [Ireland page](#ireland-page-1)
-  - [05-05-2022](#05-05-2022)
-    - [Resources page](#resources-page-1)
-  - [09-05-2022](#09-05-2022)
-    - [Navigation menu](#navigation-menu)
-  - [11-05-2022](#11-05-2022)
-    - [Colour scheme](#colour-scheme-1)
+    - [20-04-2022](#20-04-2022)
+      - [Timeline](#timeline)
+    - [26-04-2022](#26-04-2022)
+      - [Ireland page](#ireland-page-1)
+    - [05-05-2022](#05-05-2022)
+      - [Resources page](#resources-page-1)
+    - [09-05-2022](#09-05-2022)
+      - [Navigation menu](#navigation-menu)
+    - [11-05-2022](#11-05-2022)
+      - [Colour scheme](#colour-scheme-1)
+    - [16-05-2022](#16-05-2022)
+      - [User stories](#user-stories-1)
+      - [Logo](#logo)
 
 # Strategy
 The strategy is to create a website outlining the history of field hockey. It will provide a brief overview of the development of the game and act as a resource for hockey related information.
 
 # Scope
 The website will not host all available content but will provide basic information and links to external resources where appropriate.
+
+## User Stories
+As a user:
+- I want to understand the purpose of the site.
+- I want to be able to easily navigate the site.
+- I want to find the site visually pleasing.
+- I want to want be able to view the site on a variety of devices and screen sizes.
+- I want to be able to access external resources.
+- I want to be able to access information sources.
 
 # Structure
 Due to the low number of pages and the fact the pages will not be inter-dependent, the website will utilise a non-linear hyperlinked navigation structure. 
@@ -46,10 +59,10 @@ The website will consist of four pages:
   Main page with the history of field hockey, a timeline of key events and other facts.
 - Ireland
 
-  Ireland-specific page of hockey events and facts.
+  Ireland-specific page of hockey facts.
 - Resources
 
-  Page with links to Irish and international organisations, hockey blogs etc.
+  Page with links to Irish and international organisations, hockey resources etc.
 - Built With
 
   Page detailing the technologies and resources used to build the website.
@@ -152,20 +165,25 @@ The guidelines outlined in the following will be followed:
 - Look for Olympics images
 
 # Changes
-## 20-04-2022
-### Timeline
+### 20-04-2022
+#### Timeline
 Timeline was simplified. The original idea, shown below, proved too difficult to implement in the timeframe required. 
 ![](img/timeline-v1.jpg)
-## 26-04-2022
-### Ireland page
+### 26-04-2022
+#### Ireland page
 Added Ireland page design. 
-## 05-05-2022
-### Resources page
+### 05-05-2022
+#### Resources page
 Added Resources page design. 
-## 09-05-2022
-### Navigation menu
+### 09-05-2022
+#### Navigation menu
 Updated navigation menu to utilise hamburger menu on small screens. 
-## 11-05-2022
-### Colour scheme
+### 11-05-2022
+#### Colour scheme
 Updated colour scheme. 
+### 16-05-2022
+#### User stories
+Added user stories. 
+#### Logo
+Added logo and moved hamburger menu. 
 

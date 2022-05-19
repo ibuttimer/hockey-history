@@ -18,6 +18,7 @@
 }
 .card {
 	margin: var(--std-card-margin);
+    margin-top: 0px;
     padding: var(--std-padding-vert) var(--std-padding-horz);
 	box-shadow: 6px 3px 3px var(--card-shadow-colour);
 	border: var(--card-border) solid var(--card-border-colour);
@@ -30,10 +31,6 @@
 article.card div.article-section {
     padding-left: var(--std-padding-horz);
     position: static;
-}
-
-section > h2.heading {
-    top: calc(var(--h2-heading-top) + var(--std-card-margin));
 }
 
 .article-text {

@@ -1,7 +1,6 @@
 @import 'styles-nav.css';
 @import 'styles-footer.css';
 
-
 /* custom properties */
 :root {
     --std-block-size: 200px;
@@ -31,8 +30,12 @@
 }
 
 #hero-image {
+    /* can't use width 100% with absolute positioning as takes width of #hero-outer
+        including padding */
+    position: absolute;
+
     height: var(--hero-height);
-    width: 100%;
+    width: calc(100% - (2 * var(--std-padding-horz)));
 
     border-radius: 10px;
 
@@ -99,7 +102,6 @@
 #two-line-hero {
     display: none;
 }
-
 
 /* media queries */
 

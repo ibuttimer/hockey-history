@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;500&family=Montserrat+Alternates:wght@500&display=swap');
 
-
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
 :root {
     /* colour scheme: https://material.io/resources/color/#!/?view.left=1&view.right=0&primary.color=1DE9B6&secondary.color=FFF59D */
@@ -59,10 +58,6 @@
 
     /* amount to shift content horizontally by to clear rotated h2 heading */
     --h2-heading-horz-width: calc(var(--h2-line-height) + var(--std-padding-horz));
-
-    /* amount to shift article-section by to align with top of parent */
-    --article-vert-shift: calc(var(--h2-heading-vert-shift) + calc(var(--std-padded-margin-vert) * 2));
-    --article-top: calc(var(--article-vert-shift) * -1);
 }
 
 /* CSS Specificity
@@ -92,55 +87,40 @@ body {
     background-color: var(--background-colour);
 }
 
+/* heading rotation with help from 
+    https://css-tricks.com/snippets/css/text-rotation/ */
+article, 
 section {
+    position: relative;
     padding: var(--std-padding-vert) var(--std-padding-horz);
     margin: var(--std-margin-vert) var(--std-margin-horz);
-}
-
-article {
-    padding: var(--std-padding-vert) var(--std-padding-horz);
-    margin: var(--std-margin-vert) var(--std-margin-horz);
-    /* TODO article keeps original height, which leaves large gap at the bottom 
-        after heading rotated and shifted. */
 }
 
 .article-section {
-    /* move back to top of parent, to fill space created by h2 rotation */
+    /* move right to make space for rotated h2 heading */
     position: relative;
-    top: var(--article-top);
     left: var(--h2-heading-horz-width);
     width: calc(100% - var(--h2-heading-horz-width));
 }
 
-article h2 {
+article h2,
+section h2 {
     margin-top: var(--std-margin-vert);
 }
 
-h2.heading {
-    /* move back to top of parent after rotation */
-    position: relative;
-    top: var(--h2-heading-top);
+article h2.heading,
+section h2.heading {
+    /* absolute positioning means takes up vertical space */
+    position: absolute;
+    top: 0;
+    left: var(--h2-line-height);
 
-    transform-origin: bottom left;
+    /* rotate around top left & move to right */
+    transform-origin: top left;
     transform: rotate(90deg);
     display: inline-block;
     clear: both;
 }
-
-
-/* classes to align with section content */
-.section-left {
-    padding-left: var(--std-padding-horz);
-    margin-left: var(--std-margin-horz);
-}
-.section-right {
-    padding-right: var(--std-padding-horz);
-    margin-right: var(--std-margin-horz);
-}
-.section-centre {
-    text-align: center;
-}
-
 
 /* media queries */
 

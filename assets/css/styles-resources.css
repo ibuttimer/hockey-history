@@ -21,7 +21,6 @@
     --table-border-colour: rgb(100, 100, 100);
 }
 
-
 /*
     https://developer.mozilla.org/en-US/docs/Web/HTML/Element/colgroup
     https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th#attr-scope
@@ -83,6 +82,7 @@ td li {
 }
 .card {
 	margin: var(--std-card-margin);
+    margin-top: 0px;
     padding: var(--std-padding-vert) var(--std-padding-horz);
 	box-shadow: 6px 3px 3px var(--card-shadow-colour);
 	border: var(--card-border) solid var(--card-border-colour);
@@ -91,15 +91,9 @@ td li {
     background-color: var(--resource-card-background-colour-hover);
 }
 
-
 article h2 {
     padding-left: 0px;
 }
-
-section > h2.heading {
-    top: calc(var(--h2-heading-top) + var(--std-card-margin));
-}
-
 
 /* resource grid */
 

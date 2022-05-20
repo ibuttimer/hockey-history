@@ -2,6 +2,7 @@ User-agent: *
 Disallow: /design/
 Disallow: /media/
 Disallow: /test/
+Allow: /test/lighthouse/*.html
 
 Disallow: /*.md$
 Disallow: /.gitignore

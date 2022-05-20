@@ -80,11 +80,21 @@ h1, h2, h3, h4, h5, h6 {
     clear: left;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
     font-family: var(--paragraph-font);
     font-weight: var(--paragraph-font-weight);
     color: var(--secondary-text);
     background-color: var(--background-colour);
+}
+
+.content {
+    flex: 1 0 auto;
 }
 
 /* heading rotation with help from 

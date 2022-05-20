@@ -158,6 +158,8 @@ The following resources were used to build the website.
 - The timeline is based on [this example](https://codepen.io/joemaffei/pen/WNQKyPo) by [Joe Maffei](https://stackoverflow.com/users/4642023/joe-maffei) from [stackoverflow](https://stackoverflow.com/a/61781360), customised, adapted to meet [W3C Nu Html Checker](https://validator.w3.org/nu/) standards and made responsive.
 - Tooltips courtesy of [CSS Tooltip Generator](https://www.cssportal.com/css-tooltip-generator/)
 - [YouTube embedded player facade](https://github.com/paulirish/lite-youtube-embed) courtesy of [Paul Irish](https://github.com/paulirish)
+- Hamburger menu based on [Responsive CSS Hamburger Menu - CSS only](https://codepen.io/alvarotrigo/pen/MWEJEWG) from [10+ Hamburger Menu Examples &#xff3b;CSS Only&#xff3d; by Luke Embrey](https://alvarotrigo.com/blog/hamburger-menu-css/)
+- Sticky footer courtesy of [There is flexbox](https://css-tricks.com/couple-takes-sticky-footer/#aa-there-is-flexbox) from [Sticky Footer, Five Ways by Chris Coyier](https://css-tricks.com/couple-takes-sticky-footer/)
 
 ### Media
 
@@ -166,7 +168,6 @@ The following resources were used to build the website.
 - The [Responsive Mockup](#fig-1-responsive-mockup) image was generated courtesy of [Am I Responsive](http://ami.responsivedesign.is/)
 - [Hockey field image](https://commons.wikimedia.org/wiki/File:Hockey_field_metric.svg), Hockey_field.svg: User Robert Merkel on en.wikipedia, derivative work: Lcmortensen, Public domain, via Wikimedia Commons, derivative work: landscape, updated labels, length and width dimensions
 - Maps by [FreeVectorMaps.com](https://freevectormaps.com/), [Attribution License (Free)](https://freevectormaps.com/license), cropped, transparent background
-- Hamburger menu based on [Responsive CSS Hamburger Menu - CSS only](https://codepen.io/alvarotrigo/pen/MWEJEWG) from [10+ Hamburger Menu Examples &#xff3b;CSS Only&#xff3d; by Luke Embrey](https://alvarotrigo.com/blog/hamburger-menu-css/)
 - [Flag of Ireland hockey team image](https://commons.wikimedia.org/wiki/File:Flag_of_Ireland_hockey_team.svg), Caomhan27/Mysid, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0), via Wikimedia Commons
 - Pitch lines image by [TaniaRose](https://pixabay.com/users/taniarose-3072581/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2330582) from [Pixabay](https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2330582)
 - Cups image by [Arek Socha](https://pixabay.com/users/qimono-1962238/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1615074) from [Pixabay](https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1615074)

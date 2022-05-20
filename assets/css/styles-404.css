@@ -18,14 +18,3 @@ article {
 	text-align: center;
 }
 
-/* tiny screens, 450px wide or less */ 
-@media screen and (max-width: 450px) {
-
-	:root {
-		--footer-height: 80px;
-	}
-
-	footer {
-		line-height: calc(var(--footer-height) * 0.5);
-	}
-}

@@ -1,0 +1,31 @@
+@import 'styles-base.css';
+
+:root {
+	--vert-margin: calc(var(--std-margin-vert) * 3);
+}
+
+article h1 {
+	font-size: xxx-large;
+	margin-top: var(--vert-margin);
+}
+
+article h2,
+article p {
+	margin-top: var(--vert-margin);
+}
+
+article {
+	text-align: center;
+}
+
+/* tiny screens, 450px wide or less */ 
+@media screen and (max-width: 450px) {
+
+	:root {
+		--footer-height: 80px;
+	}
+
+	footer {
+		line-height: calc(var(--footer-height) * 0.5);
+	}
+}

@@ -45,7 +45,7 @@
     --default-h3-height: 1.17em;
     --default-h4-height: 1em;
     --default-h5-height: 0.83em;
-    --default-h6-height: .67em;
+    --default-h6-height: 0.67em;
 
     /* Desktop browsers use a default value of roughly 1.2, depending on the element's font-family.
         https://developer.mozilla.org/en-US/docs/Web/CSS/line-height */

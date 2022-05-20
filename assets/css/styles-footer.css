@@ -17,6 +17,7 @@ footer {
     margin-right: var(--std-margin-horz);
     padding: var(--std-padding-vert) var(--std-padding-horz) var(--std-padding-vert) var(--std-padding-horz);
     height: var(--footer-height);
+    line-height: var(--footer-height);
     color: var(--footer-content-colour);
 }
 
@@ -191,6 +192,10 @@ footer {
     }
     .socials-list {
         justify-content: center;
+    }
+
+    footer {
+      line-height: calc(var(--footer-height) * 0.75);
     }
 }
 

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300&family=Montserrat+Alternates:wght@500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;500&family=Montserrat+Alternates:wght@500&display=swap');
 
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
 :root {
@@ -15,13 +14,15 @@
     --secondary-dark: #cbc26d;
     --primary-text: #000000;
     --secondary-text: #000000;
+    --secondary-alt-text: #006F51;
 
     --background-colour: var(--secondary-light);
 
     --heading-font: 'Montserrat', sans-serif;
-    --heading-font_weight: 500;
+    --heading-font-weight: 500;
     --paragraph-font: 'Hind', sans-serif;
-    --paragraph-font_weight: 300;
+    --paragraph-font-weight: 300;
+    --paragraph-heavy-font-weight: 500;
 
     --std-margin-horz: 7.5%;
     --std-margin-vert: 5px;
@@ -29,6 +30,8 @@
     --std-spacing: 30px;
     --std-padding-horz: 15px;
     --std-padding-vert: 5px;
+
+    --std-padded-margin-vert: calc(var(--std-margin-vert) + var(--std-padding-vert));
 
     --std-border-radius: 5px;
 
@@ -43,6 +46,18 @@
     --default-h4-height: 1em;
     --default-h5-height: 0.83em;
     --default-h6-height: .67em;
+
+    /* Desktop browsers use a default value of roughly 1.2, depending on the element's font-family.
+        https://developer.mozilla.org/en-US/docs/Web/CSS/line-height */
+    --default-line-height: 1.2;
+
+    /* amount to shift vertical heading to align with top of parent after rotation */
+    --h2-line-height: calc(var(--default-h2-height) * var(--default-line-height));
+    --h2-heading-vert-shift: calc(var(--h2-line-height) - var(--std-padded-margin-vert) - var(--std-padding-vert));
+    --h2-heading-top: calc(var(--h2-heading-vert-shift) * -1);
+
+    /* amount to shift content horizontally by to clear rotated h2 heading */
+    --h2-heading-horz-width: calc(var(--h2-line-height) + var(--std-padding-horz));
 }
 
 /* CSS Specificity
@@ -60,57 +75,52 @@
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
-    font-weight: var(--heading-font_weight);
+    font-weight: var(--heading-font-weight);
     color: var(--primary-text);
     clear: left;
 }
 
 body {
     font-family: var(--paragraph-font);
-    font-weight: var(--paragraph-font_weight);
+    font-weight: var(--paragraph-font-weight);
     color: var(--secondary-text);
     background-color: var(--background-colour);
 }
 
+/* heading rotation with help from 
+    https://css-tricks.com/snippets/css/text-rotation/ */
+article, 
 section {
+    position: relative;
     padding: var(--std-padding-vert) var(--std-padding-horz);
     margin: var(--std-margin-vert) var(--std-margin-horz);
 }
 
 .article-section {
-    padding: var(--std-padding-vert) var(--std-padding-horz);
-    /* padding for vertical headings */
-    padding-left: calc(var(--std-padding-horz) + var(--default-h2-height) + var(--std-margin-vert));
-    margin: var(--std-margin-vert) var(--std-margin-horz);
+    /* move right to make space for rotated h2 heading */
+    position: relative;
+    left: var(--h2-heading-horz-width);
+    width: calc(100% - var(--h2-heading-horz-width));
 }
 
-article h2 {
+article h2,
+section h2 {
     margin-top: var(--std-margin-vert);
-    margin-left: var(--std-margin-horz);
-    padding: var(--std-padding-vert) var(--std-padding-horz);
 }
 
-h2.heading {
-    transform-origin: bottom left;
+article h2.heading,
+section h2.heading {
+    /* absolute positioning means takes up vertical space */
+    position: absolute;
+    top: 0;
+    left: var(--h2-line-height);
+
+    /* rotate around top left & move to right */
+    transform-origin: top left;
     transform: rotate(90deg);
     display: inline-block;
     clear: both;
 }
-
-
-/* classes to align with section content */
-.section-left {
-    padding-left: var(--std-padding-horz);
-    margin-left: var(--std-margin-horz);
-}
-.section-right {
-    padding-right: var(--std-padding-horz);
-    margin-right: var(--std-margin-horz);
-}
-.section-centre {
-    text-align: center;
-}
-
 
 /* media queries */
 

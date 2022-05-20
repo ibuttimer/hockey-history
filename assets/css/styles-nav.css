@@ -1,6 +1,5 @@
 @import 'styles-base.css';
 
-
 /* custom properties */
 :root {
     --menu-item-width: 130px;
@@ -16,6 +15,8 @@
 
     --nav-menu-margin-right: 20px;
 
+    --menu-button-border-width: 1px;
+
     --menu-button-current-colour: var(--primary);
     --menu-button-colour: var(--secondary-dark);
     --menu-button-hover-colour: var(--primary-dark);
@@ -30,13 +31,26 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: start;
     background-color: var(--background-colour);
     height: var(--padded-menu-height);
     margin-left: var(--std-margin-horz);
-    padding: var(--std-padding-vert) var(--std-padding-horz);
-  }
-  
+    padding: calc(var(--std-padding-vert) * 2) var(--std-padding-horz) var(--std-padding-vert) var(--std-padding-horz);
+}
+
+.logo {
+    padding-right: var(--std-padding-horz);
+    padding-top: calc((2 * var(--std-padding-vert) - var(--menu-button-border-width)));
+}
+
+.logo img {
+    margin: var(--std-margin-vert);
+    padding: calc(var(--std-padding-vert) - (2 * var(--menu-button-border-width)));
+    border: var(--menu-button-border-width) solid var(--primary);
+    border-radius: 3px;
+    background: linear-gradient(45deg, var(--primary-dark) 60%, var(--primary-light));
+}
+
 .nav-menu {
     display: flex;
     flex-direction: row;
@@ -60,7 +74,7 @@
     margin-right: var(--nav-menu-margin-right);
     margin-top: var(--std-margin-vert);
     margin-bottom: var(--std-margin-vert);
-    border: 1px solid var(--menu-button-colour);
+    border: var(--menu-button-border-width) solid var(--menu-button-colour);
     background-color: var(--menu-button-colour);
     border-radius: var(--std-border-radius);
     padding: var(--std-padding-vert) var(--std-padding-horz);
@@ -135,11 +149,23 @@
     margin-top: 0px;
     transform: rotate(-45deg);
 }
-  
+
+#menu-toggle:not(:checked) ~ .nav-menu {
+    border-width: 0;
+}
+
 /* media queries */
 
 /* tiny-small screens, 600px wide or less */ 
 @media screen and (max-width: 600px) {
+
+    :root {
+        --nav-menu-margin-right: 0;
+    }
+    
+    .top-nav {
+        justify-content: space-between;
+    }
 
     .menu-button-container {
         display: flex;
@@ -147,12 +173,15 @@
   
     .nav-menu {
         position: absolute;
-        top: 0;
+        top: var(--std-margin-vert);
         margin-top: var(--padded-menu-height);
-        left: var(--std-margin-horz);
+        right: calc(var(--std-padding-horz) + var(--std-margin-horz) - var(--menu-button-border-width));
         flex-direction: column;
-        width: 100%;
-        justify-content: left;
+
+        border: var(--menu-button-border-width) solid var(--secondary);
+        border-radius: var(--std-border-radius);
+        background-color: var(--secondary);
+        z-index: 1;
     }
   
     .nav-menu > li a {

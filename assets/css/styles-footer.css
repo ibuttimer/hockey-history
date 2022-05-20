@@ -7,6 +7,8 @@
     /* https://color.adobe.com/create/color-contrast-analyzer 
         good contrast to background colour */
     --footer-content-colour: #6D6D6D;
+
+    --footer-icon-font-size: 1.5em;
 }
 
 footer {
@@ -54,13 +56,14 @@ footer {
 .socials-list a {
     text-decoration: none;
     color: var(--footer-content-colour);
+    font-size: var(--footer-icon-font-size);
 }
 
 .built-with a {
     text-decoration: none;
     color: var(--footer-content-colour);
+    font-size: var(--footer-icon-font-size);
 }
-
 
 /* Tooltip courtesy of CSS Tooltip Generator 
     https://www.cssportal.com/css-tooltip-generator/
@@ -165,8 +168,6 @@ footer {
     display: none !important;
   }
   
-
-
 /* media queries */
 
 /* tiny screens, 450px wide or less */ 

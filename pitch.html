@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Diagram of a field hockey pitch.">
 
     <!-- fontawsome script -->
     <script src="https://kit.fontawesome.com/f561d6c0a0.js" crossorigin="anonymous"></script>
@@ -24,19 +25,30 @@
 <body>
     <header>
         <nav class="top-nav">
+            <div class="logo">
+                <a href="index.html" aria-label="logo, goto home page.">
+                    <span>
+                        <img src="assets/img/favicon_io/logo-56x56.png" width="28" height="28"
+                            alt="logo, goto home page.">
+                    </span>
+                </a>
+            </div>
             <input id="menu-toggle" type="checkbox" />
             <label class='menu-button-container' for="menu-toggle">
                 <span class='menu-button'></span>
             </label>
             <ul class="nav-menu">
                 <li>
-                    <a href="index.html"><i class="fas fa-home"></i>&nbsp;Home</a>
+                    <a href="index.html" aria-label="goto home page."><i class="fas fa-home"></i>&nbsp;Home</a>
                 </li>
                 <li>
-                    <a href="ireland.html"><i class="fas fa-flag"></i>&nbsp;Ireland</a>
+                    <a href="ireland.html" aria-label="goto ireland page."><i class="fas fa-flag"></i>&nbsp;Ireland</a>
                 </li>
-                <li class="nav-menu-li-margin-right">
-                    <a href="resources.html"><i class="fas fa-info"></i>&nbsp;Resources</a>
+                <li>
+                    <a href="resources.html" aria-label="goto resources page."><i class="fas fa-info"></i>&nbsp;Resources</a>
+                </li>
+                <li>
+                    <a href="pitch.html" class="current_page" aria-label="current page, pitch."><i class="fas fa-square"></i>&nbsp;Pitch</a>
                 </li>
             </ul>
         </nav>
@@ -55,7 +67,7 @@
             </div>
         </section>
         <article>
-            <h2 class="heading">Pitch</h2>
+            <h2 class="heading">Pitch (Outdoor)</h2>
             <div class="article-section">
                 <picture>
                     <source
@@ -64,8 +76,13 @@
                     <source
                         srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1651834738/hockey-history/Hockey_field_metric_gzubpf.jpg"
                         type="image/jpeg">
-                    <img id="pitch-img" src="assets/img/Hockey_field_metric.jpg" alt="picture of hockey pitch">
+                    <img id="pitch-img" src="assets/img/Hockey_field_metric.jpg" alt="picture of hockey pitch" width="864" height="564">
                 </picture>
+                <p>The full pitch specification may be found in the <em>FIELD AND EQUIPMENT SPECIFICATIONS</em> section of <em>Outdoor Hockey (11 a-side)</em> at 
+                    <a href="https://www.fih.ch/inside-fih/our-official-documents/rules-of-hockey/"
+                        target="_blank" rel="noopener" aria-label="visit rules of hockey on International Hockey Federation in another tab">
+                        Rules of Hockey <sup><i class="fas fa-external-link-alt" aria-hidden="true"></i></sup></a>
+                </p>
             </div>
         </article>
     </main>

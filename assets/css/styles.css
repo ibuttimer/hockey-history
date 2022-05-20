@@ -1,15 +1,18 @@
 @import 'styles-nav.css';
 @import 'styles-footer.css';
 
-
 /* custom properties */
 :root {
     --std-block-size: 200px;
+    --x0-25-block-size: calc(var(--std-block-size) / 4);
+    --x0-5-block-size: calc(var(--std-block-size) / 2);
+    --x0-75-block-size: calc(var(--x0-25-block-size) * 3);
 
     /* one line hero text */
-    --hero-text-width: 500px;
-    --hero-text-height: 50px;
     --hero-height: var(--std-block-size);
+    --hero-text-block: calc(var(--hero-height) / 4);
+    --hero-text-width: calc(var(--hero-text-block) * 10);
+    --hero-text-height: var(--hero-text-block);
 }
 
 /* hero image */
@@ -27,21 +30,25 @@
 }
 
 #hero-image {
+    /* can't use width 100% with absolute positioning as takes width of #hero-outer
+        including padding */
+    position: absolute;
+
     height: var(--hero-height);
-    width: 100%;
+    width: calc(100% - (2 * var(--std-padding-horz)));
 
     border-radius: 10px;
 
-    /* https://developer.mozilla.org/en-US/docs/Web/CSS/image/image-set */
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/image/image-set
+        https://css-tricks.com/using-performant-next-gen-images-in-css-with-image-set/ */
     background: url('../img/mas-arg-boys-2018-youth-olympics-lge.jpg') no-repeat center center;
+    /* Chrome/Edge/Opera; doesn't currently support 'type' only resolution */
     background-image: -webkit-image-set(
-        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-lge_ne1kur.webp" type("image/webp"),
-        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-lge_hrrour.jpg" type("image/jpeg")
+        url("https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-lge_ne1kur.webp") 1x
     );
-    background-image: image-set(
-        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-lge_ne1kur.webp" type("image/webp"),
-        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-lge_hrrour.jpg" type("image/jpeg")
-    );
+    /* TODO the standard way; image-set(). This is a CSS Images Module Level 4 feature, 
+        and as the W3C CSS Validator currently only supports CSS3, unable to 
+        follow recommendations from https://developer.mozilla.org/en-US/docs/Web/CSS/image/image-set */
 
     background-color: var(--primary);
 
@@ -96,7 +103,6 @@
     display: none;
 }
 
-
 /* media queries */
 
 /* small-medium screens, 800px wide or less */ 
@@ -104,18 +110,18 @@
 
     :root {
         --hero-height: 190px;   /* to match height of small image */
+        --hero-text-width: calc(var(--hero-text-block) * 8);
     }
 
     #hero-image {
         background-image: url('../img/mas-arg-boys-2018-youth-olympics-med.jpg');
+        /* Chrome/Edge/Opera; doesn't currently support 'type' only resolution */
         background-image: -webkit-image-set(
-            "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-med_shomyl.webp" type("image/webp"),
-            "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-med_qo5apd.jpg" type("image/jpeg")
+            url("https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-med_shomyl.webp") 1x
         );
-        background-image: image-set(
-            "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-med_shomyl.webp" type("image/webp"),
-            "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-med_qo5apd.jpg" type("image/jpeg")
-        );
+        /* TODO the standard way; image-set(). This is a CSS Images Module Level 4 feature, 
+            and as the W3C CSS Validator currently only supports CSS3, unable to 
+            follow recommendations from https://developer.mozilla.org/en-US/docs/Web/CSS/image/image-set */
     }
 }
 
@@ -124,21 +130,20 @@
 
     :root {
         /* two line hero text */
-        --hero-text-width: 250px;
-        --hero-text-height: 100px;
+        --hero-text-width: calc(var(--hero-text-block) * 5);
+        --hero-text-height: calc(var(--hero-text-block) * 2);
     }
 
     /* hero */
     #hero-image {
         background-image: url('../img/mas-arg-boys-2018-youth-olympics-sml.jpg');
+        /* Chrome/Edge/Opera; doesn't currently support 'type' only resolution */
         background-image: -webkit-image-set(
-            "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-sml_yl80np.webp" type("image/webp"),
-            "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-sml_r9zywy.jpg" type("image/jpeg")
+            url("https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-sml_yl80np.webp") 1x
         );
-        background-image: image-set(
-            "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-sml_yl80np.webp" type("image/webp"),
-            "https://res.cloudinary.com/dytiyi1cg/image/upload/v1651841788/hockey-history/mas-arg-boys-2018-youth-olympics-sml_r9zywy.jpg" type("image/jpeg")
-        );
+        /* TODO the standard way; image-set(). This is a CSS Images Module Level 4 feature, 
+            and as the W3C CSS Validator currently only supports CSS3, unable to 
+            follow recommendations from https://developer.mozilla.org/en-US/docs/Web/CSS/image/image-set */
     }
 
     #hero-text, #hero-text h2 {
@@ -151,6 +156,19 @@
         display: block;
     }
 }
+
+/* tiny landscape screens, 450px wide or less */ 
+@media screen and (orientation: landscape) and (max-height: 450px) {
+
+    :root {
+        --hero-height: var(--x0-5-block-size);
+    }
+
+    #hero-text {
+        font-size: 100%;
+    }    
+}
+
 
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion */
 /* Tone down the animation to avoid vestibular motion triggers like scaling or panning large objects. */

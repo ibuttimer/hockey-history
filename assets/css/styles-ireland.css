@@ -1,6 +1,7 @@
-:root {
+@import 'styles-base.css';
 
-	--std-card-margin: 30px;
+:root {
+	--std-card-margin: var(--std-padding-horz);
 
 	--card-border: 1px;
 	--card-border-colour: var(--primary-dark);
@@ -9,23 +10,7 @@
 	--card-border-hover: 2px;
 	--card-border-colour-hover: var(--primary-dark);
 	--card-background-colour-hover: var(--secondary-light);
-
 }
-
-/* introduction */
-
-#left-intro {
-    padding-top: var(--std-padding-vert);
-    width: 66%;
-    float: left;
-}
-
-#right-intro {
-    padding-top: var(--std-padding-vert);
-    width: 33%;
-    float: right;
-}
-
 
 #card-grid {
 	display: grid;
@@ -33,6 +18,7 @@
 }
 .card {
 	margin: var(--std-card-margin);
+    margin-top: 0px;
     padding: var(--std-padding-vert) var(--std-padding-horz);
 	box-shadow: 6px 3px 3px var(--card-shadow-colour);
 	border: var(--card-border) solid var(--card-border-colour);
@@ -44,6 +30,15 @@
 
 article.card div.article-section {
     padding-left: var(--std-padding-horz);
+    position: static;
+}
+
+.article-text {
+    font-weight: var(--paragraph-heavy-font-weight);
+}
+
+.article-text:hover {
+    font-weight: var(--paragraph-font-weight);
 }
 
 /*
@@ -64,9 +59,9 @@ article.card div.article-section {
     background-image: -webkit-image-set(
         "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652187024/hockey-history/Ireland_hockey_team_1908_ixop6t.jpg" type("image/jpeg")
     );
-    background-image: image-set(
-        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652187024/hockey-history/Ireland_hockey_team_1908_ixop6t.jpg" type("image/jpeg")
-    );
+    /* TODO the standard way; image-set(). This is a CSS Images Module Level 4 feature, 
+        and as the W3C CSS Validator currently only supports CSS3, unable to 
+        follow recommendations from https://developer.mozilla.org/en-US/docs/Web/CSS/image/image-set */
     background-size: cover;
     position: absolute;
     top: 0px;
@@ -74,17 +69,18 @@ article.card div.article-section {
     bottom: 0px;
     left: 0px;
     opacity: 0.2;
+    pointer-events: none;
 }
 
-#organisation-card::before {    
+#organisation-card::before {
     content: "";
     background: url('../img/Ireland_location_provinces.svg') no-repeat center center;
     background-image: -webkit-image-set(
         "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652187024/hockey-history/Ireland_location_provinces_erz3vy.svg" type("image/svg")
     );
-    background-image: image-set(
-        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652187024/hockey-history/Ireland_location_provinces_erz3vy.svg" type("image/svg")
-    );
+    /* TODO the standard way; image-set(). This is a CSS Images Module Level 4 feature, 
+        and as the W3C CSS Validator currently only supports CSS3, unable to 
+        follow recommendations from https://developer.mozilla.org/en-US/docs/Web/CSS/image/image-set */
     background-size: cover;
     position: absolute;
     top: 0px;
@@ -92,6 +88,7 @@ article.card div.article-section {
     bottom: 0px;
     left: 0px;
     opacity: 0.2;
+    pointer-events: none;
 }
 
 #leagues-card::before {    
@@ -100,9 +97,9 @@ article.card div.article-section {
     background-image: -webkit-image-set(
         "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652187024/hockey-history/hockey-2330582_640_jdwb3z.jpg" type("image/jpeg")
     );
-    background-image: image-set(
-        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652187024/hockey-history/hockey-2330582_640_jdwb3z.jpg" type("image/jpeg")
-    );
+    /* TODO the standard way; image-set(). This is a CSS Images Module Level 4 feature, 
+        and as the W3C CSS Validator currently only supports CSS3, unable to 
+        follow recommendations from https://developer.mozilla.org/en-US/docs/Web/CSS/image/image-set */
     background-size: cover;
     position: absolute;
     top: 0px;
@@ -110,6 +107,7 @@ article.card div.article-section {
     bottom: 0px;
     left: 0px;
     opacity: 0.2;
+    pointer-events: none;
 }
 
 #cups-card::before {    
@@ -118,9 +116,9 @@ article.card div.article-section {
     background-image: -webkit-image-set(
         "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652187024/hockey-history/cup-1615074_640_uj7ouj.png" type("image/png")
     );
-    background-image: image-set(
-        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652187024/hockey-history/cup-1615074_640_uj7ouj.png" type("image/png")
-    );
+    /* TODO the standard way; image-set(). This is a CSS Images Module Level 4 feature, 
+        and as the W3C CSS Validator currently only supports CSS3, unable to 
+        follow recommendations from https://developer.mozilla.org/en-US/docs/Web/CSS/image/image-set */
     background-size: cover;
     position: absolute;
     top: 0px;
@@ -128,6 +126,7 @@ article.card div.article-section {
     bottom: 0px;
     left: 0px;
     opacity: 0.2;
+    pointer-events: none;
 }
 
 #womens-world-cup-card::before {    
@@ -136,9 +135,9 @@ article.card div.article-section {
     background-image: -webkit-image-set(
         "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652174857/hockey-history/Flag_of_Ireland_hockey_team_mmsqy6.svg" type("image/svg")
     );
-    background-image: image-set(
-        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652174857/hockey-history/Flag_of_Ireland_hockey_team_mmsqy6.svg" type("image/svg")
-    );
+    /* TODO the standard way; image-set(). This is a CSS Images Module Level 4 feature, 
+        and as the W3C CSS Validator currently only supports CSS3, unable to 
+        follow recommendations from https://developer.mozilla.org/en-US/docs/Web/CSS/image/image-set */
     background-size: cover;
     position: absolute;
     top: 0px;
@@ -146,6 +145,7 @@ article.card div.article-section {
     bottom: 0px;
     left: 0px;
     opacity: 0.1;
+    pointer-events: none;
 }
 
 #olympics-card::before {    
@@ -154,9 +154,9 @@ article.card div.article-section {
     background-image: -webkit-image-set(
         "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652187274/hockey-history/480px-OLYMPICS_ICON_BY_V.V_ICONS_xvtm6b.jpg" type("image/jpeg")
     );
-    background-image: image-set(
-        "https://res.cloudinary.com/dytiyi1cg/image/upload/v1652187274/hockey-history/480px-OLYMPICS_ICON_BY_V.V_ICONS_xvtm6b.jpg" type("image/jpeg")
-    );
+    /* TODO the standard way; image-set(). This is a CSS Images Module Level 4 feature, 
+        and as the W3C CSS Validator currently only supports CSS3, unable to 
+        follow recommendations from https://developer.mozilla.org/en-US/docs/Web/CSS/image/image-set */
     background-size: cover;
     position: absolute;
     top: 0px;
@@ -164,32 +164,30 @@ article.card div.article-section {
     bottom: 0px;
     left: 0px;
     opacity: 0.2;
+    pointer-events: none;
+}
+
+.article-text:hover > #overview-card::before,
+.article-text:hover > #organisation-card::before,
+.article-text:hover > #leagues-card::before,
+.article-text:hover > #cups-card::before,
+.article-text:hover > #womens-world-cup-card::before,
+.article-text:hover > #olympics-card::before {
+    background-image: none;    
 }
 
 .article-text, .article-text h2 {
-    position: relative;
+    position: static;
 }
 
+.article-text h2 {
+    padding-left: var(--std-padding-horz);
+}
 
 /* media queries */
 
 /* medium-large screens, 1000px wide or less */ 
 @media screen and (max-width: 1000px) {
-
-    #left-intro {
-        width: 100%;
-        float: left;
-        padding: 0;
-    }
-
-    #right-intro {
-        clear: both;
-        width: 100%;
-        float: left;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-    }
 
 	#card-grid {
 		grid-template-columns: repeat(2, 1fr);

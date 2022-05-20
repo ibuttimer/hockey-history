@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Brief overview of the history of field hockey.">
 
     <!-- fontawsome script -->
     <script src="https://kit.fontawesome.com/f561d6c0a0.js" crossorigin="anonymous"></script>
@@ -27,19 +28,27 @@
 <body>
     <header>
         <nav class="top-nav">
+            <div class="logo">
+                <a href="index.html" aria-label="logo, home page.">
+                    <span>
+                        <img src="assets/img/favicon_io/logo-56x56.png" width="28" height="28"
+                            alt="logo, current page, home.">
+                    </span>
+                </a>
+            </div>
             <input id="menu-toggle" type="checkbox" />
             <label class='menu-button-container' for="menu-toggle">
                 <span class='menu-button'></span>
             </label>
             <ul class="nav-menu">
                 <li>
-                    <a href="index.html" class="current_page"><i class="fas fa-home"></i>&nbsp;Home</a>
+                    <a href="index.html" class="current_page" aria-label="current page, home."><i class="fas fa-home"></i>&nbsp;Home</a>
                 </li>
                 <li>
-                    <a href="ireland.html"><i class="fas fa-flag"></i>&nbsp;Ireland</a>
+                    <a href="ireland.html" aria-label="goto ireland page."><i class="fas fa-flag"></i>&nbsp;Ireland</a>
                 </li>
                 <li>
-                    <a href="resources.html"><i class="fas fa-info"></i>&nbsp;Resources</a>
+                    <a href="resources.html" aria-label="goto resources page."><i class="fas fa-info"></i>&nbsp;Resources</a>
                 </li>
             </ul>
         </nav>
@@ -63,10 +72,7 @@
                 <div>
                     <p>
                         The <abbr title="International Hockey Federation">FIH</abbr> estimate there are around 30
-                        million players worldwide.
-                        There are 137 National Associations of hockey, spread over five continents.
-                    </p>
-                    <p>
+                        million players worldwide. There are 137 National Associations of hockey, spread over five continents.
                         When played at the highest level, hockey is an incredibly fast and skillfull game.
                         It is an intense, physically demanding game where rolling substitutions take place throughout
                         each game.
@@ -78,8 +84,26 @@
                         It is a non-contact sport played by people of all ages, from children to octagenarians.
                         According to <a
                             href="https://www.guinnessworldrecords.com/world-records/oldest-hockey-player-(female)"
-                            aria-label="visit Guinness World Records in another tab">Guinness World Records</a>, the
-                        oldest female player is Anne Graves who is 80 years.
+                            target="_blank" rel="noopener"
+                            aria-label="visit Guinness World Records in another tab">Guinness World Records <sup><i class="fas fa-external-link-alt" aria-hidden="true"></i></sup></a>, the
+                        oldest female player is Anne Graves who played a full match aged 80 years and 9 days.
+                    </p>
+                    <p>
+                        There are a number of variations of the game, apart from the traditional eleven players outdoor format. 
+                        <a
+                            href="https://www.fih.ch/inside-fih/fih-quality-programme/facilities-guidance-resources/indoor-hockey/"
+                            target="_blank" rel="noopener"
+                            aria-label="visit Indoor Hockey by the International Hockey Federation in another tab">Indoor Hockey <sup><i class="fas fa-external-link-alt" aria-hidden="true"></i></sup></a>
+                        is played by two teams of six players, using a small sized pitch which has boards along each side to keep the ball in play. 
+                        The game is commonly played in multi-sports halls or other similar venues.
+                        ParaHockey (Hockey ID) is the adapted format of hockey for players with an intellectual disability, which is played with seven players per team.
+                        And 
+                        <a
+                            href="https://fih.ch/growhockey/hockey5s/"
+                            target="_blank" rel="noopener"
+                            aria-label="visit Hockey 5s by the International Hockey Federation in another tab">Hockey 5s <sup><i class="fas fa-external-link-alt" aria-hidden="true"></i></sup></a>
+                        is a rapidly growing small-format version of the game, played by two teams of five players, which is designed to be adaptable to multiple surfaces.
+                        Whereas, Beach Hockey is a complementary version of the sport, adapted to be played on sand, with five players per team.
                     </p>
                     <details>
                         <summary aria-label="sources click to expand">Sources</summary>
@@ -91,54 +115,54 @@
             </div>
         </article>
         <article>
-            <h2 class="heading">Introduction</h2>
+            <h2 class="heading">Origins</h2>
             <div class="article-section">
-                <div id="intro-wrapper">
-                    <div id="intro-box1">
-                        <p>
-                            The game of hockey as we know it today, has its roots in the distant past.
-                            Historical records reveal that the Egyptians played a rudimentary form of the game 4,000
-                            years ago.
-                            Also a form of the game was played in Iran around 2,000 BC, and in Ethiopia around 1,000 BC.
-                        </p>
-                    </div>
-                    <div id="intro-box2">
-                        <p>
-                            <q>
-                                The Arabs, Greeks, Persians, and Romans each had their own versions,and traces
-                                of a stick game played by the Aztec Indians of South America have been found.
-                            </q>
-                            <sup>
-                                <a href="https://www.britannica.com/sports/field-hockey" target="_blank" rel="noopener"
-                                    aria-label="visit Encyclopedia Britannica in another tab">[1]</a>&nbsp;
-                            </sup>
-                            It is believed that the game gets it name from the French word <em>'hocquet'</em>, meaning
-                            shepherd's crook in reference to the shape of the players' stick.
-                        </p>
-                    </div>
-                    <div id="intro-box3">
-                        <p>
-                            In the mid-18th century, the growth of public schools, such as Eton, lead to the modern game
-                            emerging.
-                            In 1876, the first Hockey Association was formed in the UK, and drew up the first formal set
-                            of rules.
-                            This association only lasted for six years, but in 1886 the Hockey Association was revived
-                            in London by nine founding member clubs.
-                        </p>
-                        <details>
-                            <summary aria-label="sources click to expand">Sources</summary>
-                            Please see <a href="builtwith.html#main-page-introduction"
-                                aria-label="visit main page introduction on built with page">Main Page Introduction</a>
-                            for information sources.
-                        </details>
-                    </div>
-                    <div id="intro-box4">
+                <div id="origins-wrapper">
+                    <div id="origins-video-right">
                         <div class='embed-container'>
                             <lite-youtube videoid="UD9r3WcZ9mA" 
                                 params="controls=0&start=10&end=30&modestbranding=2&rel=0&enablejsapi=1"
                                 playlabel="Play: Evolution of field hockey">
                             </lite-youtube>
                         </div>
+                    </div>
+                    <p>
+                        The game of hockey as we know it today, has its roots in the distant past.
+                        Historical records reveal that the Egyptians played a rudimentary form of the game 4,000
+                        years ago.
+                        <br>
+                        Also a form of the game was played in Iran around 2,000 BC, and in Ethiopia around 1,000 BC.
+                        <q>
+                            The Arabs, Greeks, Persians, and Romans each had their own versions,and traces
+                            of a stick game played by the Aztec Indians of South America have been found.
+                        </q>
+                        <sup>
+                            <a href="https://www.britannica.com/sports/field-hockey" target="_blank" rel="noopener"
+                                aria-label="visit Encyclopedia Britannica in another tab"><i class="fas fa-external-link-alt" aria-hidden="true"></i></a>&nbsp;
+                        </sup>
+                        It is believed that the game gets it name from the French word <em>'hocquet'</em>, meaning
+                        shepherd's crook in reference to the shape of the players' stick.
+                        <br>
+                        In the mid-18th century, the growth of public schools, such as Eton, lead to the modern game
+                        emerging.
+                        In 1876, the first Hockey Association was formed in the UK, and drew up the first formal set
+                        of rules.
+                        This association only lasted for six years, but in 1886 the Hockey Association was revived
+                        in London by nine founding member clubs.
+                    </p>
+                    <details>
+                        <summary aria-label="sources click to expand">Sources</summary>
+                        Please see <a href="builtwith.html#main-page-origins"
+                            aria-label="visit main page origins on built with page">Main Page Origins</a>
+                        for information sources.
+                    </details>
+                </div>
+                <div id="origins-video-bottom">
+                    <div class='embed-container'>
+                        <lite-youtube videoid="UD9r3WcZ9mA" 
+                            params="controls=0&start=10&end=30&modestbranding=2&rel=0&enablejsapi=1"
+                            playlabel="Play: Evolution of field hockey">
+                        </lite-youtube>
                     </div>
                 </div>
             </div>

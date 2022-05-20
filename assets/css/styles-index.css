@@ -11,7 +11,7 @@
 
 	/* horz timeline
 	   ------------- */
-	--grid-auto-flow: column;
+	--timeline-grid-auto-flow: column;
 
 	--callout-line-border-left: dashed;
 
@@ -23,6 +23,10 @@
 
 	--cell-padding_size: 1rem;
 	--cell-padding: 0 var(--cell-padding_size);
+	--odd-cell-padding-top: 0;
+	--odd-cell-padding-bottom: var(--cell-padding_size);
+	--even-cell-padding-top: calc(2 * var(--cell-padding_size));
+	--even-cell-padding-bottom: 0;
 
 	--content-shift-positive: calc(var(--std-padding) + var(--cell-padding_size));
 	--content-shift: calc(var(--content-shift-positive) * -1);
@@ -58,40 +62,26 @@
 	--timetick-even-vert-shift-positive: calc(var(--timetick-height) + var(--timeline-even-shift) + var(--timeline-thickness));
 	--timetick-even-vert-shift: calc(var(--timetick-even-vert-shift-positive) * -1);
 
-	--timetick-odd-vert-shift-positive: calc(var(--timetick-height) + var(--cell-padding_size));
+	--timetick-odd-vert-shift-positive: calc(var(--timetick-height) + var(--odd-cell-padding-bottom));
 	--timetick-odd-vert-shift: calc(var(--timetick-odd-vert-shift-positive) * -1);
+
+	/* youtube embed width="560" height="315" */
+	--video-aspect-ratio: calc(315 / 560);
+	--video-width: var(--content-half-width);
+	--video-height: calc(var(--video-width) * var(--video-aspect-ratio));
 }
 
-/* introduction */
+/* origins */
 
-#intro-wrapper {
-	display: grid;
-	grid-template-columns: 66% 33%;
+#origins-video-right {	
+	float: right; 
+	width: var(--video-width);
+	height: var(--video-height); 
 }
-
-/* box1  box4 
-   box2  box4
-   box3  box3 */	
-#intro-box1 {
-    padding-top: var(--std-padding-vert);
-	grid-column-start: 1;
-	grid-column-end: 2;
-	margin-right: var(--std-padding-horz);
-}
-#intro-box4 {
-	grid-column-start: 2;
-	grid-column-end: 3;
-	grid-row-start: 1;
-	grid-row-end: 3;
-}
-#intro-box2  {
-	grid-column-start: 1;
-	grid-column-end: 2;
-}
-#intro-box3 {
-    padding-top: var(--std-padding-vert);
-	grid-column-start: 1;
-	grid-column-end: 3;
+#origins-video-bottom {
+	display: none;
+	width: var(--video-width);
+	height: var(--video-height); 
 }
 
 /* timeline based on https://codepen.io/joemaffei/pen/WNQKyPo from https://stackoverflow.com/a/61781360
@@ -112,7 +102,7 @@ dl {
 
 	grid-auto-columns: max-content;
 	grid-auto-rows: max-content;
-	grid-auto-flow: var(--grid-auto-flow);
+	grid-auto-flow: var(--timeline-grid-auto-flow);
 	grid-template-rows: auto auto;
 	grid-template-columns: auto auto;
 	justify-items: var(--cell-justify-items);
@@ -157,6 +147,7 @@ dl .cell::after {
 	border: var(--timetick-border) solid var(--callout-line-colour);
 	background-color: var(--timetick-centre-colour);
 	border-radius: 50%;
+	z-index: 1;
 }
 
 dl .cell dt {
@@ -185,10 +176,12 @@ dl .cell dd {
 }
 
 dl .cell:nth-child(odd) {
-	/* top/right cells part of timeline */
-	padding-bottom: 1rem;
+	/* top/left cells part of timeline */
+	padding-top: var(--odd-cell-padding-top);
+	padding-bottom: var(--odd-cell-padding-bottom);
 
 	justify-content: end;
+	align-self: self-end;
 
 	/* active for horz timeline */
 	border-bottom-width: var(--timeline-thickness);
@@ -202,8 +195,9 @@ dl .cell:nth-child(odd) dd:last-child {
 	padding-bottom: 0.5rem;
 }
 dl .cell:nth-child(even) {
-	/* bottom/left cells part of timeline */
-	padding-top: 1rem;
+	/* bottom/right cells part of timeline */
+	padding-top: var(--even-cell-padding-top);
+	padding-bottom: var(--even-cell-padding-bottom);
 	position: relative;
 	/* to avoid thicker line where top & bottom cells overlap */
 	top: var(--timeline-even-shift);
@@ -227,15 +221,14 @@ dl .cell:last-child {
 	 border-bottom-color: transparent;
 }
    
-/* YouTube video */
-/* https://embedresponsively.com/ */
 .embed-container { 
-	position: relative; 
-	padding-bottom: 56.25%; 
-	height: 0; 
+	padding-left: var(--std-padding-horz);
+	padding-bottom: var(--std-padding-vert); 
 	overflow: hidden; 
 	max-width: 100%; 
 } 
+/* YouTube video */
+/* https://embedresponsively.com/ */
 .embed-container iframe, .embed-container object, .embed-container embed { 
 	position: absolute; 
 	top: 0; 
@@ -265,28 +258,12 @@ dl .cell:last-child {
 }
 
 
-/* medium-large screens, 1100px wide or less */ 
-@media screen and (max-width: 1100px) {
-
-	#intro-wrapper {
-		grid-template-columns: 58% 42%;
-	}
-}
-
-/* medium-large screens, 1000px wide or less */ 
-@media screen and (max-width: 1000px) {
-
-	#intro-wrapper {
-		grid-template-columns: 50% 50%;
-	}
-}
-
 /* small-medium screens, 800px wide or less */ 
 @media screen and (max-width: 800px) {
 
 	:root {
 
-		--grid-auto-flow: row;
+		--timeline-grid-auto-flow: row;
 
 		/* horz timeline
 		   ------------- */
@@ -301,6 +278,10 @@ dl .cell:last-child {
 		/* vert timeline
 		------------- */
 		--cell-padding: var(--cell-padding_size) 0;
+		--odd-cell-padding-top: 0;
+		--odd-cell-padding-bottom: 0;
+		--even-cell-padding-top: var(--cell-padding_size);
+		--even-cell-padding-bottom: 0;
 
 		--cell-flex-dir: column;
 
@@ -317,20 +298,11 @@ dl .cell:last-child {
 		--timeline-line-border-right: solid;
 	}
 
-
-	#intro-wrapper {
-		grid-template-columns: 42% 58%;
-	}
-
 	/* don't display every third <br> */
 	dl .cell dd br:nth-child(3n) {
 		display: none;
 	}
 
-	dl .cell::after {
-		/* time tick on line: donut */
-		position: relative;
-	}
 	dl .cell:nth-child(odd) {
 		/* right cell's part of timeline */
 		/* active for vert timeline */
@@ -351,6 +323,8 @@ dl .cell:last-child {
 		/* to avoid thicker line where top & bottom cells overlap */
 		left: var(--timeline-even-shift);
 
+		align-self: self-end;
+
 		/* active for vert timeline */
 		border-left-width: var(--timeline-thickness);
 		border-left-style: var(--timeline-line-border-left);
@@ -358,15 +332,23 @@ dl .cell:last-child {
 
 		padding-left: var(--cell-padding_size);
 	}
+	dl .cell:nth-child(even) dt, 
+	dl .cell:nth-child(even) dd {
+		text-align: end;
+	}
+
+	dl .cell::after {
+		/* time tick on line: donut */
+		position: relative;
+	}
 	dl .cell:nth-child(odd)::after {
 		/* time tick on line: donut */
-		right: calc(-100% - var(--timetick-horz-shift) - var(--cell-padding_size) - var(--cell-padding_size));
-		bottom: calc(var(--timetick-vert-shift) - var(--cell-padding_size));
+		right: calc(-100% - var(--timetick-horz-shift) - (2 * var(--cell-padding_size)));
 	}
 	dl .cell:nth-child(even)::after {
 		/* time tick on line: donut */
 		left: var(--timetick-horz-shift);
-		top: calc(var(--timetick-vert-shift) + var(--cell-padding_size) + var(--cell-padding_size));
+		top: calc(var(--timetick-vert-shift) + var(--even-cell-padding-top));
 	}
 
 	dl .cell:last-child {
@@ -374,61 +356,18 @@ dl .cell:last-child {
    }
 }
 
-
-/* small-medium screens, 700px wide or less */ 
-@media screen and (max-width: 700px) {
-
-	/* box1  box4 
-       box2  box2
-	   box3  box3 */
-	#intro-box4 {
-		grid-column-start: 2;
-		grid-column-end: 3;
-		grid-row-start: 1;
-		grid-row-end: 2;
-	}
-	#intro-box2  {
-		grid-column-start: 1;
-		grid-column-end: 2;
-		grid-column-start: 1;
-		grid-column-end: 3;
-	}
-}
-
 /* small-medium screens, 600px wide or less */ 
 @media screen and (max-width: 600px) {
 
-	/* box1
-       box2
-	   box3
-	   box4 */
-	#intro-wrapper {
-		grid-template-columns: 1fr;
+	:root {
+		--video-width: var(--content-width);
 	}
 
-	#intro-box1 {
-		grid-column-start: 1;
-		grid-column-end: 2;
-		grid-row-start: 1;
-		grid-row-end: 2;
+	#origins-video-right {	
+		display: none;
 	}
-	#intro-box2 {
-		grid-column-start: 1;
-		grid-column-end: 2;
-		grid-row-start: 2;
-		grid-row-end: 3;
-	}
-	#intro-box3 {
-		grid-column-start: 1;
-		grid-column-end: 2;
-		grid-row-start: 3;
-		grid-row-end: 4;
-	}
-	#intro-box4 {
-		grid-column-start: 1;
-		grid-column-end: 2;
-		grid-row-start: 4;
-		grid-row-end: 5;
+	#origins-video-bottom {
+		display: block;
 	}
 }
 

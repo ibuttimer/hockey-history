@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /design/
+Disallow: /media/
+Disallow: /test/
+
+Disallow: /*.md$
+Disallow: /.gitignore

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Field hockey related resources.">
 
     <!-- fontawsome script -->
     <script src="https://kit.fontawesome.com/f561d6c0a0.js" crossorigin="anonymous"></script>
@@ -23,19 +24,27 @@
 <body>
     <header>
         <nav class="top-nav">
+            <div class="logo">
+                <a href="index.html" aria-label="logo, goto home page.">
+                    <span>
+                        <img src="assets/img/favicon_io/logo-56x56.png" width="28" height="28"
+                            alt="logo, goto home page.">
+                    </span>
+                </a>
+            </div>
             <input id="menu-toggle" type="checkbox" />
             <label class='menu-button-container' for="menu-toggle">
                 <span class='menu-button'></span>
             </label>
             <ul class="nav-menu">
                 <li>
-                    <a href="index.html"><i class="fas fa-home"></i>&nbsp;Home</a>
+                    <a href="index.html" aria-label="goto home page."><i class="fas fa-home"></i>&nbsp;Home</a>
                 </li>
                 <li>
-                    <a href="ireland.html"><i class="fas fa-flag"></i>&nbsp;Ireland</a>
+                    <a href="ireland.html" aria-label="goto ireland page."><i class="fas fa-flag"></i>&nbsp;Ireland</a>
                 </li>
                 <li>
-                    <a href="resources.html" class="current_page"><i class="fas fa-info"></i>&nbsp;Resources</a>
+                    <a href="resources.html" class="current_page" aria-label="current page, resources."><i class="fas fa-info"></i>&nbsp;Resources</a>
                 </li>
             </ul>
         </nav>
@@ -54,11 +63,11 @@
             </div>
         </section>
         <article>
-            <h2 class="heading">Rules</h2>
+            <h2 class="heading">Rules (Outdoor)</h2>
             <div class="article-section">
                 <div>
                     <table>
-                        <caption>Basic Rules</caption>
+                        <caption>Basic Rules (Outdoor)</caption>
                         <colgroup>
                             <col class="table-heading">
                             <col>
@@ -101,11 +110,22 @@
                                         </ul>
                                     </div>
                                     <div>
-                                        <a href="pitch.html">
+                                        <a href="pitch.html" aria-label="goto pitch page.">
                                             <picture>
-                                                <source srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1651835712/hockey-history/Hockey_field_metric_zdugfx.webp" type="image/webp">
-                                                <source srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1651834738/hockey-history/Hockey_field_metric_gzubpf.jpg" type="image/jpeg">
-                                                <img id="pitch-img" src="assets/img/Hockey_field_metric.jpg" alt="picture of hockey pitch">
+                                                <source 
+                                                    srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1652354816/hockey-history/Hockey_field_metric-25_wt0rz4.webp" 
+                                                    media="(max-width: 500px)" type="image/webp">
+                                                <source 
+                                                    srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1652354816/hockey-history/Hockey_field_metric-50_xbzxxw.webp" 
+                                                    media="(max-width: 800px)" type="image/webp">
+                                                <source 
+                                                    srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1651835712/hockey-history/Hockey_field_metric_zdugfx.webp" 
+                                                    type="image/webp">
+                                                <source 
+                                                    srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1651834738/hockey-history/Hockey_field_metric_gzubpf.jpg" 
+                                                    type="image/jpeg">
+                                                <img id="pitch-img" width="864" height="564" 
+                                                    src="assets/img/Hockey_field_metric.jpg" alt="picture of hockey pitch, ">
                                             </picture>
                                         </a>
                                     </div>
@@ -143,199 +163,273 @@
                     </table>
                     <p>The full rules may be found at 
                         <a href="https://www.fih.ch/inside-fih/our-official-documents/rules-of-hockey/"
-                            aria-label="visit rules of hockey on International Hockey Federation in another tab">Rules of Hockey</a>
+                            target="_blank" rel="noopener" aria-label="visit rules of hockey on International Hockey Federation in another tab">
+                                Rules of Hockey <sup><i class="fas fa-external-link-alt" aria-hidden="true"></i></sup>
+                        </a>
                     </p>
 
-
-                    
                     <details>
                         <summary aria-label="sources click to expand">Sources</summary>
-                        Please see <a href="builtwith.html#ireland-page-overview"
-                            aria-label="visit ireland page overview on built with page">Ireland Page Overview</a> for
+                        Please see <a href="builtwith.html#resources-page-rules"
+                            aria-label="visit ireland Resources Page Rules on built with page">Resources Page Rules</a> for
                         information sources.
                     </details>
                 </div>
             </div>
         </article>
 
-
-        <article>
+        <section>
             <h2 class="heading">Organisations</h2>
-            <div class="article-section">
-                <div id="card-grid">
-                    <!-- International -->
-                    <div class="card">
-                        <div class="resource-grid">
-                            <div class="resource-map">
-                                <picture>
-                                    <source srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1651846435/hockey-history/maps/GLB-EU-02-4001_pf2wie.webp" type="image/webp">
-                                    <source srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1651846435/hockey-history/maps/GLB-EU-02-4001_t6ugjo.png" type="image/png">
-                                    <img src="assets/img/maps/GLB-EU-02-4001.png" alt="Ireland map image by FreeVectorMaps.com" 
-                                            width="150">
-                                </picture>
-                            </div>
-                            <div class="resource-info">
-                                <h2>International</h2>
-                                <div>
-                                    <dl>
-                                        <dt></dt>
-                                        <dd>
-                                            <a href="https://www.fih.hockey/"  target="_blank" rel="noopener"
-                                                aria-label="visit International Hockey Federation in another tab"> International Hockey Federation</a>
-                                        </dd>
-                                    </dl>
-                                </div>
+            <div id="card-grid" class="article-section">
+                <!-- International -->
+                <article class="card">
+                    <div class="resource-grid">
+                        <div class="resource-map">
+                            <picture>
+                                <source 
+                                    srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1652354186/hockey-history/maps/GLB-EU-02-4001-25_uct3fd.webp" 
+                                    media="(max-width: 500px)" type="image/webp">
+                                <source 
+                                    srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1652354186/hockey-history/maps/GLB-EU-02-4001-50_ppww8a.webp" 
+                                    media="(max-width: 800px)" type="image/webp">
+                                <source 
+                                    srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1651846435/hockey-history/maps/GLB-EU-02-4001_pf2wie.webp" 
+                                    type="image/webp">
+                                <source 
+                                    srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1651846435/hockey-history/maps/GLB-EU-02-4001_t6ugjo.png" 
+                                    type="image/png">
+                                <img src="assets/img/maps/GLB-EU-02-4001.png" alt="Ireland map image by FreeVectorMaps.com" 
+                                    width="1320" height="1317">
+                            </picture>
+                        </div>
+                        <div class="resource-info">
+                            <h2>International</h2>
+                            <div>
+                                <dl>
+                                    <dt></dt>
+                                    <dd>
+                                        <a href="https://www.fih.hockey/"  target="_blank" rel="noopener"
+                                            aria-label="visit International Hockey Federation in another tab">
+                                            <sup><i class="fas fa-external-link-alt" aria-hidden="true"></i></sup> International Hockey Federation
+                                        </a>
+                                    </dd>
+                                </dl>
                             </div>
                         </div>
                     </div>
-                    <!-- Ireland -->
-                    <div class="card">
-                        <div class="resource-grid">
-                            <div class="resource-map">
-                                <picture>
-                                    <source srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1651846435/hockey-history/maps/IE-EPS-02-4002_ianijn.webp" type="image/webp">
-                                    <source srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1651846435/hockey-history/maps/IE-EPS-02-4002_uqvv7x.png" type="image/png">
-                                    <img src="assets/img/maps/IE-EPS-02-4002.png" alt="Ireland map image by FreeVectorMaps.com" 
-                                            width="150">
-                                </picture>
-                            </div>
-                            <div class="resource-info">
-                                <h2>Ireland</h2>
-                                <div>
-                                    <dl>
-                                        <dt>National body</dt>
-                                        <dd>
-                                            <a href="https://hockey.ie/"  target="_blank" rel="noopener"
-                                                aria-label="visit Hockey Ireland in another tab">Hockey Ireland</a>
-                                        </dd>
-                                        
-                                        <dt>Regional bodies</dt>
-                                        <dd>
-                                            <a href="https://connachthockey.leaguerepublic.com/" target="_blank" rel="noopener" 
-                                                aria-label="visit Connacht Hockey in another tab">Connacht Branch</a>
-                                        </dd>
-                                        <dd>
-                                            <a href="https://www.leinsterhockey.ie/" target="_blank" rel="noopener"
-                                                aria-label="visit The Leinster Hockey Association in another tab">Leinster Hockey Association</a>
-                                        </dd>
-                                        <dd>
-                                            <a href="https://munsterhockey.ie/" target="_blank" rel="noopener" 
-                                                aria-label="visit Munster Hockey in another tab">Munster Branch Irish Hockey Association</a>
-                                        </dd>
-                                        <dd>
-                                            <a href="https://ulsterhockey.com/" target="_blank" rel="noopener" 
-                                                aria-label="visit Ulster Hockey in another tab">Ulster Hockey Union</a>
-                                        </dd>
-                                    </dl>
-                                </div>
+                </article>
+                <!-- Ireland -->
+                <article class="card">
+                    <div class="resource-grid">
+                        <div class="resource-map">
+                            <picture>
+                                <source 
+                                    srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1652354186/hockey-history/maps/IE-EPS-02-4002-25_lzmmej.webp" 
+                                    media="(max-width: 500px)" type="image/webp">
+                                <source 
+                                    srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1652354186/hockey-history/maps/IE-EPS-02-4002-50_y3djfh.webp" 
+                                    media="(max-width: 800px)" type="image/webp">
+                                <source 
+                                    srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1651846435/hockey-history/maps/IE-EPS-02-4002_ianijn.webp" 
+                                    type="image/webp">
+                                <source 
+                                    srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1651846435/hockey-history/maps/IE-EPS-02-4002_uqvv7x.png" 
+                                    type="image/png">
+                                <img src="assets/img/maps/IE-EPS-02-4002.png" alt="Ireland map image by FreeVectorMaps.com" 
+                                    width="810" height="1044">
+                            </picture>
+                        </div>
+                        <div class="resource-info">
+                            <h2>Ireland</h2>
+                            <div>
+                                <dl>
+                                    <dt>National body</dt>
+                                    <dd>
+                                        <a href="https://hockey.ie/"  target="_blank" rel="noopener"
+                                            aria-label="visit Hockey Ireland in another tab">
+                                            <sup><i class="fas fa-external-link-alt" aria-hidden="true"></i></sup> Hockey Ireland
+                                        </a>
+                                    </dd>
+                                    
+                                    <dt>Regional bodies</dt>
+                                    <dd>
+                                        <a href="https://connachthockey.leaguerepublic.com/" target="_blank" rel="noopener" 
+                                            aria-label="visit Connacht Hockey in another tab">
+                                            <sup><i class="fas fa-external-link-alt" aria-hidden="true"></i></sup> Connacht Branch
+                                        </a>
+                                    </dd>
+                                    <dd>
+                                        <a href="https://www.leinsterhockey.ie/" target="_blank" rel="noopener"
+                                            aria-label="visit The Leinster Hockey Association in another tab">
+                                            <sup><i class="fas fa-external-link-alt" aria-hidden="true"></i></sup> Leinster Hockey Association
+                                        </a>
+                                    </dd>
+                                    <dd>
+                                        <a href="https://munsterhockey.ie/" target="_blank" rel="noopener" 
+                                            aria-label="visit Munster Hockey in another tab">
+                                            <sup><i class="fas fa-external-link-alt" aria-hidden="true"></i></sup> Munster Branch Irish Hockey Association
+                                        </a>
+                                    </dd>
+                                    <dd>
+                                        <a href="https://ulsterhockey.com/" target="_blank" rel="noopener" 
+                                            aria-label="visit Ulster Hockey in another tab">
+                                            <sup><i class="fas fa-external-link-alt" aria-hidden="true"></i></sup> Ulster Hockey Union
+                                        </a>
+                                    </dd>
+                                </dl>
                             </div>
                         </div>
                     </div>
-                    <!-- England -->
-                    <div class="card">
-                        <div class="resource-grid">
-                            <div class="resource-map">
-                                <picture>
-                                    <source srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1651846434/hockey-history/maps/GB-EN-EPS-02-4001_gsvqca.webp" type="image/webp">
-                                    <source srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1651846434/hockey-history/maps/GB-EN-EPS-02-4001_zwfkvw.png" type="image/png">
-                                    <img src="assets/img/maps/GB-EN-EPS-02-4001.png" alt="England map image by FreeVectorMaps.com" 
-                                            width="150">
-                                </picture>
-                            </div>
-                            <div class="resource-info">
-                                <h2>England</h2>
-                                <div>
-                                    <dl>
-                                        <dt>National body</dt>
-                                        <dd>
-                                            <a href="https://www.englandhockey.co.uk/"  target="_blank" rel="noopener"
-                                                aria-label="visit England Hockey in another tab">England Hockey</a>
-                                        </dd>
-                                    </dl>
-                                </div>
+                </article>
+                <!-- England -->
+                <article class="card">
+                    <div class="resource-grid">
+                        <div class="resource-map">
+                            <picture>
+                                <source 
+                                    srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1652354186/hockey-history/maps/GB-EN-EPS-02-4001-25_c7os0r.webp" 
+                                    media="(max-width: 500px)" type="image/webp">
+                                <source 
+                                    srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1652354187/hockey-history/maps/GB-EN-EPS-02-4001-50_k5fqqx.webp" 
+                                    media="(max-width: 800px)" type="image/webp">
+                                <source 
+                                    srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1651846434/hockey-history/maps/GB-EN-EPS-02-4001_gsvqca.webp" 
+                                    type="image/webp">
+                                <source 
+                                    srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1651846434/hockey-history/maps/GB-EN-EPS-02-4001_zwfkvw.png" 
+                                    type="image/png">
+                                <img src="assets/img/maps/GB-EN-EPS-02-4001.png" alt="England map image by FreeVectorMaps.com" 
+                                    width="1020" height="1293">
+                            </picture>
+                        </div>
+                        <div class="resource-info">
+                            <h2>England</h2>
+                            <div>
+                                <dl>
+                                    <dt>National body</dt>
+                                    <dd>
+                                        <a href="https://www.englandhockey.co.uk/"  target="_blank" rel="noopener"
+                                            aria-label="visit England Hockey in another tab">
+                                            <sup><i class="fas fa-external-link-alt" aria-hidden="true"></i></sup> England Hockey
+                                        </a>
+                                    </dd>
+                                </dl>
                             </div>
                         </div>
                     </div>
-                    <!-- Scotland -->
-                    <div class="card">
-                        <div class="resource-grid">
-                            <div class="resource-map">
-                                <picture>
-                                    <source srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1651846434/hockey-history/maps/GB-SC-EPS-02-4001_f0qnqg.webp" type="image/webp">
-                                    <source srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1651846434/hockey-history/maps/GB-SC-EPS-02-4001_x3kcme.png" type="image/png">
-                                    <img src="assets/img/maps/GB-SC-EPS-02-4001.png" alt="Scotland map image by FreeVectorMaps.com" 
-                                            width="150">
-                                </picture>
-                            </div>
-                            <div class="resource-info">
-                                <h2>Scotland</h2>
-                                <div>
-                                    <dl>
-                                        <dt>National body</dt>
-                                        <dd>
-                                            <a href="https://hockey.ie/"  target="_blank" rel="noopener"
-                                                aria-label="visit Scottish Hockey in another tab">Scotland Hockey</a>
-                                        </dd>
-                                    </dl>
-                                </div>
+                </article>
+                <!-- Scotland -->
+                <article class="card">
+                    <div class="resource-grid">
+                        <div class="resource-map">
+                            <picture>
+                                <source 
+                                    srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1652354187/hockey-history/maps/GB-SC-EPS-02-4001-25_xj6pla.webp" 
+                                    media="(max-width: 500px)" type="image/webp">
+                                <source 
+                                    srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1652354187/hockey-history/maps/GB-SC-EPS-02-4001-50_pxrh2g.webp" 
+                                    media="(max-width: 800px)" type="image/webp">
+                                <source 
+                                    srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1651846434/hockey-history/maps/GB-SC-EPS-02-4001_f0qnqg.webp" 
+                                    type="image/webp">
+                                <source 
+                                    srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1651846434/hockey-history/maps/GB-SC-EPS-02-4001_x3kcme.png" 
+                                    type="image/png">
+                                <img src="assets/img/maps/GB-SC-EPS-02-4001.png" alt="Scotland map image by FreeVectorMaps.com" 
+                                    width="819" height="1029">
+                            </picture>
+                        </div>
+                        <div class="resource-info">
+                            <h2>Scotland</h2>
+                            <div>
+                                <dl>
+                                    <dt>National body</dt>
+                                    <dd>
+                                        <a href="https://www.scottish-hockey.org.uk/"  target="_blank" rel="noopener"
+                                            aria-label="visit Scottish Hockey in another tab">
+                                            <sup><i class="fas fa-external-link-alt" aria-hidden="true"></i></sup> Scotland Hockey
+                                        </a>
+                                    </dd>
+                                </dl>
                             </div>
                         </div>
                     </div>
-                    <!-- Wales -->
-                    <div class="card">
-                        <div class="resource-grid">
-                            <div class="resource-map">
-                                <picture>
-                                    <source srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1651846435/hockey-history/maps/GB-WL-EPS-02-4001_mrmdo9.webp" type="image/webp">
-                                    <source srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1651846435/hockey-history/maps/GB-WL-EPS-02-4001_ay98zy.png" type="image/png">
-                                    <img src="assets/img/maps/GB-WL-EPS-02-4001.png" alt="Wales map image by FreeVectorMaps.com" 
-                                            width="150">
-                                </picture>
-                            </div>
-                            <div class="resource-info">
-                                <h2>Wales</h2>
-                                <div>
-                                    <dl>
-                                        <dt>National body</dt>
-                                        <dd>
-                                            <a href="https://www.hockeywales.org.uk/"  target="_blank" rel="noopener"
-                                                aria-label="visit Hockey Wales in another tab">Hockey Wales</a>
-                                        </dd>
-                                    </dl>
-                                </div>
+                </article>
+                <!-- Wales -->
+                <article class="card">
+                    <div class="resource-grid">
+                        <div class="resource-map">
+                            <picture>
+                                <source 
+                                    srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1652354186/hockey-history/maps/GB-WL-EPS-02-4001-25_i2pmjh.webp" 
+                                    media="(max-width: 500px)" type="image/webp">
+                                <source 
+                                    srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1652354186/hockey-history/maps/GB-WL-EPS-02-4001-50_puaxl1.webp" 
+                                    media="(max-width: 800px)" type="image/webp">
+                                <source 
+                                    srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1651846435/hockey-history/maps/GB-WL-EPS-02-4001_mrmdo9.webp" 
+                                    type="image/webp">
+                                <source 
+                                    srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1651846435/hockey-history/maps/GB-WL-EPS-02-4001_ay98zy.png" 
+                                    type="image/png">
+                                <img src="assets/img/maps/GB-WL-EPS-02-4001.png" alt="Wales map image by FreeVectorMaps.com" 
+                                    width="918" height="1125">
+                            </picture>
+                        </div>
+                        <div class="resource-info">
+                            <h2>Wales</h2>
+                            <div>
+                                <dl>
+                                    <dt>National body</dt>
+                                    <dd>
+                                        <a href="https://www.hockeywales.org.uk/"  target="_blank" rel="noopener"
+                                            aria-label="visit Hockey Wales in another tab">
+                                            <sup><i class="fas fa-external-link-alt" aria-hidden="true"></i></sup> Hockey Wales
+                                        </a>
+                                    </dd>
+                                </dl>
                             </div>
                         </div>
                     </div>
-                    <!-- France -->
-                    <div class="card">
-                        <div class="resource-grid">
-                            <div class="resource-map">
-                                <picture>
-                                    <source srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1651846434/hockey-history/maps/FR-EPS-02-4001_tdxib6.webp" type="image/webp">
-                                    <source srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1651846434/hockey-history/maps/FR-EPS-02-4001_yvhwxd.png" type="image/png">
-                                    <img src="assets/img/maps/FR-EPS-02-4001.png" alt="France map image by FreeVectorMaps.com" 
-                                            width="150">
-                                </picture>
-                            </div>
-                            <div class="resource-info">
-                                <h2>France</h2>
-                                <div>
-                                    <dl>
-                                        <dt>National body</dt>
-                                        <dd>
-                                            <a href="https://www.ffhockey.org/"  target="_blank" rel="noopener"
-                                                aria-label="visit French Hockey Federation in another tab">Fédération Française de Hockey</a>
-                                        </dd>
-                                    </dl>
-                                </div>
+                </article>
+                <!-- France -->
+                <article class="card">
+                    <div class="resource-grid">
+                        <div class="resource-map">
+                            <picture>
+                                <source 
+                                    srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1652353789/hockey-history/maps/FR-EPS-02-4001-25_boogbk.webp" 
+                                    media="(max-width: 500px)" type="image/webp">
+                                <source 
+                                    srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1651846434/hockey-history/maps/FR-EPS-02-4001_tdxib6.webp" 
+                                    media="(max-width: 800px)" type="image/webp">
+                                <source 
+                                    srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1652352750/hockey-history/maps/FR-EPS-02-4001-50_bhalwq.webp" 
+                                    type="image/webp">
+                                <source srcset="https://res.cloudinary.com/dytiyi1cg/image/upload/v1651846434/hockey-history/maps/FR-EPS-02-4001_yvhwxd.png" 
+                                    type="image/png">
+                                <img src="assets/img/maps/FR-EPS-02-4001.png" alt="France map image by FreeVectorMaps.com" 
+                                    width="1128" height="1071">
+                            </picture>
+                        </div>
+                        <div class="resource-info">
+                            <h2>France</h2>
+                            <div>
+                                <dl>
+                                    <dt>National body</dt>
+                                    <dd>
+                                        <a href="https://www.ffhockey.org/"  target="_blank" rel="noopener"
+                                            aria-label="visit French Hockey Federation in another tab">
+                                            <sup><i class="fas fa-external-link-alt" aria-hidden="true"></i></sup> Fédération Française de Hockey
+                                        </a>
+                                    </dd>
+                                </dl>
                             </div>
                         </div>
                     </div>
-        
-                </div>
+                </article>
             </div>
-        </article>
-
+        </section>
 
     </main>
     <footer>

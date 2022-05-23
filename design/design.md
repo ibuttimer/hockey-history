@@ -18,7 +18,6 @@
   - [UX Elements](#ux-elements)
   - [Accessibility](#accessibility)
 - [Resources](#resources)
-- [To Do](#to-do)
 - [Changes](#changes)
     - [20-04-2022](#20-04-2022)
       - [Timeline](#timeline)
@@ -160,9 +159,6 @@ The guidelines outlined in the following will be followed:
 - https://ulsterhockey.com/
 - https://eurohockey.org/
 - https://ehlhockey.tv/
-
-# To Do
-- Look for Olympics images
 
 # Changes
 ### 20-04-2022
